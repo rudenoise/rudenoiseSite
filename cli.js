@@ -30,12 +30,7 @@ var show = (function () {
     
     i = instructions.length - 1;
     
-    xhr = new XMLHttpRequest(),
-        protocol = 'http://',
-        domain = 'rudenoise.uk',
-        endpoint = '',
-        env = 'local',
-        statusDiv;
+    xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
         var resObj;
@@ -43,8 +38,8 @@ var show = (function () {
             if (xhr.status === 200) {
                 resObj = JSON.parse(xhr.responseText);
                 resObj.arrived = (new Date()).toJSON();
-                resObj.env = env;
-                console.log(resObj);
+                console.log(resObj.title);
+                console.log(resObj.art);
             } else {
                 console.error(protocol + domain + endpoint, xhr.status);
             }
@@ -62,17 +57,18 @@ var show = (function () {
 
     function getArt(title) {
         endpoint = '/' + title + '/art.json';
-        xhr.open('GET', protocol + domain + endpoint, true);
+        console.log('GET', endpoint);
+        xhr.open('GET', endpoint, true);
         xhr.send();
     }
 
     return function (instruction) {
         console.log('Try instruction: ' + instruction);
-        if (instructions.indexOf(instruction < 0)) {
+        if (instructions.indexOf(instruction) < 0) {
             console.error('Instruction not found.');
             return;
         }
-        getArt(title);
+        getArt(instruction);
         return;
     };
 
