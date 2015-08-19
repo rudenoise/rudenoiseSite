@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link href="styles.css" rel="stylesheet" />
+    <script src="hand.js"></script>
+  </head>
+  <body>
+    <div id="output">
+      <ul>
+        <li>Dragging: <em id="dragging"></em> - current offset:<br /><em id="offset">-</em></li>
+        <li>Pointer Relative to body:<br />x:<em id="bX"></em> y: <em id="bY"></em></li>
+        <li>Pointer Relative to main:<br >/x:<em id="mX"></em> y: <em id="mY"></em></li>
+        <li>Element's top-left:<br />x:<em id="oX"></em> y: <em id="oY"></em></li>
+      </ul>
+    </div>
+    <div id="main">
+      <div id="square"></div>
+      <div id="text">
+        <p>Hello!</p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
