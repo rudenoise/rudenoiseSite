@@ -46,7 +46,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
-        <h1>Answer this:</h1>
+        <h1 id="title">Answer a question:</h1>
         <p id="question">Tap here for a new question?</p>
         <script type="text/javascript">
         var xhr, question;
@@ -59,7 +59,7 @@
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     resObj = JSON.parse(xhr.responseText);
-                    resObj.arrived = (new Date()).toJSON();
+                    document.getElementById('title').innerHTML = '';
                     question.innerHTML = resObj[(function (min, max) {
                         return Math.floor(Math.random() * (max - min)) + min;
                     }(0, resObj.length))].toUpperCase();;
