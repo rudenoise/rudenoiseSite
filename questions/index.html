@@ -45,28 +45,49 @@
     <body>
         <p id="question">Tap here for a new question?</p>
         <script type="text/javascript">
-        var xhr, question;
+        var xhr, questionEl, questionsArr = [], seenBefore = [];
 
-        question = document.getElementById('question');
+        questionEl = document.getElementById('question');
         xhr = new XMLHttpRequest();
 
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function nextQuestion() {
+            var rand = randomInt(0, questionsArr.length);
+            if (seenBefore.length === questionsArr.length) {
+                seenBefore = [];
+            }
+            if (seenBefore.indexOf(rand) < 0) {
+                seenBefore.push(rand);
+                return rand;
+            }
+            return nextQuestion();
+        }
+
+        function updateQuestion() {
+            questionEl.innerHTML = questionsArr[nextQuestion()].toUpperCase();;
+        }
+
         xhr.onreadystatechange = function () {
-            var resObj;
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
-                    resObj = JSON.parse(xhr.responseText);
-                    question.innerHTML = resObj[(function (min, max) {
-                        return Math.floor(Math.random() * (max - min)) + min;
-                    }(0, resObj.length))].toUpperCase();;
+                    questionsArr = JSON.parse(xhr.responseText);
+                    updateQuestion();
                 } else {
                     console.error(protocol + domain + endpoint, xhr.status);
                 }
             }
         };
 
-        question.addEventListener('click', function () {
-            xhr.open('GET', '/questions/questionStore.json', true);
-            xhr.send();
+        questionEl.addEventListener('click', function () {
+            if (questionsArr.length > 0) {
+                updateQuestion();
+            } else {
+                xhr.open('GET', '/questions/questionStore.json', true);
+                xhr.send();
+            }
         });
         </script>
     </body>
