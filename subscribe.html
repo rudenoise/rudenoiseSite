@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Rudenoise</title>
+    <title>Subscribe</title>
     <style type="text/css">
       @font-face {
           font-family: 'ocramedium';
@@ -41,22 +41,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
-    <h1>Rudenoise UK</h1>
-    <h2>Blog/Writing/Correspondents</h2>
-    <ul>
-        <li><a href="contact.html">Contact/Reply</a></li>
-        <li><a href="subscribe.html">Subscribe</a></li>
-    </ul>
-    <h2>Stuff:</h2>
-    <ul>
-        <li><a href="/questions">questions</a></li>
-        <li><a href="/hughes-industries">a Hughes Industries Production</a></li>
-        <li><a href="/hand">hand</a></li>
-        <li><a href="/sheep">sheep</a></li>
-        <li><a href="/chris">Constable Chris</a></li>
-        <li><a href="/xth.html">x<sup>th</sup> Hand Goods</a></li>
-        <li>Or pop the hood and get in amongst it...</li>
-    </ul>
-    <script type="text/javascript" src="cli.js"></script>
+    <h1>Subscribe</h1>
+    <form action="https://tinyletter.com/rudenoise" method="post" target="popupwindow" onsubmit="window.open(&#39;https://tinyletter.com/rudenoise&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=800,height=600&#39;);return true">
+      <p><label for="tlemail">To receive an occasional newsletter, enter your email address:</label></p>
+      <p><input type="text" style="width:140px" name="email" id="tlemail"></p>
+      <input type="hidden" value="1" name="embed">
+      <input type="submit" value="Subscribe">
+      <p class="small"><a href="https://tinyletter.com/" target="_blank">powered by TinyLetter</a></p>
+    </form>
   </body>
 </html>
