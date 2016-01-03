@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<atom:link href="http://rudenoise.uk/feed.rss" rel="self" type="application/rss+xml" />
 <rss version="2.0">
 
     <channel>
@@ -9,11 +10,13 @@
             <title>Contact Detailes</title>
             <link>http://rudenoise.uk/contact.html</link>
             <description>The latest contact detials for Rudenoise.</description>
+            <guid>http://rudenoise.uk/contact.html</guid>
         </item>
         <item>
             <title>Subscribe</title>
             <link>http://rudenoise.uk/subscribe.html</link>
             <description>Details on how to subscribe to updartes from Rudenoise.</description>
+            <guid>http://rudenoise.uk/subscribex.html</guid>
         </item>
     </channel>
 
