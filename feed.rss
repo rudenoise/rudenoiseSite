@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+    <channel>
+        <title>Rudenoise's RSS Feed</title>
+        <link>http://rudenoise.uk</link>
+        <description>A feed notifying subscribers about content on the Rudenoise UK website.</description>
+        <item>
+            <title>Contact Detailes</title>
+            <link>http://rudenoise.uk/contact.html</link>
+            <description>The latest contact detials for Rudenoise.</description>
+        </item>
+        <item>
+            <title>Subscribe</title>
+            <link>http://rudenoise.uk/subscribe.html</link>
+            <description>Details on how to subscribe to updartes from Rudenoise.</description>
+        </item>
+    </channel>
+
+</rss> 
