@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<atom:link href="http://rudenoise.uk/feed.rss" rel="self" type="application/rss+xml" />
-<rss version="2.0">
-
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Rudenoise's RSS Feed</title>
+        <atom:link href="http://rudenoise.uk/feed.rss" rel="self" type="application/rss+xml" />
+        <title>Rudenoise's Feed</title>
         <link>http://rudenoise.uk</link>
-        <description>A feed notifying subscribers about content on the Rudenoise UK website.</description>
+        <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
             <title>Contact Detailes</title>
             <link>http://rudenoise.uk/contact.html</link>
-            <description>The latest contact detials for Rudenoise.</description>
+            <description>The latest contact details for Rudenoise.</description>
             <guid>http://rudenoise.uk/contact.html</guid>
+            <pubDate>Sun, 3 Jan 2016 15:21:03 GMT</pubDate>
         </item>
         <item>
             <title>Subscribe</title>
             <link>http://rudenoise.uk/subscribe.html</link>
-            <description>Details on how to subscribe to updartes from Rudenoise.</description>
+            <description>Details on how to subscribe to updates from Rudenoise.</description>
             <guid>http://rudenoise.uk/subscribex.html</guid>
+            <pubDate>Sun, 3 Jan 2016 15:21:03 GMT</pubDate>
         </item>
     </channel>
 
