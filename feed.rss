@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <atom:link href="http://rudenoise.uk/feed.rss" rel="self" type="application/rss+xml" />
-        <title>Rudenoise's Feed</title>
+        <title>Rudenoise</title>
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
