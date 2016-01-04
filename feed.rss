@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>About this Web-Log</title>
+            <link>http://rudenoise.uk/about.html</link>
+            <description>A brief synopses of the kind of content to be read on the Rudenoise website. </description>
+            <guid>http://rudenoise.uk/about.html</guid>
+            <pubDate>Mon, 4 Jan 2016 14:25:06 GMT</pubDate>
+        </item>
+        <item>
             <title>Contact Detailes</title>
             <link>http://rudenoise.uk/contact.html</link>
             <description>The latest contact details for Rudenoise.</description>
