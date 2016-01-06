@@ -11,13 +11,13 @@ up notebooks, chatting on to people I know and making
 things out of code. This has been fine but it hasn't
 really lead anywhere.
 
-Now I want to create the possibility that the stuff I
-think about might overlap with the stuff other people
-think about. Then those people have a small chance of
-discovering this overlap and then they might respond.
+Now I want to find out whether or not the stuff I
+think about overlaps with the stuff other people
+think about. I want those people to have a small chance of
+discovering this overlap too, and then they might respond.
 In which case I might learn something, make a friend
-or even be called a twat. Which doesn't happen often
+or even be called a helmet. None of which happens often
 enough.
 
-So this will be a web-log of my thoughts, a
-broad remit.
+So this will be a web-log of my thoughts (and they can be
+about a whole load of different stuff).
