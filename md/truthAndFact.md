@@ -1,4 +1,4 @@
-# Truth
+# Truth and Facts
 
 > Facts do not convey truth. That's a mistake. Facts create norms, but truth creates illumination.
 
