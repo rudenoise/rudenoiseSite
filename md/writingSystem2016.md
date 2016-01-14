@@ -1,5 +1,7 @@
 # Writing System 2016
 
+Here comes some ramble, [the meat](#theMeat) comes after.
+
 I like writing stuff. I like words and their meanings, I like
 sentences and love to read good ones. I like writing my own and
 occasionally like reading them back (although most of the time
@@ -43,10 +45,10 @@ pocket) with Rhodia dot notepads. And these have to be easy tear
 out (perforated) ones because I'm using the following system to
 write:
 
-## The Problem
+## <a id='theMeat'></a>The Problem
 
 I fill up notebooks with thoughts. They go on a shelf and once a
-year I pull them down to read them and get really bored because
+year come back down to be read and then I am bored because
 they are repetitive fragments that don't really go anywhere.
 
 There needs to be some editorial process and refinement.
