@@ -15,10 +15,10 @@ write and I like nice stuff and writing about nice stuff doubles
 the enjoyment and I like enjoying myself. There have been two
 shifts in tooling.
 
-The first digital, I now use a Mac Book Pro as
+The first digital: I now use a Mac Book Pro as
 my computer due to work reasons. I only use it as a laptop around
-2% of the time as I like attaching a decent external keyboard (a WASD
-) and a big monitor. Big clicky keys give a proper sense of typing.
+20% of the time as I like attaching a decent external keyboard (a
+WASD) and a big monitor. Big clicky keys give a proper sense of typing.
 You're definitely getting shit done when your letters make a louder
 click. I think the ultimate in laptop typing is probably the
 ThinkPad X220 but I can't really justify having two laptops.
@@ -35,15 +35,15 @@ is to use a terminal based editor with a black background. I use
 Vim and can't recommend it highly enough. Again this is as much
 about feel as creativity. If it feels good it is good.
 
-Having said all that about computer-writing I do the majority on
-paper. Up until September last year I used hand sharpened Tombow
-Mono 100 2B pencils with plain Moleskin Cahier notebooks. Then I
-read about fountain pens being designed to be the most smooth
-action, friction free writing implements and thought I'd give that
-a go. So I use a Pilot Capless and a Kaweko Lilliput (for my
-pocket) with Rhodia dot notepads. And these have to be easy tear
-out (perforated) ones because I'm using the following system to
-write:
+The second, analogue: having said all that about computer-writing I
+do the majority on paper. Up until September last year I used hand
+sharpened Tombow Mono 100 2B pencils with plain Moleskin Cahier
+notebooks. Then I read about fountain pens being designed to be the
+most smooth action, friction free writing implements and thought I'd
+give that a go. So I use a Pilot Capless and a Kaweko Lilliput (for
+my pocket, both nibs polished with micro-mesh pads) with Rhodia dot
+notepads. And these have to be easy tear out (perforated) ones
+because I'm using the following system to write:
 
 ## <a id='theMeat'></a>The Problem
 
