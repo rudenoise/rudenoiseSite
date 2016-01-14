@@ -1,10 +1,23 @@
 # Truth and Facts
 
-> Facts do not convey truth. That's a mistake. Facts create norms, but truth creates illumination.
+> Facts do not convey truth. That's a mistake. Facts create norms,
+> but truth creates illumination.
 
-> If you’re purely after facts, please buy yourself the phone directory of Manhattan. It has four million times correct facts. But it doesn’t illuminate.
+> If you’re purely after facts, please buy yourself the phone
+> directory of Manhattan. It has four million times correct facts.
+> But it doesn’t illuminate.
+_Werner Herzog_
 
-- Werner Herzog
+> [Truth can be defined as:]
+> A mobile army of metaphors, metonyms, and anthropomorphisms—in
+> short, a sum of human relations which have been enhanced,
+> transposed, and embellished poetically and rhetorically, and
+> which after long use seem firm, canonical, and obligatory to a
+> people: truths are illusions about which one has forgotten that
+> this is what they are; metaphors which are worn out and without
+> sensuous power; coins which have lost their pictures and now
+> matter only as metal, no longer as coins.
+_Friedrich Nietzsche_
 
 ## truth
 * _truːθ/_
