@@ -70,3 +70,8 @@ in and saw a promising section heading it would turn out to be empty.
 And so I mixed all that together and now have this:
 
 ![A picture of my notes on this writing system.](./writingSystem2016.jpg)
+
+* Use a system
+* Keep it simple
+* Change it often
+* Make it appealing
