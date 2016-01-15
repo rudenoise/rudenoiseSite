@@ -2,48 +2,33 @@
 
 Here comes some ramble, [the meat](#theMeat) comes after.
 
-I like writing stuff. I like words and their meanings, I like
-sentences and love to read good ones. I like writing my own and
-occasionally like reading them back (although most of the time
-not). I try to write every day and to make things more interesting
-I pay far too much attention to the process. This includes reading
-about how successful writers do it. Getting equipment that I find
+I like writing, words, their meanings, sentences and, especially,
+reading. I try to write every day and, to keep things
+interesting, I pay attention to the process. This includes reading
+about how other writers do it. Incorporating equipment that I find
 appealing and making that part of the process. 
 
-I'll write a little more about the equipment because I like to
-write and I like nice stuff and writing about nice stuff doubles
-the enjoyment and I like enjoying myself. There have been two
-shifts in tooling.
+The process and the equipment create a context. Context alters
+perception. The medium is the message, or at least affects it.
 
-The first digital: I now use a Mac Book Pro as
-my computer due to work reasons. I only use it as a laptop around
-20% of the time as I like attaching a decent external keyboard (a
-WASD) and a big monitor. Big clicky keys give a proper sense of typing.
-You're definitely getting shit done when your letters make a louder
-click. I think the ultimate in laptop typing is probably the
-ThinkPad X220 but I can't really justify having two laptops.
+## Equipment
+
+### Digital:
+* Mac Book Pro (or Thinkpad x220 and earlier)
+* Big monitor
+* External mechanical keyboard
+* Vim
 
 Typing on computers is secondary to handwriting but essential to
-publishing so to make it more fun I can definitely recommend
-learning to touch-type. It's quicker and makes you feel like a T.V.
-computerist, which is very important. It's really easy to learn, it
-only too 3 weeks and a free online tool (there are loads, try a few
-if you're considering it).
+publishing. Learn to touch-type. It's quicker and feels good. It can
+be learned in three weeks as part of usual computer use.
 
-The absolute most important thing to do when typing on a computer
-is to use a terminal based editor with a black background. I use
-Vim and can't recommend it highly enough. Again this is as much
-about feel as creativity. If it feels good it is good.
+### Analogue:
+* Pilot Capless and a Kaweko Lilliput
+* Rhodia dot notepads (A5, A5, A6)
+* Plain A4 envelopes
 
-The second, analogue: having said all that about computer-writing I
-do the majority on paper. Up until September last year I used hand
-sharpened Tombow Mono 100 2B pencils with plain Moleskin Cahier
-notebooks. Then I read about fountain pens being designed to be the
-most smooth action, friction free writing implements and thought I'd
-give that a go. So I use a Pilot Capless and a Kaweko Lilliput (for
-my pocket, both nibs polished with micro-mesh pads) with Rhodia dot
-notepads. And these have to be easy tear out (perforated) ones
-because I'm using the following system to write:
+Writing by hand is another context/medium and influences the process.
 
 ## <a id='theMeat'></a>The Problem
 
