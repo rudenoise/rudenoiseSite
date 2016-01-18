@@ -5,8 +5,8 @@ Here comes some ramble, [the meat](#theMeat) comes after.
 I like writing, words, their meanings, sentences and, especially,
 reading. I try to write every day and, to keep things
 interesting, I pay attention to the process. This includes reading
-about how other writers do it. Incorporating equipment that I find
-appealing and making that part of the process. 
+about how other writers do it and experimenting with equipment that
+I find appealing. 
 
 The process and the equipment create a context. Context alters
 perception. The medium is the message, or at least affects it.
@@ -17,18 +17,18 @@ perception. The medium is the message, or at least affects it.
 * Mac Book Pro (or Thinkpad x220 and earlier)
 * Big monitor
 * External mechanical keyboard
-* Vim
+* (n)Vim
 
 Typing on computers is secondary to handwriting but essential to
-publishing. Learn to touch-type. It's quicker and feels good. It can
-be learned in three weeks as part of usual computer use.
+publishing. Touch-typing is essential.
 
 ### Analogue:
 * Pilot Capless and a Kaweko Lilliput
 * Rhodia dot notepads (A5, A5, A6)
 * Plain A4 envelopes
 
-Writing by hand is another context/medium and influences the process.
+Writing by hand is a context/medium that underpins the whole
+process.
 
 ## <a id='theMeat'></a>The Problem
 
@@ -36,12 +36,12 @@ I fill up notebooks with thoughts. They go on a shelf and once a
 year come back down to be read and then I am bored because
 they are repetitive fragments that don't really go anywhere.
 
-There needs to be some editorial process and refinement.
+To change this, I needed an editorial process.
 
 ## The Solution
 
-Reading about other writers' processes lead me to pick a few ideas
-that I think would work for me. These are the inspiration:
+Reading about other writers' processes lead me to a few ideas
+that appealed. These are the inspiration:
 
 > [… when a] draft is finished, I put the manuscript away for a while, a week,
 > a month, sometimes longer. When I take it out again, I read it as
