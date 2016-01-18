@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+Test
+        </title>
+        <style type="text/css">
+            @font-face {
+                    font-family: 'ocramedium';
+                    src: url('ocr-a.eot');
+                    src: url('ocr-a.eot?#iefix') format('embedded-opentype'),
+                         url('ocr-a.woff') format('woff'),
+                         url('ocr-a.ttf') format('truetype'),
+                         url('ocr-a.svg#ocramedium') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+            }
+            body {
+                margin: 1em auto;
+                padding-left: .5em;
+                padding-right: 1.5em;
+                max-width: 640px;
+                font-size: 135%;
+                line-height: 1.5em;
+                background: #222;
+                color: #CCC;
+                font-family: ocramedium, ocraextended, monospace;
+                background-image: url("bg.png");
+                background-repeat: repeat;
+            }
+            @media only screen and (max-width: 400px) {
+                body {font-size: 100%;}
+            }
+            a {
+                color: orange;
+                text-decoration: none;
+                border-bottom: 1px solid;
+            }
+            h1 { line-height: 1em;}
+            form {border: none}
+            input { font-family: ocramedium, ocraextended, monospace; border: none; }
+            .small { font-size: 65%;}
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <p>
+            <span id='h'>H</span>
+            <span id='i'>I</span>
+        </p>
+        <script type="text/javascript">
+            var h = document.getElementById('h'),
+                i = document.getElementById('i'),
+                hColor = {
+                    r: 0,
+                    g: 0,
+                    b: 0,
+                    up: true,
+                    current: 'r'
+                },
+                iColor = {
+                    r: 255,
+                    g: 255,
+                    b: 255,
+                    up: false,
+                    current: 'b'
+                },
+                hup = true;
+                iup = false;
+            function objToStr(obj) {
+                return [
+                    'rgb(',
+                    obj.r,
+                    ',',
+                    obj.g,
+                    ',',
+                    obj.b,
+                    ')'
+                ].join('');
+            }
+            function setColors() {
+                h.style.color = objToStr(hColor);
+                i.style.color = objToStr(iColor);
+            }
+            function nextColor(obj) {
+                if (obj.current === 'r') {
+                    obj.current = 'g';
+                    return;
+                }
+                if (obj.current === 'g') {
+                    obj.current = 'b';
+                    return;
+                }
+                if (obj.current === 'b') {
+                    obj.current = 'r';
+                    return;
+                }
+            }
+            setInterval(function () {
+                if (iColor.up) {
+                    iColor[iColor.current] += 1;
+                }
+                if (!iColor.up) {
+                    iColor[iColor.current] -= 1;
+                }
+                if (iColor[iColor.current] === 255) {
+                    nextColor(iColor);
+                    iColor.up = false;
+                }
+                if (iColor[iColor.current] < 1) {
+                    iColor.up = true;
+                }
+                setColors();
+            }, 5);
+            setInterval(function () {
+                if (hColor.up) {
+                    hColor[hColor.current] += 1;
+                }
+                if (!hColor.up) {
+                    hColor[hColor.current] -= 1;
+                }
+                if (hColor[hColor.current] === 255 || hColor[hColor.current] < 1) {
+                    hColor.up = !hColor.up;
+                    if (hColor.up) {
+                        nextColor(hColor);
+                    }
+                }
+                setColors();
+            }, 5);
+            setColors();
+            //h.style.color = hColor;
+            //i.style.color = iColor;
+        </script>
+    </body>
+</html>
