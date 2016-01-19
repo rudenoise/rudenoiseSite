@@ -9,7 +9,7 @@ about how other writers do it and experimenting with equipment that
 I find appealing. 
 
 The process and the equipment create a context. Context alters
-perception. The medium is the message, or at least affects it.
+perception and the medium is (or affects) the message.
 
 ## Equipment
 
