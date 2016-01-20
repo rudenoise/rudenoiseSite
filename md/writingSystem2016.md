@@ -1,6 +1,8 @@
 # Writing System 2016
 
-Here comes some ramble, [the meat](#theMeat) comes after.
+This is a post to get this blog going, it describes the process used
+to create it. Here comes some ramble, [the meat](#theMeat) comes
+after.
 
 I like writing, words, their meanings, sentences and, especially,
 reading. I try to write every day and, to keep things
@@ -23,9 +25,10 @@ Typing on computers is secondary to handwriting but essential to
 publishing. Touch-typing is essential.
 
 ### Analogue:
-* Pilot Capless <sub>[_[2](#ref2)_]</sub> and a Kaweco Lilliput <sub>[_[3](#ref3)_]</sub>
-* Rhodia dot notepads (A5, A5, A6) <sub>[_[4](#ref4)_]</sub>
-* Plain A4 envelopes
+* Pilot Capless <sub>[_[2](#ref2)_]</sub> and a Kaweco Lilliput
+  <sub>[_[3](#ref3)_]</sub> fountain pens.
+* Rhodia dot notepads (A5, A5, A6) <sub>[_[4](#ref4)_]</sub>.
+* Plain A4 envelopes.
 
 Writing by hand is a context/medium that underpins the whole
 process.
