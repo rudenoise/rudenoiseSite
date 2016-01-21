@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>Writing System 2016</title>
+            <link>http://rudenoise.uk/writingSystem2016.html</link>
+            <description>This post describes the process I'm using to create this blog.</description>
+            <guid>http://rudenoise.uk/writingSystem2016.html</guid>
+            <pubDate>Thu, 21 Jan 2016 20:32:37 GMT</pubDate>
+        </item>
+        <item>
             <title>About this Web-Log</title>
             <link>http://rudenoise.uk/about.html</link>
             <description>A brief synopses of the kind of content to be read on the Rudenoise website. </description>

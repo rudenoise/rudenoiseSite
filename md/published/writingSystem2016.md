@@ -1,8 +1,6 @@
 # Writing System 2016
 
-This is a post to get this blog going, it describes the process used
-to create it. Here comes some ramble, [the meat](#theMeat) comes
-after.
+This post describes the process I'm using to create this blog.
 
 I like writing, words, their meanings, sentences and, especially,
 reading. I try to write every day and, to keep things
@@ -33,13 +31,13 @@ publishing. Touch-typing is essential.
 Writing by hand is a context/medium that underpins the whole
 process.
 
-## <a id='theMeat'></a>The Problem
+## The Problem
 
 I fill up notebooks with thoughts. They go on a shelf and once a
 year come back down to be read and then I am bored because
 they are repetitive fragments that don't really go anywhere.
 
-To change this, I needed an editorial process.
+To change this, I needed a writing and editorial process.
 
 ## The Solution
 

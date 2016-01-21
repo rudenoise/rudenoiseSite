@@ -1,10 +1,11 @@
 # Risky Business
 
-I have a Limited Company
-(Limited by shares, meaning I can only be personally
-liable up to the value of my shares)
-<sub>[_[1](#ref1)_]</sub>.
-It has a "Corporate Personality" <sub>[_[4](#ref4)_]</sub>.
+
+
+I have a Limited Company (Limited by shares, meaning I can only be
+personally liable up to the value of my shares)
+<sub>[_[1](#ref1)_]</sub>. It has a "Corporate Personality"
+<sub>[_[4](#ref4)_]</sub>.
 
 ### References:
 1. <a id="ref1"></a>[UK Limited Company](https://www.gov.uk/business-legal-structures/limited-company)
