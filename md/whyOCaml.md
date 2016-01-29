@@ -35,4 +35,12 @@ I'm here because of an aesthetic choice. Despite all the scientific
 allusion of the computing industry, and the use of the words
 computer science, I don't think much about the comparisons and
 discussions on relative merits (despite reading them). It comes
-down to gut feel and intuition. 
+down to gut feel and intuition.
+
+That isn't to say that I see programming as an art or means of
+finding creative truth. For me, it's a process of pleasing shallow
+clarity. What you get is what you type, if it works it works and I
+get to play the role of a programmer. It's an escape from the deep
+problems into the ones that can actually be solved. I want to make
+things that give the impression of progression and make me feel
+clever (because the problems are hard but not too hard).
