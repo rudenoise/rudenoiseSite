@@ -9,6 +9,7 @@ Guides
 * https://realworldocaml.org/v1/en/html/a-guided-tour.html
 * https://ocaml.org/learn/tutorials/basics.html
 * https://github.com/realworldocaml/book/wiki/Installation-Instructions#setting-up-and-using-utop
+* https://www.cs.kent.ac.uk/people/staff/sao/articles/osx_vim_ocaml.html
 
 The basics:
 ```
