@@ -25,7 +25,13 @@ _0/5_
 
 ## Specific Activities
 
+* Bed for Sadie.
 * Light in kitchen.
 * Picture frame 'a'.
 * Put glass in other frame.
 * Print for other frame.
+* Savings accounts for girls.
+
+## Done
+
+_NONE, YET._
