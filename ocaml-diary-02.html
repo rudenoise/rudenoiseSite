@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+OCaml Diary, Week Two
+        </title>
+        <style type="text/css">
+            @font-face {
+                    font-family: 'ocramedium';
+                    src: url('ocr-a.eot');
+                    src: url('ocr-a.eot?#iefix') format('embedded-opentype'),
+                         url('ocr-a.woff') format('woff'),
+                         url('ocr-a.ttf') format('truetype'),
+                         url('ocr-a.svg#ocramedium') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+            }
+            body {
+                margin: 1em auto;
+                padding-left: .5em;
+                padding-right: 1.5em;
+                max-width: 640px;
+                font-size: 135%;
+                line-height: 1.5em;
+                background: #222;
+                color: #CCC;
+                font-family: ocramedium, ocraextended, monospace;
+                background-image: url("/bg.png");
+                background-repeat: repeat;
+            }
+            blockquote {
+                font-size: 0.9em;
+                font-style: oblique;
+            }
+            .caption {
+                font-size: 0.7em;
+                font-style: italic;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 640px;
+            }
+            @media only screen and (max-width: 400px) {
+                body {font-size: 100%;}
+            }
+            a {
+                color: orange;
+                text-decoration: none;
+                border-bottom: 1px solid;
+            }
+            sub>em>a { border-bottom: none; }
+            h1 { line-height: 1em;}
+            form {border: none}
+            input { font-family: ocramedium, ocraextended, monospace; border: none; }
+            .small { font-size: 65%;}
+            .sourceCode {
+                background: #444;
+                color: #FFF;
+            }
+            .ocaml .fl {
+                color: yellow;
+            }
+            .ocaml .kw {
+                color: #ffb380;
+            }
+            .ocaml .co {
+                color: #ccc;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <article>
+            <header>
+                <h1>
+OCaml Diary, Week Two
+                </h1>
+                <p class="small">Published:
+                    <time>
+2016-02-05
+                    </time>
+                </p>
+            </header>
+<p>Learning a programming language in amongst a full-time job (I'm a contractor, on a contract, so this comes out of my own time/pocket) and parenting my daughters (2 and 4) is a tricky process. Reading the book <sub>[<em><a href="#ref1">1</a></em>]</sub> on the bus to and from my client gives me 3 hours a week <sub>[<em><a href="#ref2">2</a></em>]</sub>. Then I grab the odd 1/2 hour before and/or after work to test out the ideas via <em>utop</em> <sub>[<em><a href="#ref3">3</a></em>]</sub> or even using vim with <em>merlin</em> <sub>[<em><a href="#ref4">4</a></em>]</sub>).</p>
+<p>After about a week of this I was getting a feel for OCaml's style. I usually prefer simple languages. JavaScript the Good Parts <sub>[<em><a href="#ref5">5</a></em>]</sub> and the Little Schemer <sub>[<em><a href="#ref6">6</a></em>]</sub> are the high water mark for book/language combinations. Small concepts that grow in your mind, less is more. OCaml isn't simple in this way. Real World OCaml is a thick book 469 pages) more than half of which is describing the language (enough to swallow both JSTGP and LS with room to spare).</p>
+<p>It reminds me of Swift (which took a lot of inspiration from OCaml, apparently), Erlang (it's functional, uses guards/pattern-matching etc...) and Haskel (compiled, fast, functional, a focus on types etc... and there's a fair bit of mental adjustment needed).</p>
+<p>Progress was slow and the The Go Programming Language <sub>[<em><a href="ref7">7</a></em>]</sub> book started to look more appealing. Go is a simple language, it prioritises clear simple building blocks and an idiomatic style. It should appeal, and it does, but reading TGPL wasn't drawing me in. While Go is practical and powerful, the challenge of OCaml was greater. OCaml's extra complexity has been designed for a purpose and it doesn't pander to convention.</p>
+<p>I have the impression that persevering will yield something worthwhile.</p>
+<h2 id="workings-out">Workings Out</h2>
+<p><a id="ref2"></a> Hours of OCaml reading time:</p>
+<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="co">(* define a recursive function</span>
+<span class="co"> * recurse a list and check each item is the same</span>
+<span class="co"> *)</span>
+<span class="kw">let</span> <span class="kw">rec</span> same a_list =
+  <span class="kw">match</span> a_list <span class="kw">with</span>
+    | [] | [_] -&gt; <span class="kw">true</span>
+    | hd1 :: hd2 :: tl -&gt;
+      <span class="kw">if</span> hd1 &lt;&gt; hd2 <span class="kw">then</span>
+        <span class="kw">false</span>
+      <span class="kw">else</span>
+        same (hd2 :: tl);;
+
+<span class="co">(* call same</span>
+<span class="co"> * with some equivalent values</span>
+<span class="co"> * 3 days</span>
+<span class="co"> * 2 trips</span>
+<span class="co"> * each trip 1/2 hour</span>
+<span class="co"> *)</span>
+same [
+  (<span class="fl">3.</span> *. <span class="fl">2.</span> *. <span class="fl">0.5</span>);
+  (( *. ) <span class="fl">3.</span> (( *. ) <span class="fl">2.</span> <span class="fl">0.5</span>));
+  <span class="fl">3.</span>
+];;
+<span class="co">(* returns true *)</span></code></pre></div>
+<h2 id="links">Links</h2>
+<ul>
+<li><a id="ref1"></a> <a href="https://github.com/diml/uto://github.com/the-lambda-church/merli://realworldocaml.org/">Real World OCaml</a></li>
+<li><a id="ref3"></a> <a href="https://github.com/diml/utop">utop</a></li>
+<li><a id="ref4"></a> <a href="https://github.com/diml/uto://github.com/the-lambda-church/merlin">merlin</a></li>
+<li><a id="ref5"></a> <a href="http://shop.oreilly.com/product/9780596517748.do">JavaScript the Good Parts</a></li>
+<li><a id="ref6"></a> <a href="https://mitpress.mit.edu/books/little-schemer">The Little Schemer</a></li>
+<li><a id="ref7"></a> <a href="http://www.gopl.io/">The Go Programming Language</a></li>
+</ul>
+            <footer>
+                <p class="small">If you want to be informed when more of this stuff is written you can <a href="/subscribe.html">subscribe</a> or why not look at <a href="/">Rudenoise's home page</a>?</p>
+            </footer>            
+        </article>
+    </body>
+</html>

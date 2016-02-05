@@ -1,4 +1,4 @@
-# Why OCaml?
+# OCaml Diary, Week One
 
 I decided to start learning a new programming language, selecting
 candidates based on pragmatic logic: likelihood of paid work,
