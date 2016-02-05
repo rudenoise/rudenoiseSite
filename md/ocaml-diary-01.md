@@ -27,20 +27,18 @@ OCaml is drawing me in because I like the role it enables me to play.
 It's seen as esoteric and difficult without the obviousness of
 Haskell. It's used on the fringes. The barrier to entry is
 reassuringly high. Advocates talk about its speed and ability to
-encapsulate certain problem sets more succinctly. This is all
-reassuring but not the source of its appeal to me. It feels good to
-be on the fringes of the computing industry without any real risk.
+encapsulate certain problem sets more succinctly.
 
 I'm here because of an aesthetic choice. Despite all the scientific
 allusion of the computing industry, and the use of the words
-computer science, I don't think much about the comparisons and
+_computer science_, I don't think much about the comparisons and
 discussions on relative merits (despite reading them). It comes
 down to gut feel and intuition.
 
 That isn't to say that I see programming as an art or means of
 finding creative truth. For me, it's a process of pleasing shallow
 clarity. What you get is what you type, if it works it works and I
-get to play the role of a programmer. It's an escape from the deep
-problems into the ones that can actually be solved. I want to make
+get to play the role of a programmer. It's an escape from human
+problems into the finite world of machines. I want to make
 things that give the impression of progression and make me feel
 clever (because the problems are hard but not too hard).
