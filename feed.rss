@@ -6,6 +6,20 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>OCaml Diary, Week 2</title>
+            <link>http://rudenoise.uk/ocaml-diary-02.html</link>
+            <description>Getting a feel for OCaml and its idiosyncrasies.</description>
+            <guid>http://rudenoise.uk/ocaml-diary-02.html</guid>
+            <pubDate>Mon, 8 Feb 2016 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>OCaml Diary, Week 1</title>
+            <link>http://rudenoise.uk/ocaml-diary-01.html</link>
+            <description>Choosing a new programming language to learn.</description>
+            <guid>http://rudenoise.uk/ocaml-diary-01.html</guid>
+            <pubDate>Mon, 8 Feb 2016 07:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title>Writing System 2016</title>
             <link>http://rudenoise.uk/writingSystem2016.html</link>
             <description>This post describes the process I'm using to create this blog.</description>

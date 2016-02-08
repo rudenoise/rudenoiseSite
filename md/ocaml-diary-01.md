@@ -23,7 +23,7 @@ constructed as Go's but I was intrigued. I started "Real World OCam"
 online, then bought the physical book. I even did a boast on
 Twitter. Now I've written this.
 
-OCaml is drawing me in because I like the role it enables me to play.
+OCaml drew me in because I like the role it enables me to play.
 It's seen as esoteric and difficult without the obviousness of
 Haskell. It's used on the fringes. The barrier to entry is
 reassuringly high. Advocates talk about its speed and ability to
