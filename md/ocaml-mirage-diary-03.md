@@ -1,33 +1,33 @@
-# OCaml Diary, Week 3
+# OCaml (and Mirage OS) Diary, Week 3
 
 Whilst continuing to work through _Real World Ocaml_, I did some
-research into projects that make use of it and found a project
-that really caught my interest. MirageOS <sub>[_[1](#ref1)_]</sub>.
+research into projects that make use of it and found one
+that really helled my interest. MirageOS <sub>[_[1](#ref1)_]</sub>.
 
-I've been working on DevOps projects for clients for a while and
-have made use of Docker as part of development environments for the
-teams I've worked in and as a deployable wrapper around
-applications going into "_the cloud_". As a developer Docker, has
-been useful in creating portable, reproducible environments and as
-the platform progresses I've been looking at reducing the number of
-moving parts in the stack. In a NodeJS stack, that is a lot of
-moving parts (Operating System, NodeJS, NPM packages - a lot of NPM
-packages - and sitting on top the application's code, AKA the value).
+I've been working on DevOps projects, with clients, for a while and
+have made use of Docker (as part of both development environments
+and deployment mechanism). As a developer Docker, has
+been useful in creating portable, reproducible environments. Making
+this process so easy to manage has its downsides, the ease of
+adding dependencies to the stack, for example.
+In a NodeJS stack, there can be a lot of moving parts (Operating
+System, system tools,  NodeJS, NPM packages - that also pull in
+further packages - and sitting on top: the application, AKA the
+value).
 
 This is a lot of stuff to use when the application itself can be
 pretty small, especially in the case of micro-services. There is a
 lot of coupling and dependency in these stack and, once bundled,
 the combined size is significant. To reconstruct the constituent
-parts takes time, more parts more time. This slows down deploy
-times and becomes brittle.
+parts takes time. More parts: more time and complexity. This slows
+down deploy times and the system becomes brittle.
 
 Another factor to consider is security. A web-application's
 vulnerabilities are highly exposed so developers need to be mindful
 about the attack-surfaces they may introduce. That's a difficult
-task when reasoning about application logic, alone. For the jobbing
-full-stack, DevOps engineer it would be valuable be able to know
-about all the attack-surfaces and monitor/manage them. This is a
-lot of work when taking into account the stack beneath the app.
+task when limited to application logic. For the jobbing
+full-stack, DevOps engineer it is desirable be to know
+about all the attack-surfaces, then monitor and manage them.
 What does the Linux distribution and version contain? What
 applications have been added via the package manager? If this is a
 node app what do all the NPM package dependencies do? That is a lot
@@ -42,7 +42,11 @@ contained binary on top. For example: A GoLang app inside
 micro-container is a decent combination and well worth considering.
 
 It turns out that the refining process can be taken further. One
-approach is the use of micro-kernels, MirageOS, for example.
+approach is the use of unikernels, MirageOS, for example. There is
+an useful history and description of these on the ACM Queue site
+<sub>[_[1](#ref1)_]</sub>.
+
+Having read
 
 ## Links
 
@@ -56,3 +60,5 @@ approach is the use of micro-kernels, MirageOS, for example.
 * <a id="ref8"></a> []()
 * <a id="ref9"></a> []()
 * <a id="ref10"></a> []()
+
+[Unikernels: Rise of the Virtual Library Operating System](http://queue.acm.org/detail.cfm?id=2566628)

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+OCaml (and Mirage OS) Diary, Week 3
+        </title>
+        <style type="text/css">
+            @font-face {
+                    font-family: 'ocramedium';
+                    src: url('ocr-a.eot');
+                    src: url('ocr-a.eot?#iefix') format('embedded-opentype'),
+                         url('ocr-a.woff') format('woff'),
+                         url('ocr-a.ttf') format('truetype'),
+                         url('ocr-a.svg#ocramedium') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+            }
+            body {
+                margin: 1em auto;
+                padding-left: .5em;
+                padding-right: 1.5em;
+                max-width: 640px;
+                font-size: 135%;
+                line-height: 1.5em;
+                background: #222;
+                color: #CCC;
+                font-family: ocramedium, ocraextended, monospace;
+                background-image: url("/bg.png");
+                background-repeat: repeat;
+            }
+            blockquote {
+                font-size: 0.9em;
+                font-style: oblique;
+            }
+            .caption {
+                font-size: 0.7em;
+                font-style: italic;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 640px;
+            }
+            @media only screen and (max-width: 400px) {
+                body {font-size: 100%;}
+            }
+            a {
+                color: orange;
+                text-decoration: none;
+                border-bottom: 1px solid;
+            }
+            sub>em>a { border-bottom: none; }
+            h1 { line-height: 1em;}
+            form {border: none}
+            input { font-family: ocramedium, ocraextended, monospace; border: none; }
+            .small { font-size: 65%;}
+            .sourceCode {
+                overflow-x: scroll; 
+                background: #444;
+                color: #FFF;
+            }
+            .ocaml .fl {
+                color: yellow;
+            }
+            .ocaml .kw {
+                color: #ffb380;
+            }
+            .ocaml .co {
+                color: #ccc;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <article>
+            <header>
+                <h1>
+OCaml (and Mirage OS) Diary, Week 3
+                </h1>
+                <p class="small">Published:
+                    <time>
+2016-02-12
+                    </time>
+                </p>
+            </header>
+<p>Whilst continuing to work through <em>Real World Ocaml</em>, I did some research into projects that make use of it and found one that really helled my interest. MirageOS <sub>[<em><a href="#ref1">1</a></em>]</sub>.</p>
+<p>I've been working on DevOps projects, with clients, for a while and have made use of Docker (as part of both development environments and deployment mechanism). As a developer Docker, has been useful in creating portable, reproducible environments. Making this process so easy to manage has its downsides, the ease of adding dependencies to the stack, for example. In a NodeJS stack, there can be a lot of moving parts (Operating System, system tools, NodeJS, NPM packages - that also pull in further packages - and sitting on top: the application, AKA the value).</p>
+<p>This is a lot of stuff to use when the application itself can be pretty small, especially in the case of micro-services. There is a lot of coupling and dependency in these stack and, once bundled, the combined size is significant. To reconstruct the constituent parts takes time. More parts: more time and complexity. This slows down deploy times and the system becomes brittle.</p>
+<p>Another factor to consider is security. A web-application's vulnerabilities are highly exposed so developers need to be mindful about the attack-surfaces they may introduce. That's a difficult task when limited to application logic. For the jobbing full-stack, DevOps engineer it is desirable be to know about all the attack-surfaces, then monitor and manage them. What does the Linux distribution and version contain? What applications have been added via the package manager? If this is a node app what do all the NPM package dependencies do? That is a lot of questions to answer and this is a mutable stack, updates need to be made and the system's variety shifting and growing.</p>
+<h2 id="reducing-the-stack">Reducing the Stack</h2>
+<p>One improvement over big stacks like those often used in NodeJS is to reduce the size of the docker-container and deploy a self contained binary on top. For example: A GoLang app inside micro-container is a decent combination and well worth considering.</p>
+<p>It turns out that the refining process can be taken further. One approach is the use of unikernels, MirageOS, for example. There is an useful history and description of these on the ACM Queue site <sub>[<em><a href="#ref1">1</a></em>]</sub>.</p>
+<p>Having read</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a id="ref1"></a> <a href="https://mirage.io/">Mirage OS</a></li>
+<li><a id="ref2"></a> <a href=""></a></li>
+<li><a id="ref3"></a> <a href=""></a></li>
+<li><a id="ref4"></a> <a href=""></a></li>
+<li><a id="ref5"></a> <a href=""></a></li>
+<li><a id="ref6"></a> <a href=""></a></li>
+<li><a id="ref7"></a> <a href=""></a></li>
+<li><a id="ref8"></a> <a href=""></a></li>
+<li><a id="ref9"></a> <a href=""></a></li>
+<li><a id="ref10"></a> <a href=""></a></li>
+</ul>
+<p><a href="http://queue.acm.org/detail.cfm?id=2566628">Unikernels: Rise of the Virtual Library Operating System</a></p>
+            <footer>
+                <p class="small">If you want to be informed when more of this stuff is written you can <a href="/subscribe.html">subscribe</a> or why not look at <a href="/">Rudenoise's home page</a>?</p>
+            </footer>            
+        </article>
+    </body>
+</html>
