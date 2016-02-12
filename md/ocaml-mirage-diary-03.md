@@ -4,6 +4,8 @@ Whilst continuing to work through _Real World Ocaml_, I did some
 research into projects that make use of it and found one
 that really helled my interest. MirageOS <sub>[_[1](#ref1)_]</sub>.
 
+## Complexity in DevOps
+
 I've been working on DevOps projects, with clients, for a while and
 have made use of Docker (as part of both development environments
 and deployment mechanism). As a developer Docker, has
