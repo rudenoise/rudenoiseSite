@@ -1,66 +1,79 @@
-# OCaml (and Mirage OS) Diary, Week 3
+# OCaml/Mirage OS Diary, Week 3
 
 Whilst continuing to work through _Real World Ocaml_, I did some
-research into projects that make use of it and found one
-that really helled my interest. MirageOS <sub>[_[1](#ref1)_]</sub>.
+research into related projects and found one
+that really helled my interest: MirageOS <sub>[_[1](#ref1)_]</sub> (a
+unikernel/library OS for building small, fast and secure web-servers).
 
-## Complexity in DevOps
+## My history with servers 2003-2016
 
-I've been working on DevOps projects, with clients, for a while and
-have made use of Docker (as part of both development environments
-and deployment mechanism). As a developer Docker, has
-been useful in creating portable, reproducible environments. Making
-this process so easy to manage has its downsides, the ease of
-adding dependencies to the stack, for example.
-In a NodeJS stack, there can be a lot of moving parts (Operating
-System, system tools,  NodeJS, NPM packages - that also pull in
-further packages - and sitting on top: the application, AKA the
-value).
+* **2003** Started my dev "career". The website I
+  worked on was a LAMP stack hosted on a single "beefy" server,
+  kept in a rack, in (what I remember to be, but can't find
+  supporting evidence for) a nuclear fallout shelter beneath
+  Manchester's China Town. We administered it via _ssh_ and _ftp_.
+  If it ran into trouble someone had to run down there and
+  physically swap it for a spare. Apparently, it set alight once
+  when (non-pornographic) images were hot-linked by an Italian porn
+  site. It got too hot. _Data backup_ was done as DB dumps and
+  _redundancy_ was RAID enabled drives! I enjoyed those years.
+* **2006-2011** Things settled into a less drama prone phase as
+  projects I worked on were living in RackSpace boxes with SLAs and
+  management packages. There were DB, Server and Network admins at
+  the larger companies. Blogs, like _High Scalability_, told enticing
+  tales of server-farms in shipping containers and other exotic and
+  exciting set-ups.
+* **2011-2014** Things started getting a bit tasty again as cloud
+  services were consumerised. DevOps tooling had trickled down (and
+  my employer dealt with global scale and location problems). The creation,
+  movement and management of servers was becoming another every-day
+  tool (thanks to Vagrant, Chef, Puppet, AWS CLI and their like).
+* **2015** Docker was now firmly in place as a way to build
+  and manage consistent environments (from dev machines to live servers).
+  Servers were now another programming tool.
+* **2016** Unikernels?!
 
-This is a lot of stuff to use when the application itself can be
-pretty small, especially in the case of micro-services. There is a
-lot of coupling and dependency in these stack and, once bundled,
-the combined size is significant. To reconstruct the constituent
-parts takes time. More parts: more time and complexity. This slows
-down deploy times and the system becomes brittle.
+## Why Unikernels?
 
-Another factor to consider is security. A web-application's
-vulnerabilities are highly exposed so developers need to be mindful
-about the attack-surfaces they may introduce. That's a difficult
-task when limited to application logic. For the jobbing
-full-stack, DevOps engineer it is desirable be to know
-about all the attack-surfaces, then monitor and manage them.
-What does the Linux distribution and version contain? What
-applications have been added via the package manager? If this is a
-node app what do all the NPM package dependencies do? That is a lot
-of questions to answer and this is a mutable stack, updates need to
-be made and the system's variety shifting and growing.
+In a NodeJS stack, for example, there are a lot of moving parts 
+Operating System, system tools,  NodeJS, NPM packages - that also
+pull in further packages - and sitting on top: the application).
 
-## Reducing the Stack
+Stacks like this have a lot components to think about, manage and
+deploy. In a world of micro-services the ratio of _stuff_ to
+application code grows further.
 
-One improvement over big stacks like those often used in NodeJS is
-to reduce the size of the docker-container and deploy a self
-contained binary on top. For example: A GoLang app inside
-micro-container is a decent combination and well worth considering.
+On top of this, each item in the stack has the potential to
+introduce security vulnerability.
 
-It turns out that the refining process can be taken further. One
-approach is the use of unikernels, MirageOS, for example. There is
-an useful history and description of these on the ACM Queue site
-<sub>[_[1](#ref1)_]</sub>.
+The challenge now is to reduce the complexity/stack-size. Go apps
+with micro-containers is a good example of this movement
+<sub>[_[2](#ref2)_]</sub>.
 
-Having read
+A potential step on from this are Unikernels and Library Operating
+Systems. Application code and operating system compiled and
+deployed as one purpose built unit. This leads to tiny (measured in kB
+rather than MB), fast starting and quickly deployed servers with
+fewer attack surfaces.
+
+For a good history and overview of all this I recommend
+_Unikernels: Rise of the Virtual Library Operating System_
+<sub>[_[3](#ref3)_]</sub>.
+
+## So what am I doing about it?
+
+I've enjoyed learning OCaml but needed a real-world project to use
+it on. I've also been looking to contribute to an Open Source
+project, ideally one that could play a part in the future of the
+internet's infrastructure. Discovering Unikernels lead me to sign
+up for the Mirage OS Hackathon (and it's in Marrakech)
+<sub>[_[4](#ref4)_]</sub>.
+
+I'm all in.
 
 ## Links
 
 * <a id="ref1"></a> [Mirage OS](https://mirage.io/)
-* <a id="ref2"></a> []()
-* <a id="ref3"></a> []()
-* <a id="ref4"></a> []()
-* <a id="ref5"></a> []()
-* <a id="ref6"></a> []()
-* <a id="ref7"></a> []()
-* <a id="ref8"></a> []()
-* <a id="ref9"></a> []()
-* <a id="ref10"></a> []()
-
-[Unikernels: Rise of the Virtual Library Operating System](http://queue.acm.org/detail.cfm?id=2566628)
+* <a id="ref2"></a> [Microcontainers – Tiny, Portable Docker Containers](http://www.iron.io/microcontainers-tiny-portable-containers/)
+* <a id="ref3"></a> [Unikernels: Rise of the Virtual Library Operating System](http://queue.acm.org/detail.cfm?id=2566628)
+* <a id="ref4"></a> [MirageOS hackathon](http://marrakech2016.mirage.io/)
