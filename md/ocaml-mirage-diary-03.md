@@ -1,4 +1,4 @@
-# OCaml/Mirage OS Diary, Week 3
+# OCaml/MirageOS Diary, Week 3
 
 Whilst continuing to work through _Real World Ocaml_, I did some
 research into related projects and found one
