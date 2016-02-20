@@ -1,9 +1,9 @@
 # OCaml/MirageOS Diary, Week 3
 
 Whilst continuing to work through _Real World Ocaml_, I did some
-research into related projects and found one
-that really helled my interest: MirageOS <sub>[_[1](#ref1)_]</sub> (a
-unikernel/library OS for building small, fast and secure web-servers).
+research into related projects and this caught my interest:
+MirageOS <sub>[_[1](#ref1)_]</sub> (a unikernel/library-OS for
+building small, fast and secure web-servers).
 
 ## My history with servers 2003-2016
 
@@ -17,17 +17,18 @@ unikernel/library OS for building small, fast and secure web-servers).
   when (non-pornographic) images were hot-linked by an Italian porn
   site. It got too hot. _Data backup_ was done as DB dumps and
   _redundancy_ was RAID enabled drives! I enjoyed those years.
-* **2006-2011** Things settled into a less drama prone phase as
-  projects I worked on were living in RackSpace boxes with SLAs and
-  management packages. There were DB, Server and Network admins at
-  the larger companies. Blogs, like _High Scalability_, told enticing
-  tales of server-farms in shipping containers and other exotic and
-  exciting set-ups.
+* **2006-2011** Servers were less exciting as the projects I worked on lived
+  in RackSpace boxes (with SLAs and management packages). There were
+  DB, Server and Network admins at the larger companies.
+  We even used source control.
+  Blogs, like _High Scalability_, had tales of server-farms in
+  shipping containers and other exotic and exciting set-ups.
 * **2011-2014** Things started getting a bit tasty again as cloud
   services were consumerised. DevOps tooling had trickled down (and
-  my employer dealt with global scale and location problems). The creation,
-  movement and management of servers was becoming another every-day
-  tool (thanks to Vagrant, Chef, Puppet, AWS CLI and their like).
+  my employer dealt with global scale and location problems). The
+  creation, movement and management of servers was becoming another
+  every-day tool (thanks to Vagrant, Chef, Puppet, AWS CLI and their
+  like).
 * **2015** Docker was now firmly in place as a way to build
   and manage consistent environments (from dev machines to live servers).
   Servers were now another programming tool.

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="http://rudenoise.uk/ocaml.rss" rel="self" type="application/rss+xml" />
+        <title>Rudenoise</title>
+        <link>http://rudenoise.uk</link>
+        <description>Rudenoise's OCaml Posts</description>
+        <item>
+            <title>OCaml/MirageOS Diary, Week 3</title>
+            <link>http://rudenoise.uk/ocaml-mirage-diary-03.html</link>
+            <description>OCaml leads me to MirageOS and the world of Unikernel Servers</description>
+            <guid>http://rudenoise.uk/ocaml-mirage-diary-03.html</guid>
+            <pubDate>Fri, 19 Feb 2016 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>OCaml Diary, Week 2</title>
+            <link>http://rudenoise.uk/ocaml-diary-02.html</link>
+            <description>Getting a feel for OCaml and its idiosyncrasies.</description>
+            <guid>http://rudenoise.uk/ocaml-diary-02.html</guid>
+            <pubDate>Mon, 8 Feb 2016 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>OCaml Diary, Week 1</title>
+            <link>http://rudenoise.uk/ocaml-diary-01.html</link>
+            <description>Choosing a new programming language to learn.</description>
+            <guid>http://rudenoise.uk/ocaml-diary-01.html</guid>
+            <pubDate>Mon, 8 Feb 2016 07:00:00 GMT</pubDate>
+        </item>
+    </channel>
+
+</rss> 
+
