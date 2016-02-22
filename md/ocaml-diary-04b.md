@@ -1,8 +1,7 @@
-# OCaml/MirageOS Diary, Part 4B
+# OCaml Diary, Part 4B
 
 Having set up a MirageOS development environment
-<sub>[_[1](#ref1)_]</sub> I continued with my OCaml
-learning.
+<sub>[_[1](#ref1)_]</sub> I continued with my OCaml learning.
 
 ## Links
 
