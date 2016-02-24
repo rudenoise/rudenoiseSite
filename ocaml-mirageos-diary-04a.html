@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+OCaml/MirageOS Diary, Part 4A
+        </title>
+        <style type="text/css">
+            @font-face {
+                    font-family: 'ocramedium';
+                    src: url('ocr-a.eot');
+                    src: url('ocr-a.eot?#iefix') format('embedded-opentype'),
+                         url('ocr-a.woff') format('woff'),
+                         url('ocr-a.ttf') format('truetype'),
+                         url('ocr-a.svg#ocramedium') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+            }
+            body {
+                margin: 1em auto;
+                padding-left: .5em;
+                padding-right: 1.5em;
+                max-width: 640px;
+                font-size: 135%;
+                line-height: 1.5em;
+                background: #222;
+                color: #CCC;
+                font-family: ocramedium, ocraextended, monospace;
+                background-image: url("/bg.png");
+                background-repeat: repeat;
+            }
+            article {
+                text-align: justify;
+            }
+            blockquote {
+                font-size: 0.9em;
+                font-style: oblique;
+            }
+            .caption {
+                font-size: 0.7em;
+                font-style: italic;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 640px;
+            }
+            @media only screen and (max-width: 400px) {
+                body {font-size: 100%;}
+            }
+            a {
+                color: orange;
+                text-decoration: none;
+                border-bottom: 1px solid;
+            }
+            sub>em>a { border-bottom: none; }
+            h1 { line-height: 1em;}
+            form {border: none}
+            input { font-family: ocramedium, ocraextended, monospace; border: none; }
+            .small { font-size: 65%;}
+            pre {
+                overflow-x: scroll; 
+                background: #444;
+                color: #FFF;
+                text-align: left;
+            }
+            .ocaml .fl {
+                color: yellow;
+            }
+            .ocaml .kw {
+                color: #ffb380;
+            }
+            .ocaml .co {
+                color: #ccc;
+            }
+        </style>
+        <link rel="alternate" type="application/rss+xml" title="Rudenoise's Feed" href="http://rudenoise.uk/feed.rss">
+        <link rel="alternate" type="application/rss+xml" title="Rudenoise's OCaml Feed" href="http://rudenoise.uk/ocaml.rss">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    </head>
+    <body>
+        <article>
+            <header>
+                <h1>
+OCaml/MirageOS Diary, Part 4A
+                </h1>
+                <p class="small">Published:
+                    <time>
+2016-02-24
+                    </time>
+                </p>
+            </header>
+<p>Week 4 in OCaml land was busy. In preparation for the MirageOS Hackathon I spent some time setting up my development environment, which is covered in this post. I also started a simple OCaml CLI application, which is covered in Part 4B <sub>[<em><a href="#ref1">1</a></em>]</sub>.</p>
+<h2 id="installing-and-developing-inside-osx">Installing and Developing Inside OSX</h2>
+<p>Installing OCaml (if you havent already), using Home Brew:</p>
+<pre class="sh"><code># get opam package manager
+brew install opam
+# get the ocaml
+opam switch 4.01.0
+# a repl
+opam install utop</code></pre>
+<h2 id="deploying-to-xen-inside-vbox-with-ubuntu-inside-osx">Deploying to Xen, inside VBox, with Ubuntu, inside OSX</h2>
+<p>This process is more complicated. MirageOS unikernels will ultimately be deployed inside the Xen hypervisor (as used by many cloud hosting services).</p>
+<blockquote>
+<p>A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines. Wikipedia</p>
+</blockquote>
+<p>When running inside OSX (or other *nix OS), the Mirage OS compilation process uses various opam modules that allow your server application to run on top of the Operating System's stack network interfaces, file-system etc...). When compiling for Xen deployment these modules are swapped for modules that interact directly with Xen's emulated hardware (QEMU) environment. It becomes a self contained Operating System. The resulting <em>.xen</em> file contains the entire unikernel.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a id="ref1"></a> <a href="/ocaml-diary-4b.html">OCaml/MirageOS Diary, Part 4B</a></li>
+<li><a id="ref2"></a> <a href="https://mirage.io/wiki/install">Install Mirage</a></li>
+<li><a id="ref3"></a> <a href=""></a></li>
+<li><a id="ref4"></a> <a href=""></a></li>
+<li><a id="ref5"></a> <a href=""></a></li>
+<li><a id="ref6"></a> <a href=""></a></li>
+<li><a id="ref7"></a> <a href=""></a></li>
+<li><a id="ref8"></a> <a href=""></a></li>
+<li><a id="ref9"></a> <a href=""></a></li>
+<li><a id="ref10"></a> <a href=""></a></li>
+<li><a id="ref11"></a> <a href=""></a></li>
+<li><a id="ref12"></a> <a href=""></a></li>
+<li><a id="ref13"></a> <a href=""></a></li>
+</ul>
+            <footer>
+                <p class="small">If you want to be informed when more of this stuff is written you can <a href="/subscribe.html">subscribe</a> or why not look at <a href="/">Rudenoise's home page</a>?</p>
+            </footer>            
+        </article>
+    </body>
+</html>
