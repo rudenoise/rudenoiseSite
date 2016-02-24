@@ -18,7 +18,7 @@ opam switch 4.01.0
 opam install utop
 ```
 
-## Deploying to Xen, inside VBox, with Ubuntu, inside OSX
+## Deploying to Xen, with Ubuntu, Inside VBox, Inside OSX
 
 This process is more complicated. MirageOS unikernels will ultimately
 be deployed inside the Xen hypervisor (as used by many cloud hosting
@@ -27,7 +27,8 @@ services).
 > A hypervisor or virtual machine monitor (VMM) is a piece of
 > computer software, firmware or hardware that creates and runs
 > virtual machines.
-Wikipedia
+
+- Wikipedia (like supervisor, not "really, really good visor").
 
 When running inside OSX (or other \*nix OS), the Mirage OS
 compilation process uses various opam modules that allow your
@@ -38,7 +39,10 @@ directly with Xen's emulated hardware (QEMU) environment. It
 becomes a self contained Operating System. The resulting _.xen_
 file contains the entire unikernel. 
 
-
+To have a self contained development environment, on your
+workstation, you're going to need two hypervisors: VirtualBox and
+Xen. VBox to run a virtual machine, inside which Ubuntu and Xen
+will run side-by-side.
 
 ## Links
 

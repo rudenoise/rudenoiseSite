@@ -100,12 +100,16 @@ brew install opam
 opam switch 4.01.0
 # a repl
 opam install utop</code></pre>
-<h2 id="deploying-to-xen-inside-vbox-with-ubuntu-inside-osx">Deploying to Xen, inside VBox, with Ubuntu, inside OSX</h2>
+<h2 id="deploying-to-xen-with-ubuntu-inside-vbox-inside-osx">Deploying to Xen, with Ubuntu, Inside VBox, Inside OSX</h2>
 <p>This process is more complicated. MirageOS unikernels will ultimately be deployed inside the Xen hypervisor (as used by many cloud hosting services).</p>
 <blockquote>
-<p>A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines. Wikipedia</p>
+<p>A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines.</p>
 </blockquote>
+<ul>
+<li>Wikipedia (like supervisor, not &quot;really, really good visor&quot;).</li>
+</ul>
 <p>When running inside OSX (or other *nix OS), the Mirage OS compilation process uses various opam modules that allow your server application to run on top of the Operating System's stack network interfaces, file-system etc...). When compiling for Xen deployment these modules are swapped for modules that interact directly with Xen's emulated hardware (QEMU) environment. It becomes a self contained Operating System. The resulting <em>.xen</em> file contains the entire unikernel.</p>
+<p>To have a self contained development environment, on your workstation, you're going to need two hypervisors: VirtualBox and Xen. VBox to run a virtual machine, inside which Ubuntu and Xen will run side-by-side.</p>
 <h2 id="links">Links</h2>
 <ul>
 <li><a id="ref1"></a> <a href="/ocaml-diary-4b.html">OCaml/MirageOS Diary, Part 4B</a></li>
