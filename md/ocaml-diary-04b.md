@@ -77,9 +77,10 @@ enjoyed.
 
 ## The Results
 
-A few hours mucking about and I had the basics working. It seems
-the language is seeping into my brain at a good rate. I can build
-basic software.
+A few hours mucking about and I had the basics working. Some OCaml
+seeped in and remained long enough to build working software. Then
+I had a look at the results and compared them to other
+implementations.
 
 
 

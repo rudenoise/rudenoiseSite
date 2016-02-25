@@ -87,44 +87,46 @@ OCaml/MirageOS Diary, Part 4A
                 </h1>
                 <p class="small">Published:
                     <time>
-2016-02-24
+2016-02-25
                     </time>
                 </p>
             </header>
-<p>Week 4 in OCaml land was busy. In preparation for the MirageOS Hackathon I spent some time setting up my development environment, which is covered in this post. I also started a simple OCaml CLI application, which is covered in Part 4B <sub>[<em><a href="#ref1">1</a></em>]</sub>.</p>
+<p>Week 4 in OCaml land was busy. In preparation for the MirageOS Hackathon I spent some time setting up my development environment, which is covered in this post. I also started a simple OCaml CLI application, which is covered in Part 4B (coming shortly).</p>
 <h2 id="installing-and-developing-inside-osx">Installing and Developing Inside OSX</h2>
-<p>Installing OCaml (if you havent already), using Home Brew:</p>
+<p>Install OCaml (if you haven't already), using Home Brew:</p>
 <pre class="sh"><code># get opam package manager
 brew install opam
 # get the ocaml
 opam switch 4.01.0
 # a repl
 opam install utop</code></pre>
+<p>Then install the <em>mireage</em> libraries <sub>[<em><a href="#ref2">2</a></em>]</sub>.</p>
+<p>Then it's a case of following the documentation on the MirageOS website <sub>[<em><a href="#ref3">3</a></em>]</sub>.</p>
 <h2 id="deploying-to-xen-with-ubuntu-inside-vbox-inside-osx">Deploying to Xen, with Ubuntu, Inside VBox, Inside OSX</h2>
-<p>This process is more complicated. MirageOS unikernels will ultimately be deployed inside the Xen hypervisor (as used by many cloud hosting services).</p>
+<p>This process is more complicated. MirageOS unikernels will ultimately be deployed inside the Xen hypervisor (as used by many cloud hosting services) (like supervisor, not &quot;really, really good visor&quot;).</p>
 <blockquote>
-<p>A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines.</p>
+<p>A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines. <sub>[<em><a href="#ref4">4</a></em>]</sub></p>
 </blockquote>
-<ul>
-<li>Wikipedia (like supervisor, not &quot;really, really good visor&quot;).</li>
-</ul>
-<p>When running inside OSX (or other *nix OS), the Mirage OS compilation process uses various opam modules that allow your server application to run on top of the Operating System's stack network interfaces, file-system etc...). When compiling for Xen deployment these modules are swapped for modules that interact directly with Xen's emulated hardware (QEMU) environment. It becomes a self contained Operating System. The resulting <em>.xen</em> file contains the entire unikernel.</p>
-<p>To have a self contained development environment, on your workstation, you're going to need two hypervisors: VirtualBox and Xen. VBox to run a virtual machine, inside which Ubuntu and Xen will run side-by-side.</p>
+<p>When running inside OSX (or other *nix OS), the Mirage OS compilation process uses various opam modules that allow your server application to run in communication with the Operating System's network interfaces, file-system etc.... When compiling for Xen deployment these modules are swapped for modules that interact directly with Xen's emulated hardware (QEMU) environment. It becomes a self contained Operating System. The resulting <em>.xen</em> file contains the entire unikernel (application and OS in one).</p>
+<p>To have a self contained development environment, on your workstation, you're going to need two hypervisors: VirtualBox and Xen. VBox to run a virtual machine, inside which a Linux/Unix distribution (as <em>dom0</em>) will run side-by-side with Xen. The Mirage unikernels will run in/on Xen/<em>domU</em>.</p>
+<p>Setting these up manually takes time and is a little fiddly. I did find it useful to gain an understanding of how this set-up fits together. I found Magnus Skjegstad's guide really helpful <sub>[<em><a href="#ref5">5</a></em>]</sub>.</p>
+<p>A problem to look out for is a clash between any Host Only Networks you may already have on Virtual Box. I had pre existing Docker Machines set up that used the IPv4 <em>192.168.56.1</em>. Deleting the machines and any _HON_s cleared the way. The other route would be to set up a <em>HON</em> with an differnt static IP and adjust the set-up to take this into account.</p>
+<p>Alternatively the same should be possible using a Packer/Vagrant image from the Mirage Virtualbox VMs via Vagrant repo <sub>[<em><a href="#ref6">6</a></em>]</sub>. While I could build Mirage Unikernels, I couldn't deploy them as I'm unclear how to configure the network settings and they don't appear to work out of the box. I also tried another <sub>[<em><a href="#ref6">7</a></em>]</sub> but this ran into trouble building the mirage libraries.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>I'm intersted in testing my knowledge by creatng a guide, simialr to Magnus's, using Alpine Linux.</p>
+<p>Then build a Packer/Vagrant project for getting a repeatable automated environment working.</p>
+<p>A long term goal could be to create a set of tools similar to those used in the docker/lxc ecosystem. This would manage stetting up VBox VMs and their networking in a similar way <em>docker-machine</em> does. Then a <em>docker-compose</em> like tool for building and launching networked unikernels built inside the VM/<em>dom0</em> but synced from the host OS.</p>
+<p>If that tool was built in OCaml, I'd be very happy (although this is beyond me just now).</p>
+<p>The tools described above would be very useful for onboarding developers looking to get up and running with Mirage without having to get into the finer points of how the environment fits together. And, perhapse, all this is being worked on by Docker/Unikernel Systems?</p>
 <h2 id="links">Links</h2>
 <ul>
 <li><a id="ref1"></a> <a href="/ocaml-diary-4b.html">OCaml/MirageOS Diary, Part 4B</a></li>
 <li><a id="ref2"></a> <a href="https://mirage.io/wiki/install">Install Mirage</a></li>
-<li><a id="ref3"></a> <a href=""></a></li>
-<li><a id="ref4"></a> <a href=""></a></li>
-<li><a id="ref5"></a> <a href=""></a></li>
-<li><a id="ref6"></a> <a href=""></a></li>
-<li><a id="ref7"></a> <a href=""></a></li>
-<li><a id="ref8"></a> <a href=""></a></li>
-<li><a id="ref9"></a> <a href=""></a></li>
-<li><a id="ref10"></a> <a href=""></a></li>
-<li><a id="ref11"></a> <a href=""></a></li>
-<li><a id="ref12"></a> <a href=""></a></li>
-<li><a id="ref13"></a> <a href=""></a></li>
+<li><a id="ref3"></a> <a href="https://mirage.io/wiki/hello-world">Mirage Hello World</a></li>
+<li><a id="ref4"></a> <a href="https://en.wikipedia.org/wiki/Hypervisor">Hypervisor, Wikipedia</a></li>
+<li><a id="ref5"></a> <a href="http://www.skjegstad.com/blog/2015/01/19/mirageos-xen-virtualbox/">Local Mirage Development with Xen and VirtualBox</a></li>
+<li><a id="ref6"></a> <a href="https://github.com/mirage/mirage-vagrant-vms">Mirage Vagrant VMs</a></li>
+<li><a id="ref7"></a> <a href="https://github.com/mattgray/mirage-xen-virtualbox">Matt Grey's Mirage-Xen-Virtualbox</a></li>
 </ul>
             <footer>
                 <p class="small">If you want to be informed when more of this stuff is written you can <a href="/subscribe.html">subscribe</a> or why not look at <a href="/">Rudenoise's home page</a>?</p>
