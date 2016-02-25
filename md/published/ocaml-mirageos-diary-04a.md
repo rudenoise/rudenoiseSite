@@ -1,6 +1,6 @@
 # OCaml/MirageOS Diary, Part 4A
 
-Week 4 in OCaml land was busy. In preparation for the MirageOS
+Week 4 with OCaml was busy. In preparation for the MirageOS
 Hackathon I spent some time setting up my development environment,
 which is covered in this post. I also started a simple OCaml CLI
 application, which is covered in Part 4B (coming shortly).

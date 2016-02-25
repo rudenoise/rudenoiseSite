@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>OCaml/MirageOS Diary, Part 4a</title>
+            <link>http://rudenoise.uk/ocaml-mirageos-diary-04a.html</link>
+            <description>Setting up a MirageOS development environment. Native and in Xen, on my local machine.</description>
+            <guid>http://rudenoise.uk/ocaml-mirageos-diary-04a.html</guid>
+            <pubDate>Thu, 25 Feb 2016 22:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title>OCaml/MirageOS Diary, Week 3</title>
             <link>http://rudenoise.uk/ocaml-mirage-diary-03.html</link>
             <description>OCaml leads me to MirageOS and the world of Unikernel Servers</description>
