@@ -16,7 +16,7 @@ opam switch 4.01.0
 opam install utop
 ```
 
-Then install the _mireage_ libraries <sub>[_[2](#ref2)_]</sub>.
+Then install the _mirage_ libraries <sub>[_[2](#ref2)_]</sub>.
 
 Then it's a case of following the documentation on the MirageOS
 website <sub>[_[3](#ref3)_]</sub>.
