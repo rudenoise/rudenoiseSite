@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>OCaml Diary, Part 4b</title>
+            <link>http://rudenoise.uk/ocaml-diary-04b.html</link>
+            <description>A simple OCaml CLI application and how it compares to some alternatives.</description>
+            <guid>http://rudenoise.uk/ocaml-diary-04b.html</guid>
+            <pubDate>Thu  3 Mar 2016 20:47:00 GMT</pubDate>
+        </item>
+        <item>
             <title>OCaml/MirageOS Diary, Part 4a</title>
             <link>http://rudenoise.uk/ocaml-mirageos-diary-04a.html</link>
             <description>Setting up a MirageOS development environment. Native and in Xen, on my local machine.</description>
