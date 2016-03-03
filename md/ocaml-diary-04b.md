@@ -1,45 +1,43 @@
 # OCaml Diary, Part 4B
 
-Having set up a MirageOS development environment
-<sub>[_[1](#ref1)_]</sub> I continued improving my OCaml.
-
-When experimenting with new languages in the past, I've made the
-same small CLI application. A program that walks through the
+Previously, while learning languages,  I've made the same small, CLI
+application. A program that walks through the
 contents of a directory, stores the paths of any files contained
-within, then does the same for any sub-directroies, recursively.
+within, then does the same for any sub-directories, recursively.
 These paths can then be printed to the console directly, or
-filtered then printed. So far I've done this task using NodeJS, Go
-and Gambit Scheme. I usually call it _inPath_.
+filtered then printed. So far I've done this task using
+NodeJS<sub>[_[1](#ref1)_]</sub>, Go<sub>[_[2](#ref2)_]</sub>
+and Gambit Scheme<sub>[_[3](#ref3)_]</sub>. I usually call it _inPath_.
 
 The aim is to test my ability to build something small, self
-contained and useful, from scratch. Doing so ensures that I know
-the tools used to build and debug the app, and where to find
+contained and useful, from scratch. Doing so ensures that I understand
+the tools used to build and debug an app, and where to find
 supporting information.
 
 ## The Development Experience
 
-The development cycle went something like this:
+The OCaml development cycle went something like this:
 
 * Edit inPath.ml in vim.
-* Save and see if _Merlin_ has picked up any problems.
+* Save and see if _Merlin_<sub>[_[4](#ref4)_]</sub> has picked up any problems.
 * Run _MerlinErrorCheck_ correct as necessary.
-* Run _corebuild inPath.byte_ for fast compilation to byte-code.
+* Run _corebuild inPath.byte_ for fast compilation to byte-code, then test.
 * Every few successful builds compile a native executable with
   _corebuild inPath.native_.
 
-Getting the environment set up involves a few steps but afterwards
+Getting the environment set-up involves a few steps but afterwards
 the cycle was smooth and efficient. It may only be a
-tiny project but I was impressed by the support the tools provide.
-They may not be as simple as those provided by Go (there are a lot
-of ways to compile an OCaml program) but the compiler is highly
-configurable while still usable for a novice.
+tiny project but the supporting tools still impressed.
+The compilers are not as simple as those provided by Go 
+(there are a lot of ways to compile an OCaml program) but are still
+manageable for a novice.
 
-The program used various modules from _Core.Std_, an equivalent to
+The program used various modules from _Core.Std_<sub>[_[5](#ref5)_]</sub>, an equivalent to
 a standard-library (OCaml keeps itself small allowing the user to
-customise as required). Building CLI apps is well
-supported via the _Command_ module. Help text, input parsing and
-flags have useful APIs, getting the basics working was equivalent
-the effort needed on other ecosystems.
+extend/include functionality, as required). Building CLI apps is
+well supported via the _Command_<sub>[_[6](#ref6)_]</sub> module.
+Help text, input parsing and flags have useful APIs, getting the
+basics working was equivalent the effort needed on other ecosystems.
 
 Switching between "pure functional" (for internal data structures and
 recursion) and imperative (communicating with the environment
@@ -57,7 +55,7 @@ implementation for another and should I, the compiler is likely to
 know about it.
 
 Iterating the design and implementation of OCaml programs differs
-from other ecosystems, that I've used. Getting a basic/prototype
+from other ecosystems that I've used. Getting a basic/prototype
 implementation was quick. Refactoring could then take a number of
 paths depending on how I wished to extend the functionality. Moving
 data processing to purely functional data-structures and APIs, for
@@ -78,24 +76,46 @@ enjoyed.
 ## The Results
 
 A few hours mucking about and I had the basics working. Some OCaml
-seeped in and remained long enough to build working software. Then
-I had a look at the results and compared them to other
+knowledge had seeped in and remained long enough to build working
+software. Then I had a look at the results and compared them to other
 implementations.
 
+| Language  | Binary size   |
+|-----------|---------------|
+| Go        | 3.0M          |
+| Gambit    | 5.0M          |
+| OCaml     | 14M           |
 
+I ran the following test for each binary and took a rough average
+(excluding any outliers caused by OS caching).
+
+```sh
+time inPathOCaml ~/Dropbox/ > /tmp/out.txt 
+```
+| Language  | _Real_ read time  |
+|-----------|-------------------|
+| Go        | 0m0.200s          |
+| Gambit    | 0m0.165s          |
+| OCaml     | 0m0.057s          |
+
+These tests are not that useful for anything serious but that
+didn't stop me from drawing the following, probably inaccurate,
+conclusions:
+
+1. The _core_ lib must be pretty big and including it leads to the
+   large binary.
+2. The execution time isn't adversely affected by the unused functionality.
+3. I could rewrite this code to exclude _core_.
+4. Managing the compilers could have lead to a more tailored result.
+
+The code is up for criticism on GitHub <sub>[_[7](#ref7)_]</sub>.
 
 ## Links
 
-* <a id="ref1"></a> [OCaml/MirageOS Diary, Part 4A](/ocaml-mirageos-diary-4a.html)
-* <a id="ref2"></a> []()
-* <a id="ref3"></a> []()
-* <a id="ref4"></a> []()
-* <a id="ref5"></a> []()
-* <a id="ref6"></a> []()
-* <a id="ref7"></a> []()
-* <a id="ref8"></a> []()
-* <a id="ref9"></a> []()
-* <a id="ref10"></a> []()
-* <a id="ref11"></a> []()
-* <a id="ref12"></a> []()
-* <a id="ref13"></a> []()
+* <a id="ref1"></a> [inPath NodeJS](https://github.com/rudenoise/inPath)
+* <a id="ref2"></a> [inPath GoLang](https://github.com/rudenoise/counting/blob/master/examples/inPath.go)
+* <a id="ref3"></a> [inPath Gambit  Scheme](https://github.com/rudenoise/inPathScheme)
+* <a id="ref4"></a> [Merlin in vim from scratch](https://github.com/the-lambda-church/merlin/wiki/vim-from-scratch)
+* <a id="ref5"></a> [Core documentation](https://ocaml.janestreet.com/ocaml-core/111.28.00/doc/core/)
+* <a id="ref6"></a> [Module Command](https://ocaml.janestreet.com/ocaml-core/111.28.00/doc/core/#Command)
+* <a id="ref7"></a> [inPath OCaml](https://github.com/rudenoise/inPathOCaml)

@@ -96,8 +96,9 @@ OCaml/MirageOS Diary, Part 4A
 <p>Install OCaml (if you haven't already), using Home Brew:</p>
 <pre class="sh"><code># get opam package manager
 brew install opam
-# get the ocaml
-opam switch 4.01.0
+# get latest ocaml
+opam switch 4.02.3
+eval `opam config env`
 # a repl
 opam install utop</code></pre>
 <p>Then install the <em>mirage</em> libraries <sub>[<em><a href="#ref2">2</a></em>]</sub>.</p>
@@ -122,7 +123,9 @@ opam install utop</code></pre>
 <p>The tools described above would be very useful for on boarding developers looking to get up and running with Mirage without having to get into the finer points of how the environment fits together. And, perhaps, all this is being worked on by Docker/Unikernel Systems?</p>
 <h2 id="links">Links</h2>
 <ul>
+<!--
 <li><a id="ref1"></a> <a href="/ocaml-diary-4b.html">OCaml/MirageOS Diary, Part 4B</a></li>
+-->
 <li><a id="ref2"></a> <a href="https://mirage.io/wiki/install">Install Mirage</a></li>
 <li><a id="ref3"></a> <a href="https://mirage.io/wiki/hello-world">Mirage Hello World</a></li>
 <li><a id="ref4"></a> <a href="https://en.wikipedia.org/wiki/Hypervisor">Hypervisor, Wikipedia</a></li>
