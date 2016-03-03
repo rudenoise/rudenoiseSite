@@ -37,7 +37,7 @@ a standard-library (OCaml keeps itself small allowing the user to
 extend/include functionality, as required). Building CLI apps is
 well supported via the _Command_<sub>[_[6](#ref6)_]</sub> module.
 Help text, input parsing and flags have useful APIs, getting the
-basics working was equivalent the effort needed on other ecosystems.
+basics working was equivalent the effort spent in other ecosystems.
 
 Switching between "pure functional" (for internal data structures and
 recursion) and imperative (communicating with the environment
@@ -51,27 +51,26 @@ combinations/configurations available make it possible to express
 very clear programs that are tailored and specific to their
 problem-space. The type system and language design also make
 solutions less ambiguous. I'm less likely to mistake one
-implementation for another and should I, the compiler is likely to
+implementation for another and should I, the compiler should
 know about it.
 
 Iterating the design and implementation of OCaml programs differs
-from other ecosystems that I've used. Getting a basic/prototype
+from the other ecosystems. Getting a basic/prototype
 implementation was quick. Refactoring could then take a number of
 paths depending on how I wished to extend the functionality. Moving
 data processing to purely functional data-structures and APIs, for
 example. Or bundling areas of the code into modules, using their
 own types and interfaces, to aid separation of concerns,
-documentation of intent and reuse. Various constructs for building
+documentation of intent, and reuse. Various constructs for building
 flows and passing data between functions could be chosen. I didn't
 get as far as using the native profiling tools or compiler
-configurations.
+configurations. I expect they would add yet more food for thought.
 
 This could be seen as unnecessary complexity, especially when
 compared with Go's approach. But getting something basic working
-can be quick, after which point there are a lot of options
-available for improvement. The results may not be generic but they
-will be descriptive. It's a different approach and one I
-enjoyed.
+was fast enough, after which point there were many options
+available for improvement. While the implementation was not uniform
+it is descriptive. It's a different approach and one I enjoyed.
 
 ## The Results
 
