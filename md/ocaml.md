@@ -57,6 +57,10 @@ set rtp+=~/code/ocp-indent-vim
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 ```
 
+### Setup NeoVim
+
+Install the python client: [Python client to Neovim](https://github.com/neovim/python-client)
+
 ## Tutorials/Books
 
 https://realworldocaml.org/v1/en/html/a-guided-tour.html
