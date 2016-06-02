@@ -40,7 +40,7 @@ now comfortable with the basic concepts (modules, functors, async/lwt etc...)
 but still have quite a few things I'd like to master (error handling,
 parsing, s-expressions, the compiler etc...).
 
-Following on from my a previous post I shrank my _inPath_<sub>[_[2](#ref2)_]</sub>
+Following on from a previous post I shrank my _inPath_<sub>[_[2](#ref2)_]</sub>
 binary from 14MB to 1MB, simply by removing _Core_. I doubt that it makes a significant
 difference to anything, other than size in memory/disk, but
 eradicating _Core_ is necessary when working with _MirageOS_ (and
@@ -48,9 +48,9 @@ this is an interesting point to note having followed the _Real
 World OCaml_ learning curve).
 
 The hackathon reminded me that there are subjects within computing
-that grab my interest and yet I've never taken the time to really
-investigate. They would also allow me to contribute to the
-formation of tools like _MirageOS_ that I currently cannot. These are
+that grab my interest and yet I've never taken the time to thoroughly
+investigate. A deeper knowledge would also allow me to contribute to the
+formation of tools like _MirageOS_ in ways that I currently cannot. These are
 the topics and books I'd like to get into:
 
 * Networks and protocols (_Computer Networking: A Top-Down
