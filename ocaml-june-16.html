@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+OCaml Update June 2016
+        </title>
+        <style type="text/css">
+            @font-face {
+                    font-family: 'ocramedium';
+                    src: url('ocr-a.eot');
+                    src: url('ocr-a.eot?#iefix') format('embedded-opentype'),
+                         url('ocr-a.woff') format('woff'),
+                         url('ocr-a.ttf') format('truetype'),
+                         url('ocr-a.svg#ocramedium') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+            }
+            body {
+                margin: 1em auto;
+                padding-left: .5em;
+                padding-right: 1.5em;
+                max-width: 640px;
+                font-size: 135%;
+                line-height: 1.5em;
+                background: #222;
+                color: #CCC;
+                font-family: ocramedium, ocraextended, monospace;
+                background-image: url("/bg.png");
+                background-repeat: repeat;
+            }
+            article {
+                text-align: justify;
+            }
+            blockquote {
+                font-size: 0.9em;
+                font-style: oblique;
+            }
+            .caption {
+                font-size: 0.7em;
+                font-style: italic;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 640px;
+            }
+            @media only screen and (max-width: 400px) {
+                body {font-size: 100%;}
+            }
+            a {
+                color: orange;
+                text-decoration: none;
+                border-bottom: 1px solid;
+            }
+            sub>em>a { border-bottom: none; }
+            h1 { line-height: 1em;}
+            form {border: none}
+            input { font-family: ocramedium, ocraextended, monospace; border: none; }
+            .small { font-size: 65%;}
+            pre {
+                overflow-x: scroll; 
+                background: #444;
+                color: #FFF;
+                text-align: left;
+            }
+            .ocaml .fl {
+                color: yellow;
+            }
+            .ocaml .kw {
+                color: #ffb380;
+            }
+            .ocaml .co {
+                color: #ccc;
+            }
+        </style>
+        <link rel="alternate" type="application/rss+xml" title="Rudenoise's Feed" href="http://rudenoise.uk/feed.rss">
+        <link rel="alternate" type="application/rss+xml" title="Rudenoise's OCaml Feed" href="http://rudenoise.uk/ocaml.rss">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    </head>
+    <body>
+        <article>
+            <header>
+                <h1>
+OCaml Update June 2016
+                </h1>
+                <p class="small">Published:
+                    <time>
+2016-06-02
+                    </time>
+                </p>
+            </header>
+<p>This blog hasn't seen much action lately because I've been coding, instead. Rather than wait for writing time to open up here's a brief round up of the last few months:</p>
+<h2 id="mirageos-hackathon-marrakech"><em>MirageOS</em> Hackathon, Marrakech</h2>
+<p>Back in March I spent a few days hacking on <em>MirageOS</em> related <em>OCaml</em>. It was probably the best code-related activity/event that I've ever attended. Conferences, workshops and courses generally leave me cold. The difference here was the lack of &quot;salesmanship&quot;, hackers showed up, opened laptops, hacked, chatted, ate, drank... If I wanted to know something about <em>OCaml</em> or <em>MirageOS</em> I could ask an expert, they were right there.</p>
+<p>Despite being a novice, I felt welcome, made some friends and gained a fresh perspective on how tech-projects can be formed (outside the bubble of commerce and business/career interests). Valuing intellectual curiosity, creativity and the potential to improve the applications of computing - rather than how these technologies can be bought and sold.</p>
+<p>I mucked about running a <em>MirageOS</em> Unikernel on a Raspberry Pi<sub>[<em><a href="#ref1">1</a></em>]</sub>. Improved my <em>OCaml</em><sub>[<em><a href="#ref2">2</a></em>]</sub>. And was given a good idea for a project by Hannes<sub>[<em><a href="#ref3">3</a></em>]</sub>, the result being a <em>MirageOS Dashboard</em> (giving an overview of the packages and tools developers will find useful when working on <em>MirageOS</em>)<sub>[<em><a href="#ref4">4</a></em>]</sub>.</p>
+<p>There's a load more to say about this, luckily others have taken the time to write it up in more detail <sub>[<em><a href="#ref5">5</a></em>]</sub> <sub>[<em><a href="#ref6">6</a></em>]</sub>.</p>
+<h2 id="other-stuff">Other Stuff</h2>
+<p>My <em>OCaml</em> skills are improving and I feel reasonably productive. I'm now comfortable with the basic concepts (modules, functors etc...) but still have quite a few things I'd like to master. Following on from my a previous post I shrank my <em>inPath</em> binary from 14MB to 1MB, simply by removing <em>Core</em>. I doubt that it makes a significant difference to anything, other than size in memory/disk, but eradicating <em>Core</em> is necessary when working with <em>MirageOS</em>.</p>
+<p>The hackathon reminded me that there are subjects within computing that grab my interest and yet I've never taken the time to really investigate. They would also allow me to contribute to the formation of tools like <em>MirageOS</em> that I currently cannot. These are the topics and books I'd like to get into:</p>
+<ul>
+<li>Networks and protocols (<em>Computer Networking: A Top-Down Approach</em><sub>[<em><a href="#ref9">9</a></em>]</sub> and <em>Computer Networks</em><sub>[<em><a href="#ref10">10</a></em>]</sub>);</li>
+<li>Compilers and languages (<em>Structure and Interpretation of Computer Programs</em><sub>[<em><a href="#ref11">11</a></em>]</sub>);</li>
+<li>Processors and assembly language (<em>Feynman: Lectures on Computation</em><sub>[<em><a href="#ref12">12</a></em>]</sub> and <em>Programming from the Ground Up</em><sub>[<em><a href="#ref13">13</a></em>]</sub>).</li>
+</ul>
+<p>Tackling any of these would be at the expense of time spent on <em>OCaml</em>, <em>MirageOS</em> and the <em>MirageOS Dashboard</em>. So that's the current dilemma, <em><em>advice welcome</em></em>.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a id="ref1"></a> <a href="https://github.com/rudenoise/qemu-solo5-mirage-rpi3">qemu-solo5-mirage-rpi3</a></li>
+<li><a id="ref2"></a> <a href="https://github.com/rudenoise/inPathOCaml">inPathOCaml</a></li>
+<li><a id="ref3"></a> <a href="http://hannes.nqsb.io/">Hannes Mehnert</a></li>
+<li><a id="ref4"></a> <a href="https://github.com/rudenoise/mirage-dashboard">MirageOS Dashboard</a></li>
+<li><a id="ref5"></a> <a href="http://canopy.mirage.io/">MirageOS Marrakech Canopy</a></li>
+<li><a id="ref6"></a> <a href="https://mirage.io/blog/2016-spring-hackathon">Hackathon Trip Reports</a></li>
+<li><a id="ref9"></a> <a href="https://github.com/mw12/Academics/blob/master/sem%203-2/Computer%20Networks/Computer%20Networking%20A%20Top%20Down%20Approach%206th%20Edition.pdf">Computer Networking: A Top Down Approach</a></li>
+<li><a id="ref10"></a> <a href="http://cse.hcmut.edu.vn/~minhnguyen/NET/Computer%20Networks%20-%20A%20Tanenbaum%20-%205th%20edition.pdf">Conmputer Networks</a></li>
+<li><a id="ref11"></a> <a href="https://mitpress.mit.edu/sicp/full-text/book/book.html">SICP</a></li>
+<li><a id="ref12"></a> <a href="https://cds.cern.ch/record/411350/files/p101.pdf">Lectures on Computation</a></li>
+<li><a id="ref13"></a> <a href="http://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf">Programming from the Ground Up</a></li>
+</ul>
+            <footer>
+                <p class="small">If you want to be informed when more of this stuff is written you can <a href="/subscribe.html">subscribe</a> or why not look at <a href="/">Rudenoise's home page</a>?</p>
+            </footer>            
+        </article>
+    </body>
+</html>
