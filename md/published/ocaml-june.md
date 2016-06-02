@@ -1,18 +1,19 @@
 # OCaml Update June 2016
 
-This blog hasn't seen much action lately because I've been coding,
-instead. Rather than wait for writing time to open up here's a
+This blog hasn't seen much action lately, because I've been coding.
+Rather than wait for writing time to open up here's a
 brief round up of the last few months:
 
 ## _MirageOS_ Hackathon, Marrakech
 
-Back in March I spent a few days hacking on _MirageOS_ related
+Back in March I spent a few days hacking on _MirageOS_ and
 _OCaml_. It was probably the best code-related activity/event that
-I've ever attended. Conferences, workshops and courses generally
-leave me cold. The difference here was the lack of "salesmanship",
-hackers showed up, opened laptops, hacked, chatted, ate, drank...
+I've attended, ever. Conferences, workshops and courses generally
+leave me cold. The difference here was the lack of "salesmanship".
+Hackers showed up, opened laptops, hacked, chatted, ate, drank...
 If I wanted to know something about _OCaml_ or _MirageOS_ I could
-ask an expert, they were right there.
+ask an expert, they were right there. The agenda was: breakfast,
+hack/chat, lunch, hack/chat/souk, diner, hack/drink/chat.
 
 Despite being a novice, I felt welcome, made some friends and
 gained a fresh perspective on how tech-projects can be formed
@@ -35,12 +36,16 @@ time to write it up in more detail <sub>[_[5](#ref5)_]</sub>
 ## Other Stuff
 
 My _OCaml_ skills are improving and I feel reasonably productive. I'm
-now comfortable with the basic concepts (modules, functors etc...)
-but still have quite a few things I'd like to master. Following on
-from my a previous post I shrank my _inPath_ binary from 14MB to
-1MB, simply by removing _Core_. I doubt that it makes a significant
+now comfortable with the basic concepts (modules, functors, async/lwt etc...)
+but still have quite a few things I'd like to master (error handling,
+parsing, s-expressions, the compiler etc...).
+
+Following on from my a previous post I shrank my _inPath_<sub>[_[2](#ref2)_]</sub>
+binary from 14MB to 1MB, simply by removing _Core_. I doubt that it makes a significant
 difference to anything, other than size in memory/disk, but
-eradicating _Core_ is necessary when working with _MirageOS_.
+eradicating _Core_ is necessary when working with _MirageOS_ (and
+this is an interesting point to note having followed the _Real
+World OCaml_ learning curve).
 
 The hackathon reminded me that there are subjects within computing
 that grab my interest and yet I've never taken the time to really
@@ -62,7 +67,6 @@ _MirageOS_ and the _MirageOS Dashboard_. So that's the current dilemma,
 *_advice welcome_*.
 
 ## Links
-
 
 * <a id="ref1"></a> [qemu-solo5-mirage-rpi3](https://github.com/rudenoise/qemu-solo5-mirage-rpi3)
 * <a id="ref2"></a> [inPathOCaml](https://github.com/rudenoise/inPathOCaml)
