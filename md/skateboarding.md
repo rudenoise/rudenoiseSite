@@ -46,7 +46,11 @@ It was really good, it was less a competition and more a jam. As is
 the recent [Glory Challenge 2016](http://www.thrashermagazine.com/articles/videos/dime-s-glory-challenge-2016-video/).
 These _jams_ are a loosely organised group of skaters egging each-
 other on to do have more fun and show-off. Who "won" or ranked was 
-gut feel and crowd reaction, not points system was in effect.
+gut feel and crowd reaction, not points, system was in effect.
+
+This mode probably doesn't work well for TV, viewers need to 
+understand what is going on with some narrative structure to hold 
+it together.
 
 Aesthetics play a huge part. Right down to sound. I've just "popped"
 the shields out of my wheel bearings to get that "crispy"/"gangster"
