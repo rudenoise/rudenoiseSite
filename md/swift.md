@@ -21,6 +21,25 @@ Swift has these attributes in one language. While not quite a strong on
 the types and OCaml or idiomatic as Go, it is strong enough for my needs.
 Like a low maintenance OCaml that boring companies might actually use.
 
+## Downsides
+
+OCaml's bucklescript looks really good, there isn't a Swift equivalent,
+yet.
+
+I chose Swift as it can go cross-platform thanks to it's LLVM based compiler.
+However it is hard to get a staticaly linked binary.
+
+```sh
+swift build -Xswiftc -static-stdlib
+// should/could work but produces errors
+```
+
+A basic CLI app that takes args and prints strings gets the following error:
+```
+./hello: error while loading shared libraries: libicui18n.so.55: cannot open shared object file: No such file or directory
+```
+
+
 ## Links
 
 * install: [v3](https://swift.org/download/#releases)
