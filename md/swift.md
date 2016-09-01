@@ -23,6 +23,10 @@ Like a low maintenance OCaml that boring companies might actually use.
 
 ## Links
 
+* install: [v3](https://swift.org/download/#releases)
+* vim
+  * [syntastic](https://github.com/scrooloose/syntastic/)
+  * [swift.vim](https://github.com/keith/swift.vim)
 * []()
 * []()
 * []()
