@@ -27,18 +27,61 @@ OCaml's bucklescript looks really good, there isn't a Swift equivalent,
 yet.
 
 I chose Swift as it can go cross-platform thanks to it's LLVM based compiler.
-However it is hard to get a staticaly linked binary.
+However it is hard to get a statically linked binary. I'm looking into
+contributing to the swift-package-manager to get this working.
 
-```sh
-swift build -Xswiftc -static-stdlib
-// should/could work but produces errors
-```
 
 A basic CLI app that takes args and prints strings gets the following error:
 ```
 ./hello: error while loading shared libraries: libicui18n.so.55: cannot open shared object file: No such file or directory
 ```
 
+## Build Swift 3 from Source
+
+```sh
+# set-up dir
+mkdir swift-source
+cd swift-source
+
+# get all sources
+git clone https://github.com/apple/swift.git
+./swift/utils/update-checkout --clone
+```
+
+## Making _Foundation_ Available to the _Swift Build_
+
+```sh
+swift build -Xswiftc -static-stdlib
+# should/could work but produces errors
+# /usr/bin/ld.gold: error: cannot find -lFoundation
+```
+
+The Swift Package Manager has statically compiled _.a_ files for some
+essential libraries. _XCTest_ and _Foundation_ are currently not
+provided.
+```sh
+ls {path_to_swift_snapshot_usr_dir}/lib/swift_static/linux/
+# libswiftCore.a  libswiftGlibc.a  libswiftSwiftOnoneSupport.a
+```
+
+After talking to Daniel Dunbar one the _swift-users_ mailing list, I've
+decided to try and add these libraries to the Swift Package Manager.
+
+A first step is to compile _swift-corelibs-foundation_ from source.
+
+```sh
+mkdir swift-corelibs
+cd swift-corelibs
+
+# clone repos
+git clone https://github.com/apple/swift-corelibs-foundation.git
+git clone https://github.com/apple/swift-corelibs-xctest.git
+git clone https://github.com/apple/swift-corelibs-libdispatch.git
+
+# build
+cd swift-corelibs-foundation
+
+```
 
 ## Links
 
@@ -46,9 +89,13 @@ A basic CLI app that takes args and prints strings gets the following error:
 * vim
   * [syntastic](https://github.com/scrooloose/syntastic/)
   * [swift.vim](https://github.com/keith/swift.vim)
-* []()
-* []()
-* []()
+* Contributing to Swift
+  * [Swift Contributing Guidelines](https://swift.org/contributing/)
+  * [Swift Repo](https://github.com/apple/swift)
+  * [Swift Package Manager](https://swift.org/package-manager/)
+  * [Swift Package Manager Repo](https://swift.org/package-manager/)
+  * [Swift Foundation Lib](https://swift.org/core-libraries/#foundation)
+  * [Foundation repo](https://github.com/apple/swift-corelibs-foundation)
 * []()
 * []()
 * []()

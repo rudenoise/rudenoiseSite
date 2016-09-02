@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+Swift Diary: Part 1
+        </title>
+        <style type="text/css">
+            @font-face {
+                    font-family: 'ocramedium';
+                    src: url('ocr-a.eot');
+                    src: url('ocr-a.eot?#iefix') format('embedded-opentype'),
+                         url('ocr-a.woff') format('woff'),
+                         url('ocr-a.ttf') format('truetype'),
+                         url('ocr-a.svg#ocramedium') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+            }
+            body {
+                margin: 1em auto;
+                padding-left: .5em;
+                padding-right: 1.5em;
+                max-width: 640px;
+                font-size: 135%;
+                line-height: 1.5em;
+                background: #222;
+                color: #CCC;
+                font-family: ocramedium, ocraextended, monospace;
+                background-image: url("/bg.png");
+                background-repeat: repeat;
+            }
+            article {
+                text-align: justify;
+            }
+            blockquote {
+                font-size: 0.9em;
+                font-style: oblique;
+            }
+            .caption {
+                font-size: 0.7em;
+                font-style: italic;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 640px;
+            }
+            @media only screen and (max-width: 400px) {
+                body {font-size: 100%;}
+            }
+            a {
+                color: orange;
+                text-decoration: none;
+                border-bottom: 1px solid;
+            }
+            sub>em>a { border-bottom: none; }
+            h1 { line-height: 1em;}
+            form {border: none}
+            input { font-family: ocramedium, ocraextended, monospace; border: none; }
+            .small { font-size: 65%;}
+            pre {
+                overflow-x: scroll; 
+                background: #444;
+                color: #FFF;
+                text-align: left;
+            }
+            .ocaml .fl {
+                color: yellow;
+            }
+            .ocaml .kw {
+                color: #ffb380;
+            }
+            .ocaml .co {
+                color: #ccc;
+            }
+        </style>
+        <link rel="alternate" type="application/rss+xml" title="Rudenoise's Feed" href="http://rudenoise.uk/feed.rss">
+        <link rel="alternate" type="application/rss+xml" title="Rudenoise's OCaml Feed" href="http://rudenoise.uk/ocaml.rss">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    </head>
+    <body>
+        <article>
+            <header>
+                <h1>
+Swift Diary: Part 1
+                </h1>
+                <p class="small">Published:
+                    <time>
+2016-09-02
+                    </time>
+                </p>
+            </header>
+<h2 id="what-am-i-doing">What am I doing?</h2>
+<p>I had an idea for a side-project: a writing tool using data-structures from Graph Theory.</p>
+<p>I decided to write it in Swift (v3), which now works on Linux decoupled from the Apple ecosystem.</p>
+<h2 id="why-swift">Why Swift?</h2>
+<p>I like the simplicity and ease of use that the Go/Golang tools provide (repl, fast and simple compiler, simple package management, simple test tool etc...).</p>
+<p>I like the functional style, strong type-system and language features like pattern-matching that OCaml provides.</p>
+<p>Swift has these attributes in one language. While not quite a strong on the types and OCaml or idiomatic as Go, it is strong enough for my needs. Like a low maintenance OCaml that boring companies might actually use.</p>
+<h2 id="downsides">Downsides</h2>
+<p>OCaml's bucklescript looks really good, there isn't a Swift equivalent, yet.</p>
+<p>I chose Swift as it can go cross-platform thanks to it's LLVM based compiler. However it is hard to get a statically linked binary. I'm looking into contributing to the swift-package-manager to get this working.</p>
+<p>A basic CLI app that takes args and prints strings gets the following error:</p>
+<pre><code>./hello: error while loading shared libraries: libicui18n.so.55: cannot open shared object file: No such file or directory</code></pre>
+<h2 id="build-swift-3-from-source">Build Swift 3 from Source</h2>
+<pre class="sh"><code># set-up dir
+mkdir swift-source
+cd swift-source
+
+# get all sources
+git clone https://github.com/apple/swift.git
+./swift/utils/update-checkout --clone</code></pre>
+<h2 id="making-foundation-available-to-the-swift-build">Making <em>Foundation</em> Available to the <em>Swift Build</em></h2>
+<pre class="sh"><code>swift build -Xswiftc -static-stdlib
+# should/could work but produces errors
+# /usr/bin/ld.gold: error: cannot find -lFoundation</code></pre>
+<p>The Swift Package Manager has statically compiled <em>.a</em> files for some essential libraries. <em>XCTest</em> and <em>Foundation</em> are currently not provided.</p>
+<pre class="sh"><code>ls {path_to_swift_snapshot_usr_dir}/lib/swift_static/linux/
+# libswiftCore.a  libswiftGlibc.a  libswiftSwiftOnoneSupport.a</code></pre>
+<p>After talking to Daniel Dunbar one the <em>swift-users</em> mailing list, I've decided to try and add these libraries to the Swift Package Manager.</p>
+<p>A first step is to compile <em>swift-corelibs-foundation</em> from source.</p>
+<pre class="sh"><code>mkdir swift-corelibs
+cd swift-corelibs
+
+# clone repos
+git clone https://github.com/apple/swift-corelibs-foundation.git
+git clone https://github.com/apple/swift-corelibs-xctest.git
+git clone https://github.com/apple/swift-corelibs-libdispatch.git
+
+# build
+cd swift-corelibs-foundation
+</code></pre>
+<h2 id="links">Links</h2>
+<ul>
+<li>install: <a href="https://swift.org/download/#releases">v3</a></li>
+<li>vim</li>
+<li><a href="https://github.com/scrooloose/syntastic/">syntastic</a></li>
+<li><a href="https://github.com/keith/swift.vim">swift.vim</a></li>
+<li>Contributing to Swift</li>
+<li><a href="https://swift.org/contributing/">Swift Contributing Guidelines</a></li>
+<li><a href="https://github.com/apple/swift">Swift Repo</a></li>
+<li><a href="https://swift.org/package-manager/">Swift Package Manager</a></li>
+<li><a href="https://swift.org/package-manager/">Swift Package Manager Repo</a></li>
+<li><a href="https://swift.org/core-libraries/#foundation">Swift Foundation Lib</a></li>
+<li><a href="https://github.com/apple/swift-corelibs-foundation">Foundation repo</a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+</ul>
+            <footer>
+                <p class="small">If you want to be informed when more of this stuff is written you can <a href="/subscribe.html">subscribe</a> or why not look at <a href="/">Rudenoise's home page</a>?</p>
+            </footer>            
+        </article>
+    </body>
+</html>
