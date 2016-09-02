@@ -125,9 +125,29 @@ git clone https://github.com/apple/swift.git
 <p>This can then build swift from souce <em>and</em> core libs:</p>
 <pre class="sh"><code>cd {path_to}/swift-source
 swift/utils/build-script --xctest --foundation -t</code></pre>
+<p>On my ThinkPad X250 (i5, 16GB) the first build took a good 45mins. The resulting build directory size was 55G!</p>
+<p>And it runs!</p>
+<pre><code>build/Ninja-RelWithDebInfoAssert/swift-linux-x86_64/bin/swift --version
+# Swift version 3.0-dev (LLVM f54fa77021, Clang 0e6c928036, Swift 3488c8091a)</code></pre>
+<h3 id="todo">TODO:</h3>
+<p>Next up, build static libs from <em>corelibs</em>.</p>
+<blockquote>
+<p>The Swift standard libraries produce static archives as part of its build process (driven via CMake) so that can for some hints on the options required. Beyond that, I think it's a matter of building the relevant .a files and then getting them to install into the right location in the toolchain.</p>
+</blockquote>
+<pre class="sh"><code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/
+# shows all the .swift.o files for Foundation e.g.
+./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/UUID.swift.o
+# could this be built with
+ar rcs libFoundation.a *.swift.o
+# does link but resulting libFoundation.a produces a lot of errors (proably not acting on the right files, a gcc tool on llvm output?)</code></pre>
+<ul>
+<li>Work out how to build static libs using the existing build script. <code>swift/utils/build-script --build-swift-static-stdlib 1 --foundation</code> From <em>swift/utils/build-presets.ini</em> Now have the <em>.so</em> at: <code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/libFoundation.so</code> And the <em>.o</em> files at <code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation</code></li>
+<li>Look at how these are made and replicate for <em>corelibs</em></li>
+<li>Add to <em>toolchain</em></li>
+</ul>
 <h2 id="links">Links</h2>
 <ul>
-<li>install: <a href="https://swift.org/download/#releases">v3</a></li>
+<li>install: <a href="https://swift.org/download/#previews">Swift v3</a></li>
 <li>vim
 <ul>
 <li><a href="https://github.com/scrooloose/syntastic/">syntastic</a></li>

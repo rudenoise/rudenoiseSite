@@ -78,9 +78,48 @@ cd {path_to}/swift-source
 swift/utils/build-script --xctest --foundation -t
 ```
 
+On my ThinkPad X250 (i5, 16GB) the first build took a good 45mins. The
+resulting build directory size was 55G!
+
+And it runs!
+
+```
+build/Ninja-RelWithDebInfoAssert/swift-linux-x86_64/bin/swift --version
+# Swift version 3.0-dev (LLVM f54fa77021, Clang 0e6c928036, Swift 3488c8091a)
+```
+
+### TODO:
+
+
+Next up, build static libs from _corelibs_.
+
+> The Swift standard libraries produce static archives as part of its
+> build process (driven via CMake) so that can for some hints on the options required.
+> Beyond that, I think it's a matter of building the relevant .a files
+> and then getting them to install into the right location in the toolchain.
+
+```sh
+./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/
+# shows all the .swift.o files for Foundation e.g.
+./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/UUID.swift.o
+# could this be built with
+ar rcs libFoundation.a *.swift.o
+# does link but resulting libFoundation.a produces a lot of errors (proably not acting on the right files, a gcc tool on llvm output?)
+```
+
+* Work out how to build static libs using the existing build script.
+  ```swift/utils/build-script --build-swift-static-stdlib 1 --foundation```
+  From _swift/utils/build-presets.ini_
+  Now have the _.so_ at:
+  ```./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/libFoundation.so```
+  And the _.o_ files at
+  ```./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation```
+* Look at how these are made and replicate for _corelibs_
+* Add to _toolchain_
+
 ## Links
 
-* install: [v3](https://swift.org/download/#releases)
+* install: [Swift v3](https://swift.org/download/#previews)
 * vim
     * [syntastic](https://github.com/scrooloose/syntastic/)
     * [swift.vim](https://github.com/keith/swift.vim)
