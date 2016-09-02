@@ -36,18 +36,6 @@ A basic CLI app that takes args and prints strings gets the following error:
 ./hello: error while loading shared libraries: libicui18n.so.55: cannot open shared object file: No such file or directory
 ```
 
-## Build Swift 3 from Source
-
-```sh
-# set-up dir
-mkdir swift-source
-cd swift-source
-
-# get all sources
-git clone https://github.com/apple/swift.git
-./swift/utils/update-checkout --clone
-```
-
 ## Making _Foundation_ Available to the _Swift Build_
 
 ```sh
@@ -69,33 +57,40 @@ decided to try and add these libraries to the Swift Package Manager.
 
 A first step is to compile _swift-corelibs-foundation_ from source.
 
+### Build Swift 3 from Source
+
 ```sh
-mkdir swift-corelibs
-cd swift-corelibs
+# add ubuntu 16.04 specific dependencies
+sudo apt-get install dh-autoreconf libcurl4-gnutls-dev
+# set-up dir
+mkdir swift-source
+cd swift-source
 
-# clone repos
-git clone https://github.com/apple/swift-corelibs-foundation.git
-git clone https://github.com/apple/swift-corelibs-xctest.git
-git clone https://github.com/apple/swift-corelibs-libdispatch.git
+# get all sources
+git clone https://github.com/apple/swift.git
+./swift/utils/update-checkout --clone
+```
 
-# build
-cd swift-corelibs-foundation
+This can then build swift from souce _and_ core libs:
 
+```sh
+cd {path_to}/swift-source
+swift/utils/build-script --xctest --foundation -t
 ```
 
 ## Links
 
 * install: [v3](https://swift.org/download/#releases)
 * vim
-  * [syntastic](https://github.com/scrooloose/syntastic/)
-  * [swift.vim](https://github.com/keith/swift.vim)
+    * [syntastic](https://github.com/scrooloose/syntastic/)
+    * [swift.vim](https://github.com/keith/swift.vim)
 * Contributing to Swift
-  * [Swift Contributing Guidelines](https://swift.org/contributing/)
-  * [Swift Repo](https://github.com/apple/swift)
-  * [Swift Package Manager](https://swift.org/package-manager/)
-  * [Swift Package Manager Repo](https://swift.org/package-manager/)
-  * [Swift Foundation Lib](https://swift.org/core-libraries/#foundation)
-  * [Foundation repo](https://github.com/apple/swift-corelibs-foundation)
+    * [Swift Contributing Guidelines](https://swift.org/contributing/)
+    * [Swift Repo](https://github.com/apple/swift)
+    * [Swift Package Manager](https://swift.org/package-manager/)
+    * [Swift Package Manager Repo](https://swift.org/package-manager/)
+    * [Swift Foundation Lib](https://swift.org/core-libraries/#foundation)
+    * [Foundation repo](https://github.com/apple/swift-corelibs-foundation)
 * []()
 * []()
 * []()

@@ -103,14 +103,6 @@ Swift Diary: Part 1
 <p>I chose Swift as it can go cross-platform thanks to it's LLVM based compiler. However it is hard to get a statically linked binary. I'm looking into contributing to the swift-package-manager to get this working.</p>
 <p>A basic CLI app that takes args and prints strings gets the following error:</p>
 <pre><code>./hello: error while loading shared libraries: libicui18n.so.55: cannot open shared object file: No such file or directory</code></pre>
-<h2 id="build-swift-3-from-source">Build Swift 3 from Source</h2>
-<pre class="sh"><code># set-up dir
-mkdir swift-source
-cd swift-source
-
-# get all sources
-git clone https://github.com/apple/swift.git
-./swift/utils/update-checkout --clone</code></pre>
 <h2 id="making-foundation-available-to-the-swift-build">Making <em>Foundation</em> Available to the <em>Swift Build</em></h2>
 <pre class="sh"><code>swift build -Xswiftc -static-stdlib
 # should/could work but produces errors
@@ -120,30 +112,36 @@ git clone https://github.com/apple/swift.git
 # libswiftCore.a  libswiftGlibc.a  libswiftSwiftOnoneSupport.a</code></pre>
 <p>After talking to Daniel Dunbar one the <em>swift-users</em> mailing list, I've decided to try and add these libraries to the Swift Package Manager.</p>
 <p>A first step is to compile <em>swift-corelibs-foundation</em> from source.</p>
-<pre class="sh"><code>mkdir swift-corelibs
-cd swift-corelibs
+<h3 id="build-swift-3-from-source">Build Swift 3 from Source</h3>
+<pre class="sh"><code># add ubuntu 16.04 specific dependencies
+sudo apt-get install dh-autoreconf libcurl4-gnutls-dev
+# set-up dir
+mkdir swift-source
+cd swift-source
 
-# clone repos
-git clone https://github.com/apple/swift-corelibs-foundation.git
-git clone https://github.com/apple/swift-corelibs-xctest.git
-git clone https://github.com/apple/swift-corelibs-libdispatch.git
-
-# build
-cd swift-corelibs-foundation
-</code></pre>
+# get all sources
+git clone https://github.com/apple/swift.git
+./swift/utils/update-checkout --clone</code></pre>
+<p>This can then build swift from souce <em>and</em> core libs:</p>
+<pre class="sh"><code>cd {path_to}/swift-source
+swift/utils/build-script --xctest --foundation -t</code></pre>
 <h2 id="links">Links</h2>
 <ul>
 <li>install: <a href="https://swift.org/download/#releases">v3</a></li>
-<li>vim</li>
+<li>vim
+<ul>
 <li><a href="https://github.com/scrooloose/syntastic/">syntastic</a></li>
 <li><a href="https://github.com/keith/swift.vim">swift.vim</a></li>
-<li>Contributing to Swift</li>
+</ul></li>
+<li>Contributing to Swift
+<ul>
 <li><a href="https://swift.org/contributing/">Swift Contributing Guidelines</a></li>
 <li><a href="https://github.com/apple/swift">Swift Repo</a></li>
 <li><a href="https://swift.org/package-manager/">Swift Package Manager</a></li>
 <li><a href="https://swift.org/package-manager/">Swift Package Manager Repo</a></li>
 <li><a href="https://swift.org/core-libraries/#foundation">Swift Foundation Lib</a></li>
 <li><a href="https://github.com/apple/swift-corelibs-foundation">Foundation repo</a></li>
+</ul></li>
 <li><a href=""></a></li>
 <li><a href=""></a></li>
 <li><a href=""></a></li>
