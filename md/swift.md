@@ -36,7 +36,7 @@ A basic CLI app that takes args and prints strings gets the following error:
 ./hello: error while loading shared libraries: libicui18n.so.55: cannot open shared object file: No such file or directory
 ```
 
-## Making _Foundation_ Available to the _Swift Build_
+### Making _Foundation_ Available to the _Swift Build_
 
 ```sh
 swift build -Xswiftc -static-stdlib
