@@ -114,20 +114,9 @@ Next up, build static libs from _corelibs_.
 > Beyond that, I think it's a matter of building the relevant .a files
 > and then getting them to install into the right location in the toolchain.
 
-```sh
-./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/
-# shows all the .swift.o files for Foundation e.g.
-./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/UUID.swift.o
-# does link but resulting libFoundation.a produces a lot of errors (proably not acting on the right files, a gcc tool on llvm output?)
-```
+[Other notes on building static binaries](http://si.org/posts/2016/09/swift_static_binary)
 
 * Work out how to build static libs using the existing build script.
-  ```swift/utils/build-script --build-swift-static-stdlib --libdispatch --foundation```
-  From _swift/utils/build-presets.ini_
-  Now have the _.so_ at:
-  ```./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/libFoundation.so```
-  And the _.o_ files at
-  ```./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation```
 * Look at how these are made and replicate for _corelibs_
 * Add to _toolchain_
 

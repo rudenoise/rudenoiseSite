@@ -144,12 +144,9 @@ cp libFoundation.a ~/swift/lib/swift_static/linux/</code></pre>
 <blockquote>
 <p>The Swift standard libraries produce static archives as part of its build process (driven via CMake) so that can for some hints on the options required. Beyond that, I think it's a matter of building the relevant .a files and then getting them to install into the right location in the toolchain.</p>
 </blockquote>
-<pre class="sh"><code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/
-# shows all the .swift.o files for Foundation e.g.
-./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/UUID.swift.o
-# does link but resulting libFoundation.a produces a lot of errors (proably not acting on the right files, a gcc tool on llvm output?)</code></pre>
+<p><a href="http://si.org/posts/2016/09/swift_static_binary">Other notes on building static binaries</a></p>
 <ul>
-<li>Work out how to build static libs using the existing build script. <code>swift/utils/build-script --build-swift-static-stdlib --libdispatch --foundation</code> From <em>swift/utils/build-presets.ini</em> Now have the <em>.so</em> at: <code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/libFoundation.so</code> And the <em>.o</em> files at <code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation</code></li>
+<li>Work out how to build static libs using the existing build script.</li>
 <li>Look at how these are made and replicate for <em>corelibs</em></li>
 <li>Add to <em>toolchain</em></li>
 </ul>
