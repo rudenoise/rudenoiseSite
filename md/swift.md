@@ -75,7 +75,7 @@ This can then build swift from souce _and_ core libs:
 
 ```sh
 cd {path_to}/swift-source
-swift/utils/build-script --xctest --foundation -t
+swift/utils/build-script --xctest --foundation --libdispatch -t
 ```
 
 On my ThinkPad X250 (i5, 16GB) the first build took a good 45mins. The
@@ -86,6 +86,22 @@ And it runs!
 ```
 build/Ninja-RelWithDebInfoAssert/swift-linux-x86_64/bin/swift --version
 # Swift version 3.0-dev (LLVM f54fa77021, Clang 0e6c928036, Swift 3488c8091a)
+```
+
+Build lib dispatch
+```
+cd swft-source/
+./swift/utils/build-script --libdispatch -- --install-libdispatch
+cd build/Ninja-RelWithDebInfoAssert/libdispatch-linux-x86_64
+ar rcs libDispatch.a ./src/.libs/*.o ./src/swift/*.o ./src/swift/.libs/libdispatch_la-DispatchStubs.o ./src/BlocksRuntime/.libs/*.o ./libpwq/src/posix/*.o ./libpwq/src/posix/.libs/*.o ./libpwq/src/linux/*.o ./libpwq/src/linux/.libs/*.o ./libpwq/src/*.o ./libpwq/src/.libs/*.o ./libkqueue/src/posix/.libs/*.o ./libkqueue/src/posix/*.o ./libkqueue/src/linux/*.o ./libkqueue/src/linux/.libs/*.o ./libkqueue/src/common/*.o ./libkqueue/src/common/.libs/*.o
+cp libDispatch.a ~/swift/lib/swift_static/linux/
+```
+
+Build Foundation
+```
+cd build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation
+ar rcs libFoundation.a Foundation/*.o Foundation/**/*.o CoreFoundation/**/*.o
+cp libFoundation.a ~/swift/lib/swift_static/linux/
 ```
 
 ### TODO:
@@ -102,13 +118,11 @@ Next up, build static libs from _corelibs_.
 ./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/
 # shows all the .swift.o files for Foundation e.g.
 ./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/UUID.swift.o
-# could this be built with
-ar rcs libFoundation.a *.swift.o
 # does link but resulting libFoundation.a produces a lot of errors (proably not acting on the right files, a gcc tool on llvm output?)
 ```
 
 * Work out how to build static libs using the existing build script.
-  ```swift/utils/build-script --build-swift-static-stdlib 1 --foundation```
+  ```swift/utils/build-script --build-swift-static-stdlib --libdispatch --foundation```
   From _swift/utils/build-presets.ini_
   Now have the _.so_ at:
   ```./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/libFoundation.so```

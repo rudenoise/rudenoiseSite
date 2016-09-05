@@ -87,7 +87,7 @@ Swift Diary: Part 1
                 </h1>
                 <p class="small">Published:
                     <time>
-2016-09-02
+2016-09-05
                     </time>
                 </p>
             </header>
@@ -124,11 +124,21 @@ git clone https://github.com/apple/swift.git
 ./swift/utils/update-checkout --clone</code></pre>
 <p>This can then build swift from souce <em>and</em> core libs:</p>
 <pre class="sh"><code>cd {path_to}/swift-source
-swift/utils/build-script --xctest --foundation -t</code></pre>
+swift/utils/build-script --xctest --foundation --libdispatch -t</code></pre>
 <p>On my ThinkPad X250 (i5, 16GB) the first build took a good 45mins. The resulting build directory size was 55G!</p>
 <p>And it runs!</p>
 <pre><code>build/Ninja-RelWithDebInfoAssert/swift-linux-x86_64/bin/swift --version
 # Swift version 3.0-dev (LLVM f54fa77021, Clang 0e6c928036, Swift 3488c8091a)</code></pre>
+<p>Build lib dispatch</p>
+<pre><code>cd swft-source/
+./swift/utils/build-script --libdispatch -- --install-libdispatch
+cd build/Ninja-RelWithDebInfoAssert/libdispatch-linux-x86_64
+ar rcs libDispatch.a ./src/.libs/*.o ./src/swift/*.o ./src/swift/.libs/libdispatch_la-DispatchStubs.o ./src/BlocksRuntime/.libs/*.o ./libpwq/src/posix/*.o ./libpwq/src/posix/.libs/*.o ./libpwq/src/linux/*.o ./libpwq/src/linux/.libs/*.o ./libpwq/src/*.o ./libpwq/src/.libs/*.o ./libkqueue/src/posix/.libs/*.o ./libkqueue/src/posix/*.o ./libkqueue/src/linux/*.o ./libkqueue/src/linux/.libs/*.o ./libkqueue/src/common/*.o ./libkqueue/src/common/.libs/*.o
+cp libDispatch.a ~/swift/lib/swift_static/linux/</code></pre>
+<p>Build Foundation</p>
+<pre><code>cd build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation
+ar rcs libFoundation.a Foundation/*.o Foundation/**/*.o CoreFoundation/**/*.o
+cp libFoundation.a ~/swift/lib/swift_static/linux/</code></pre>
 <h3 id="todo">TODO:</h3>
 <p>Next up, build static libs from <em>corelibs</em>.</p>
 <blockquote>
@@ -137,11 +147,9 @@ swift/utils/build-script --xctest --foundation -t</code></pre>
 <pre class="sh"><code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/
 # shows all the .swift.o files for Foundation e.g.
 ./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation/UUID.swift.o
-# could this be built with
-ar rcs libFoundation.a *.swift.o
 # does link but resulting libFoundation.a produces a lot of errors (proably not acting on the right files, a gcc tool on llvm output?)</code></pre>
 <ul>
-<li>Work out how to build static libs using the existing build script. <code>swift/utils/build-script --build-swift-static-stdlib 1 --foundation</code> From <em>swift/utils/build-presets.ini</em> Now have the <em>.so</em> at: <code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/libFoundation.so</code> And the <em>.o</em> files at <code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation</code></li>
+<li>Work out how to build static libs using the existing build script. <code>swift/utils/build-script --build-swift-static-stdlib --libdispatch --foundation</code> From <em>swift/utils/build-presets.ini</em> Now have the <em>.so</em> at: <code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/libFoundation.so</code> And the <em>.o</em> files at <code>./build/Ninja-RelWithDebInfoAssert/foundation-linux-x86_64/Foundation/Foundation</code></li>
 <li>Look at how these are made and replicate for <em>corelibs</em></li>
 <li>Add to <em>toolchain</em></li>
 </ul>
