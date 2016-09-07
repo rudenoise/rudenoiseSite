@@ -26,10 +26,12 @@ Like a low maintenance OCaml that boring companies might actually use.
 OCaml's bucklescript looks really good, there isn't a Swift equivalent,
 yet.
 
+No high quality (ISO independent) equivalent to OCaml's _Lwt_,
+async is coming in v4 and parallel processing to be addressed in v5.
+
 I chose Swift as it can go cross-platform thanks to it's LLVM based compiler.
 However it is hard to get a statically linked binary. I'm looking into
 contributing to the swift-package-manager to get this working.
-
 
 A basic CLI app that takes args and prints strings gets the following error:
 ```
