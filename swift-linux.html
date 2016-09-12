@@ -91,9 +91,9 @@ Creating a Swift Package on Linux
                     </time>
                 </p>
             </header>
-<p>I like Swift and Linux, you might too, so here's a <em>fast</em> guide to creating and releasing a Swift module. From Linux.</p>
+<p>I like Swift and Linux, you might too. Here's a <em>fast</em> guide to creating and releasing a Swift module, from Linux.</p>
 <h2 id="getting-started">Getting Started</h2>
-<p>There's not a vast amount of documentation but <a href="https://swift.org/">Swift.org</a> has enough to get you started. And the <a href="https://swift.org/documentation/#the-swift-programming-language">Swift Programming Language</a> book is pretty decent on the basics.</p>
+<p>There's not a vast amount of documentation but <a href="https://swift.org/">Swift.org</a> has enough to get you started. And the <a href="https://swift.org/documentation/#the-swift-programming-language">Swift Programming Language</a> book is decent on language basics.</p>
 <p>The first step is to get the Swift Toolchain running. I've been using Swift 3. At the time of writing <em>GM Candidate</em> is the latest version, while there have been changes between previews the compiler and tools are helpful in suggesting corrections.</p>
 <p>Ubuntu is the only supported Linux flavour, 14.04 and 15.10 are the supported versions. I'm using 16.04 and have had no trouble.</p>
 <p>Download and install instructions can be found on the <a href="https://swift.org/download/#previews">swift downloads</a> page.</p>
@@ -134,15 +134,29 @@ let package = Package(
         majorVersion: 0)
     ]
 )</code></pre>
-<h2 id="wot-i-done">Wot I Done</h2>
-<p>After a few days work I have the beginnings of my Graph library <a href="https://github.com/rudenoise/grift">Grift (Graphs + Swift)</a>.</p>
-<p>The process has been very enjoyable, I recommend it. I can see Swift being a good tool for many of the same reasons Golang has gained so much traction. If you're functionally inclined, it might even have the edge.</p>
 <h2 id="thoughts">Thoughts</h2>
 <p>I like it. It reminds me of <em>Go</em>, simple dev tools and workflow. There's also some good overlap with OCaml, the type-system is strict enough that a successful compilation is a reasonable grantee that the code works. I probably prefer OCaml as a language, and Go's tooling, but it has enough of each to be a compelling choice.</p>
-<p>The project is a work-in-progress so the mailing lists have been very useful, and welcoming.</p>
+<p>Swift on Linux is a work-in-progress so the mailing lists have been very useful, and welcoming.</p>
 <p>There isn't much to compete with Go-routines' concurrency or async libs (like OCaml's Lwt), it looks like these are in the pipeline for v4 and v5.</p>
-<p>I was hoping to compile static binaries, with a view to deploying web-services to very minimal hosts (and eventually a Rump Kernel based unikernel OS). This isn't currently possible if you're using <em>Foundation</em> (the extended std lib ported from OSX/IOS). I've been looking at chipping in on the Open Source project but so far it's been a bit beyond me (still learning). If you're looking at helping out on a cool project, Swift could be the one for you.</p>
-<h2 id="other-useful-links">Other Useful links:</h2>
+<p>I was hoping to compile static binaries, with a view to deploying web-services to very minimal hosts (and possibly a Rump Kernel based unikernel OS). This isn't currently possible if you're using <em>Foundation</em> (the extended std lib ported from OSX/IOS). I've been looking at chipping in on the Open Source project but so far it's been a bit beyond me (still learning). If you're looking at helping out on a cool project, Swift could be the one for you.</p>
+<h2 id="useful-links">Useful links:</h2>
+<ul>
+<li>install: <a href="https://swift.org/download/#previews">Swift v3</a></li>
+<li>vim
+<ul>
+<li><a href="https://github.com/scrooloose/syntastic/">syntastic</a></li>
+<li><a href="https://github.com/keith/swift.vim">swift.vim</a></li>
+</ul></li>
+<li>Contributing to Swift
+<ul>
+<li><a href="https://swift.org/contributing/">Swift Contributing Guidelines</a></li>
+<li><a href="https://github.com/apple/swift">Swift Repo</a></li>
+<li><a href="https://swift.org/package-manager/">Swift Package Manager</a></li>
+<li><a href="https://swift.org/package-manager/">Swift Package Manager Repo</a></li>
+<li><a href="https://swift.org/core-libraries/#foundation">Swift Foundation Lib</a></li>
+<li><a href="https://github.com/apple/swift-corelibs-foundation">Foundation repo</a></li>
+</ul></li>
+</ul>
             <footer>
                 <p class="small">If you want to be informed when more of this stuff is written you can <a href="/subscribe.html">subscribe</a> or why not look at <a href="/">Rudenoise's home page</a>?</p>
             </footer>            

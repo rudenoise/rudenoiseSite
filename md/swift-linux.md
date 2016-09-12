@@ -1,14 +1,14 @@
 # Creating a Swift Package on Linux
 
-I like Swift and Linux, you might too, so here's a _fast_ guide to creating and
-releasing a Swift module. From Linux.
+I like Swift and Linux, you might too. Here's a _fast_ guide to creating and
+releasing a Swift module, from Linux.
 
 ## Getting Started
 
 There's not a vast amount of documentation but [Swift.org](https://swift.org/)
 has enough to get you started. And the
 [Swift Programming Language](https://swift.org/documentation/#the-swift-programming-language)
-book is pretty decent on the basics.
+book is decent on language basics.
 
 The first step is to get the Swift Toolchain running. I've been
 using Swift 3. At the time of writing _GM Candidate_ is the latest
@@ -80,16 +80,6 @@ let package = Package(
 )
 ```
 
-## Wot I Done
-
-After a few days work I have the beginnings of my Graph library
-[Grift (Graphs + Swift)](https://github.com/rudenoise/grift).
-
-The process has been very enjoyable, I recommend it. I can see
-Swift being a good tool for many of the same reasons Golang has
-gained so much traction. If you're functionally inclined, it might
-even have the edge.
-
 ## Thoughts
 
 I like it. It reminds me of _Go_, simple dev tools and workflow.
@@ -99,7 +89,7 @@ grantee that the code works. I probably prefer OCaml as a
 language, and Go's tooling, but it has enough of each to be a
 compelling choice.
 
-The project is a work-in-progress so the mailing lists have been
+Swift on Linux is a work-in-progress so the mailing lists have been
 very useful, and welcoming.
 
 There isn't much to compete with Go-routines' concurrency or async
@@ -107,11 +97,24 @@ libs (like OCaml's Lwt), it looks like these are in the pipeline
 for v4 and v5.
 
 I was hoping to compile static binaries, with a view to deploying
-web-services to very minimal hosts (and eventually a Rump Kernel
+web-services to very minimal hosts (and possibly a Rump Kernel
 based unikernel OS). This isn't currently possible if you're using
 _Foundation_ (the extended std lib ported from OSX/IOS). I've been
 looking at chipping in on the Open Source project but so far it's
 been a bit beyond me (still learning). If you're looking at helping
 out on a cool project, Swift could be the one for you.
 
-## Other Useful links:
+## Useful links:
+
+* install: [Swift v3](https://swift.org/download/#previews)
+* vim
+    * [syntastic](https://github.com/scrooloose/syntastic/)
+    * [swift.vim](https://github.com/keith/swift.vim)
+* Contributing to Swift
+    * [Swift Contributing Guidelines](https://swift.org/contributing/)
+    * [Swift Repo](https://github.com/apple/swift)
+    * [Swift Package Manager](https://swift.org/package-manager/)
+    * [Swift Package Manager Repo](https://swift.org/package-manager/)
+    * [Swift Foundation Lib](https://swift.org/core-libraries/#foundation)
+    * [Foundation repo](https://github.com/apple/swift-corelibs-foundation)
+
