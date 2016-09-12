@@ -1,21 +1,7 @@
 # Creating a Swift Package on Linux
 
-A few weeks back I decided to start building a tool using Swift on
-Linux.
-
-I'd used Swift v1 on an IOS project a while back and liked
-the language (functional, strong type system etc...) but felt that
-using it inside the IOS ecosystem didn't really allow me to get a
-"pure" Swift experience.
-
-Since then I've been happily back on Linux using OCaml as
-my "go to" language. But I kept an eye on Swift. It was open
-sourced and shortly after the Swift Toolchain became available for
-Ubuntu. I'd been reading about Graph Theory and wanted to play with
-the ideas so I thought I'd implement them in Swift.
-
-I like it. You might too, so here's a _fast_ guide to creating and
-releasing a Swift module.
+I like Swift and Linux, you might too, so here's a _fast_ guide to creating and
+releasing a Swift module. From Linux.
 
 ## Getting Started
 
@@ -25,9 +11,12 @@ has enough to get you started. And the
 book is pretty decent on the basics.
 
 The first step is to get the Swift Toolchain running. I've been
-using Swift 3. At the time of writing Preview 6 is the latest and
-while there have been changes between previews the compiler and
-tools are helpful in suggesting corrections.
+using Swift 3. At the time of writing _GM Candidate_ is the latest
+version, while there have been changes between previews the
+compiler and tools are helpful in suggesting corrections.
+
+Ubuntu is the only supported Linux flavour, 14.04 and 15.10 are the
+supported versions. I'm using 16.04 and have had no trouble.
 
 Download and install
 instructions can be found on the [swift downloads](https://swift.org/download/#previews)
@@ -35,6 +24,7 @@ page.
 
 ## Building a Swift Package
 
+Create a directory for you project and initialise a package:
 ```sh
 mkdir yourSwiftProject
 cd yourSwiftProject
@@ -62,17 +52,22 @@ swift build
 swift test
 ```
 
+You're ready to start making a package. Start by giving it a name
+in the _Package.swift_ file and go from there. After a while you
+may be ready to publish that package for others to use.
+
 Publishing your package is as simple as:
 ```sh
 git add -A
-git commit -am 'my project is ready'
+git commit -am 'my project is ready for a release'
 git tag 0.1.0
 git tag -a 0.1.0 -m "my version 0.1.0"
 git push origin 0.1.0
 ```
 
 And to include it in another project, add the git URL to the
-_Package.swift_. e.g:
+_Package.swift_. I started the basics of a _Graph Data_ library and
+include it in other Swift projects like this:
 ```swift
 import PackageDescription
 
@@ -118,3 +113,5 @@ _Foundation_ (the extended std lib ported from OSX/IOS). I've been
 looking at chipping in on the Open Source project but so far it's
 been a bit beyond me (still learning). If you're looking at helping
 out on a cool project, Swift could be the one for you.
+
+## Other Useful links:

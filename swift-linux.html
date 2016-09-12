@@ -87,19 +87,18 @@ Creating a Swift Package on Linux
                 </h1>
                 <p class="small">Published:
                     <time>
-2016-09-09
+2016-09-12
                     </time>
                 </p>
             </header>
-<p>A few weeks back I decided to start building a tool using Swift on Linux.</p>
-<p>I'd used Swift v1 on an IOS project a while back and liked the language (functional, strong type system etc...) but felt that using it inside the IOS ecosystem didn't really allow me to get a &quot;pure&quot; Swift experience.</p>
-<p>Since then I've been happily back on Linux using OCaml as my &quot;go to&quot; language. But I kept an eye on Swift. It was open sourced and shortly after the Swift Toolchain became available for Ubuntu. I'd been reading about Graph Theory and wanted to play with the ideas so I thought I'd implement them in Swift.</p>
-<p>I like it. You might too, so here's a <em>fast</em> guide to creating and releasing a Swift module.</p>
+<p>I like Swift and Linux, you might too, so here's a <em>fast</em> guide to creating and releasing a Swift module. From Linux.</p>
 <h2 id="getting-started">Getting Started</h2>
 <p>There's not a vast amount of documentation but <a href="https://swift.org/">Swift.org</a> has enough to get you started. And the <a href="https://swift.org/documentation/#the-swift-programming-language">Swift Programming Language</a> book is pretty decent on the basics.</p>
-<p>The first step is to get the Swift Toolchain running. I've been using Swift 3. At the time of writing Preview 6 is the latest and while there have been changes between previews the compiler and tools are helpful in suggesting corrections.</p>
+<p>The first step is to get the Swift Toolchain running. I've been using Swift 3. At the time of writing <em>GM Candidate</em> is the latest version, while there have been changes between previews the compiler and tools are helpful in suggesting corrections.</p>
+<p>Ubuntu is the only supported Linux flavour, 14.04 and 15.10 are the supported versions. I'm using 16.04 and have had no trouble.</p>
 <p>Download and install instructions can be found on the <a href="https://swift.org/download/#previews">swift downloads</a> page.</p>
 <h2 id="building-a-swift-package">Building a Swift Package</h2>
+<p>Create a directory for you project and initialise a package:</p>
 <pre class="sh"><code>mkdir yourSwiftProject
 cd yourSwiftProject
 swift package init</code></pre>
@@ -118,13 +117,14 @@ swift package init</code></pre>
 swift build
 # test it
 swift test</code></pre>
+<p>You're ready to start making a package. Start by giving it a name in the <em>Package.swift</em> file and go from there. After a while you may be ready to publish that package for others to use.</p>
 <p>Publishing your package is as simple as:</p>
 <pre class="sh"><code>git add -A
-git commit -am &#39;my project is ready&#39;
+git commit -am &#39;my project is ready for a release&#39;
 git tag 0.1.0
 git tag -a 0.1.0 -m &quot;my version 0.1.0&quot;
 git push origin 0.1.0</code></pre>
-<p>And to include it in another project, add the git URL to the <em>Package.swift</em>. e.g:</p>
+<p>And to include it in another project, add the git URL to the <em>Package.swift</em>. I started the basics of a <em>Graph Data</em> library and include it in other Swift projects like this:</p>
 <pre class="swift"><code>import PackageDescription
 
 let package = Package(
@@ -142,6 +142,7 @@ let package = Package(
 <p>The project is a work-in-progress so the mailing lists have been very useful, and welcoming.</p>
 <p>There isn't much to compete with Go-routines' concurrency or async libs (like OCaml's Lwt), it looks like these are in the pipeline for v4 and v5.</p>
 <p>I was hoping to compile static binaries, with a view to deploying web-services to very minimal hosts (and eventually a Rump Kernel based unikernel OS). This isn't currently possible if you're using <em>Foundation</em> (the extended std lib ported from OSX/IOS). I've been looking at chipping in on the Open Source project but so far it's been a bit beyond me (still learning). If you're looking at helping out on a cool project, Swift could be the one for you.</p>
+<h2 id="other-useful-links">Other Useful links:</h2>
             <footer>
                 <p class="small">If you want to be informed when more of this stuff is written you can <a href="/subscribe.html">subscribe</a> or why not look at <a href="/">Rudenoise's home page</a>?</p>
             </footer>            
