@@ -117,4 +117,5 @@ out on a cool project, Swift could be the one for you.
     * [Swift Package Manager Repo](https://swift.org/package-manager/)
     * [Swift Foundation Lib](https://swift.org/core-libraries/#foundation)
     * [Foundation repo](https://github.com/apple/swift-corelibs-foundation)
+* [Foundation Docs](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/ObjC_classic/)
 
