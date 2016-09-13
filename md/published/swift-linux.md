@@ -1,7 +1,7 @@
 # Creating a Swift Package on Linux
 
-I like Swift and Linux, you might too. Here's a _fast_ guide to creating and
-releasing a Swift module, from Linux.
+I like Swift and Linux, you might too. Here's a _fast_ guide to
+creating and releasing a Swift module, from Linux.
 
 ## Getting Started
 
@@ -66,8 +66,8 @@ git push origin 0.1.0
 ```
 
 And to include it in another project, add the git URL to the
-_Package.swift_. I started the basics of a _Graph Data_ library and
-include it in other Swift projects like this:
+_Package.swift_. I started the basics of a _Graph Data_ library
+and include it in other Swift projects like this:
 ```swift
 import PackageDescription
 
@@ -83,10 +83,10 @@ let package = Package(
 ## Thoughts
 
 I like it. It reminds me of _Go_, simple dev tools and workflow.
-There's also some good overlap with OCaml, the type-system is
+There's also overlap with OCaml, the type-system is
 strict enough that a successful compilation is a reasonable
 grantee that the code works. I probably prefer OCaml as a
-language, and Go's tooling, but it has enough of each to be a
+language and Go's tooling, but it has enough of each to be a
 compelling choice.
 
 Swift on Linux is a work-in-progress so the mailing lists have been

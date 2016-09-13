@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>Swift on Linux</title>
+            <link>http://rudenoise.uk/swift-linux.html</link>
+            <description>A fast guide to creating and releasing a Swift module, from Linux.</description>
+            <guid>http://rudenoise.uk/swift-linux.html</guid>
+            <pubDate>Tue  13 Sept 2016 11:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title>OCaml Update June 2016</title>
             <link>http://rudenoise.uk/ocaml-june-16.html</link>
             <description>Updates on: MirageOS Hackathon, Marrakech; MirageOS Dashboard; and what to learn, next?</description>
