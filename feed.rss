@@ -6,9 +6,9 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
-            <title>Swift on Linux</title>
+            <title>Creating a Swift Package on Linux</title>
             <link>http://rudenoise.uk/swift-linux.html</link>
-            <description>A fast guide to creating and releasing a Swift module, from Linux.</description>
+            <description>A fast guide to creating and releasing a Swift package/module, from Linux.</description>
             <guid>http://rudenoise.uk/swift-linux.html</guid>
             <pubDate>Tue  13 Sept 2016 11:00:00 GMT</pubDate>
         </item>
