@@ -1,7 +1,7 @@
 # Creating a Swift Package on Linux
 
 I like Swift and Linux, you might too. Here's a _fast_ guide to
-creating and releasing a Swift module, from Linux.
+creating and releasing a Swift package/module, from Linux.
 
 ## Getting Started
 
