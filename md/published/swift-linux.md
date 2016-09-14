@@ -11,8 +11,8 @@ has enough to get you started. And the
 book is decent on language basics.
 
 The first step is to get the Swift Toolchain running. I've been
-using Swift 3. At the time of writing _GM Candidate_ is the latest
-version, while there have been changes between previews the
+using Swift 3. At the time of writing _3.0_ is the latest
+version, while there have been changes between versions the
 compiler and tools are helpful in suggesting corrections.
 
 Ubuntu is the only supported Linux flavour, 14.04 and 15.10 are the
