@@ -87,7 +87,7 @@ Creating a Swift Package on Linux
                 </h1>
                 <p class="small">Published:
                     <time>
-2016-09-14
+2016-09-16
                     </time>
                 </p>
             </header>
@@ -121,7 +121,6 @@ swift test</code></pre>
 <p>Publishing your package is as simple as:</p>
 <pre class="sh"><code>git add -A
 git commit -am &#39;my project is ready for a release&#39;
-git tag 0.1.0
 git tag -a 0.1.0 -m &quot;my version 0.1.0&quot;
 git push origin 0.1.0</code></pre>
 <p>And to include it in another project, add the git URL to the <em>Package.swift</em>. I started the basics of a <em>Graph Data</em> library and include it in other Swift projects like this:</p>

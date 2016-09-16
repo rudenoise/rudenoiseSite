@@ -60,7 +60,6 @@ Publishing your package is as simple as:
 ```sh
 git add -A
 git commit -am 'my project is ready for a release'
-git tag 0.1.0
 git tag -a 0.1.0 -m "my version 0.1.0"
 git push origin 0.1.0
 ```
