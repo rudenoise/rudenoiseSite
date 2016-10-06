@@ -95,10 +95,10 @@ Open BSD Notes
 <blockquote>
 <p>Instead of trying to make it do more, they keep it focused on doing what it does with more security and reliability. <em>Derek Sivers</em></p>
 </blockquote>
-<p>The basic OS is small, the x86 install is less than 300MB. This provides everything <em>OpenBSD</em>'s developers consider essential for a general-purpose Operating System. The UNIX philosophy is adhered to and coupled with rigorous documentation. If there is a job that needs doing it will have one program to do it and the user can read a thorough manual describing its intended use and functionality, with examples. While not for the novice (it's console only, by default) the system is complete and self-contained. With time a user could operate and learn about the system with no external resources. [This is beyond me, so far, but I'm getting there.]</p>
+<p>The basic OS is small, the x86 install is less than 300MB. This provides everything <em>OpenBSD</em>'s developers consider essential for a general-purpose Operating System. The UNIX philosophy is adhered to and is coupled with rigorous documentation. If there is a job that needs doing it will have one program to do it and the user can read a thorough manual describing its intended use and functionality, with examples. While not for the novice (it's console only, by default) the system is complete and self-contained. With time a user could operate and learn about the system with no external resources. [This is beyond me, so far, but I'm getting there.]</p>
 <p>I'm enjoying the learning-curve, I recommend it.</p>
 <h2 id="adding-things">Adding Things</h2>
-<p>I aim at a simple set-up, for example I try and publish this site with as few tools as possible:</p>
+<p>I aim at a simple set-up, for example this page published using the flowing tools:</p>
 <ul>
 <li>write and edit in <em>vim</em>;</li>
 <li>use <em>git</em> for version control;</li>
@@ -107,9 +107,9 @@ Open BSD Notes
 <li>a <em>shell</em> script to wrap the HTML in a minimally styled document;</li>
 <li>I deploy this to an <em>AWS S3</em> bucket which serves over <em>http</em>.</li>
 </ul>
-<p>I thought that this setup-was &quot;minimal&quot; but adding all this to a system as stripped down as <em>OpenBSD</em> reveals just how much computation is involved.</p>
+<p><em>OpenBSD</em> reveals just how much computation is involved in assembling the tools, above.</p>
 <p>For instance, <em>pandoc</em> is a non-trivial piece of software. To install on <em>Ubuntu</em> I'd simply:</p>
-<pre class="sh"><code>sudo apt-get install pandoc</code></pre>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get install pandoc</code></pre></div>
 <p>This would bring down a pre-compiled binary and any dynamically linked libraries/dependent-packages. Seems simple but this is deceptive. To install on OpenBSD there is no preconfigured binary. To obtain <em>pandoc</em> I needed to:</p>
 <ol style="list-style-type: decimal">
 <li>install the <em>Glasgow Haskell Comiler</em> (<em>GHC</em>);</li>
@@ -119,7 +119,7 @@ Open BSD Notes
 <p>This process took over 30 mins to complete (the <em>X61s</em> first appeared in 2007 so its slow by current standards).</p>
 <h2 id="minimisation">Minimisation</h2>
 <p>I like to know and understand my tools. I'm not at a stage where replacing <em>vim</em> and <em>git</em> are an option.</p>
-<p>Much as I admire <em>pandoc</em> I am not using most of its functionality. For sub-set of <em>markdown</em> that I'm using I could write my own <em>md-to-html</em> program.</p>
+<p>Much as I admire <em>pandoc</em> I am not using most of its functionality. For the sub-set of <em>markdown</em> that I'm using I could write my own <em>md-to-html</em> program.</p>
 <p>And though <em>AWS</em> is cheap (this blog is never visited enough to make it worth Amazon's effort to bill me) I could be serving content from my own <em>OpenBSD</em> server at home.</p>
 <h2 id="links">Links</h2>
 <ul>

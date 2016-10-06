@@ -6,6 +6,20 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title></title>
+            <link>http://rudenoise.uk/md-mc-notes.html</link>
+            <description>Notes and thoughts triggered by Jentery Sayers's piece of the same title.</description>
+            <guid>http://rudenoise.uk/md-mc-notes.html</guid>
+            <pubDate>Thu  6 Oct 2016 19:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>OpenBSD Notes</title>
+            <link>http://rudenoise.uk/open-bsd-notes.html</link>
+            <description>A rugged and minimal pairing of OS and laptop.</description>
+            <guid>http://rudenoise.uk/open-bsd-notes.html</guid>
+            <pubDate>Thu  6 Oct 2016 19:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title>Creating a Swift Package on Linux</title>
             <link>http://rudenoise.uk/swift-linux.html</link>
             <description>A fast guide to creating and releasing a Swift package/module, from Linux.</description>
