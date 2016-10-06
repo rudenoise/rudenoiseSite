@@ -148,7 +148,7 @@ and re-purposed.
 Movements like "_micro service architecture_" aim to reduce the need
 for common implementation methods as long as components of large
 systems describe to one-another how they can interoperate
-<sub>[_[11](#ref11)_]</sub>.
+<sub>[_[12](#ref12)_]</sub>.
 
 More to follow...
 
