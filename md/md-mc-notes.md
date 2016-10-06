@@ -2,7 +2,7 @@
 
 The following is a loose set of notes and thoughts triggered by
 Jentery Sayers's piece of the same title, defining the concept of
-_Minimal Computing_ <sub>_[1](#ref1)_</sub>. This is far from
+_Minimal Computing_ <sub>[_[1](#ref1)_]</sub>. This is far from
 empirical, I'm not an academic but I do find this discussion very
 interesting.
 
@@ -27,10 +27,11 @@ should be reduced or the complexity of the control-system increased
 (hiding the complexity from the end user).
 
 In its technical implementation, Jekyll only moves the complexity
-around, the reduction in the system is negligible.
+around, the overall reduction in the system's complexity is
+negligible.
 
 Agree that reducing the design and UI functions is beneficial and in
-keeping with the principles of _minicomp_, so far.
+keeping with the principles of _Minimal Computing_, so far.
 
 The notion of a "minimal" system is very subjective. In most cases,
 assuming that the complexity is essential, what remains can be hidden
