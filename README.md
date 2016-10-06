@@ -17,7 +17,7 @@ Create a markdown file in ```./md```
 
 Turn it into an HTML page with:
 ```
-./md/toHTML md/{fileName.md} > {fileName.html}
+./md/toHTML[.bash|.ksh] md/{fileName.md} > {fileName.html}
 ```
 
 ## Stuff
