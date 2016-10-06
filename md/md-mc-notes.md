@@ -46,6 +46,8 @@ coupled with an extensive and well thought out manual. The
 implementation separate from the operation of the program yet both
 following the same core principles and UNIX Philosophy.
 
+## Minimal Use
+
 Thinking on the division between the creation of tools and the
 creation of content (as I'm working on the tools side of the
 balance): the protocols and delivery methods of web-content are far
@@ -68,6 +70,73 @@ time, coordinated pulling of git repositories could be a foundation
 for a far more energy efficient transfer, retrieval and storage of
 textual records (or any digitised media).
 
+While _HTML_ is a well adopted format browsers are hugely resource
+hungry. Most modern sites are close to unusable in text-based tools
+like _Linx_<sub>[_[10](#ref10)_]</sub>. Distributing content in simple
+formats like _markdown_ over protocols similar to _git_ would almost
+certainly reduce expended computing power.
+
+## Minimal Consumption
+
+Computing power, it seems to me, is largely consumed by graphics. For
+example, the capabilities offered by the latest smart-phones
+plateaued a few years back. The main driver for the upgrade-cycle is
+the higher-resolution cameras, that store larger image-files that, in
+turn, require a more pixel-dense screen to display them in all their
+detail.
+
+As a professional programmer, my machine requirements are minimal.
+I'm writing this on a machine from 2007 which is blazingly fast for
+most tasks that don't require images.
+
+## Minimal Maintenance
+
+I think that the _Law of Requisite Variety_ can be applied here. My
+OpenBSD laptop upgrades are painless in comparison to the
+infrastructure I use professionally to manage servers in the cloud.
+Also upgrading my Macbook Pro is a far more unpredictable
+proposition due to the vast number of variables with that system.
+
+This is compounded by the rate of change. This is exactly what keeps
+me in work.
+
+## Minimal Barriers
+
+Simple isn't the same as easy. Computer processors are very "simple"
+but they are capable of doing simple things repetitiously and very
+quickly. For instance nearly all arithmetic in a processor can be
+performed just by adding. This is _simple_ but not _easy_.
+
+A problem I see in the project that I work on is the drive to make
+the barriers low for the users. In so doing constraints are placed on
+functionality, there are fewer paths to follow so fewer mistakes can
+be made. The trade-off is that should the user need to perform a
+creative (rather than prescribed task) the system is inflexible.
+
+You can only reduce complexity to a certain degree, after which you
+can only move it around.
+
+## Minimal Internet
+
+There are alternative protocols that could be adopted that support
+these requirements.
+
+Technologies, such as Unikernel Operating Systems could also be used.
+By reducing the components of a server to only those needed for a
+specific task, the code can be tiny, the energy consumption minimal
+and they can even be turned off between page requests
+<sub>[_[11](#ref11)_]</sub>.
+
+## Minimal Technical Language
+
+This area is one of the toughest social issues in professional
+software-development. Debates over tools and methods are unending and
+ever present. Especially as terminology is continually being coined
+and re-purposed.
+
+Movements like _micro service architecture_ aim to reduce the need
+for common implementation methods as long as components of large
+systems describe to one-another how they can interoperate.
 
 ## Links
 
@@ -80,4 +149,6 @@ textual records (or any digitised media).
 7. <a id="ref7"></a> [Geek Sublime](https://www.graywolfpress.org/books/geek-sublime)
 8. <a id="ref8"></a> [OpenBSD](https://www.openbsd.org/)
 9. <a id="ref9"></a> [Git pull requests](https://help.github.com/articles/about-pull-requests/)
-10. <a id="ref10"></a> []()
+10. <a id="ref10"></a> [Lynx Browser](https://en.wikipedia.org/wiki/Lynx_(web_browser))
+11. <a id="ref11"></a> [Unikernels: Rise of the Virtual Library Operating System](http://queue.acm.org/detail.cfm?id=2566628)
+11. <a id="ref12"></a> [Microservices](http://martinfowler.com/articles/microservices.html)
