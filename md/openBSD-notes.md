@@ -1,18 +1,19 @@
 # Open BSD Notes
 
-Following my inclination to try and understand my computing set-up:
-I've installed OpenBSD on my ThinkPad X61s. I've head it referenced
-as a minimal general purpose operating-system that focused on
-security via constant code review.
+I've installed OpenBSD on my ThinkPad X61s. A rugged and minimal
+pairing of OS and laptop.
 
-The basic install is small, a fully operational x86 install is less
-than 300MB. This provides everything the developers consider
+> Instead of trying to make it do more, they keep it focused on doing
+> what it does with more security and reliability. _Derek Sivers_
+
+The basic OS is small, the x86 install is less
+than 300MB. This provides everything _OpenBSD_'s developers consider
 essential for a general-purpose Operating System. The UNIX philosophy
-is strongly appreciated and combined with rigorous documentation. If
+is adhered to and coupled with rigorous documentation. If
 there is a job that needs doing it will have one program to do it and
 the user can read a thorough manual describing its intended use and
-functionality with examples. While not for the novice (it's console
-only by default) the system is complete and self-contained. With time
+functionality, with examples. While not for the novice (it's console
+only, by default) the system is complete and self-contained. With time
 a user could operate and learn about the system with no external
 resources. [This is beyond me, so far, but I'm getting there.]
 
@@ -26,24 +27,23 @@ with as few tools as possible:
 * write and edit in _vim_;
 * use _git_ for version control;
 * _markdown_ for text;
-* _pandoc_ to convert to _HTML_;
+* _pandoc_ to convert _md_ to _HTML_;
 * a _shell_ script to wrap the HTML in a minimally styled document;
 * I deploy this to an _AWS S3_ bucket which serves over _http_.
 
 I thought that this setup-was "minimal" but adding all this to a
 system as stripped down as _OpenBSD_ reveals just how much
-computation is involved. This also ignores the imense complexity
-hidden behind the _S3_ bucket.
+computation is involved.
 
-For instance, _pandoc_ is a non-trivial piece of software. On
-_Ubuntu_ I'd simply:
+For instance, _pandoc_ is a non-trivial piece of software. To install
+on _Ubuntu_ I'd simply:
 
 ```sh
 sudo apt-get install pandoc
 ```
 
 This would bring down a pre-compiled binary and any dynamically
-linked libraries/packages. Seems simple but this is deceptive. To
+linked libraries/dependent-packages. Seems simple but this is deceptive. To
 install on OpenBSD there is no preconfigured binary. To obtain
 _pandoc_ I needed to:
 
@@ -64,10 +64,15 @@ Much as I admire _pandoc_ I am not using most of its functionality.
 For sub-set of _markdown_ that I'm using I could write my own
 _md-to-html_ program.
 
-And though _AWS_ is cheap (this blog is never hit enough to make it
+And though _AWS_ is cheap (this blog is never visited enough to make it
 worth Amazon's effort to bill me) I could be serving content from my
 own _OpenBSD_ server at home.
 
 ## Links
+* [OpenBSD](https://www.openbsd.org/)
 * [My collected OpenBSD links](https://pinboard.in/u:rudenoise/t:openBSD/)
+* [Minimal Computing](http://go-dh.github.io/mincomp/)
 * [Derek Sivers on OpenBSD 6](https://pinboard.in/u:rudenoise/t:openBSD/)
+* [UNIX Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)
+* [Pandoc](http://pandoc.org/)
+* [ThnikPad X61s](http://pandoc.org/)
