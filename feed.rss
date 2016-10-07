@@ -6,39 +6,39 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
-            <title></title>
+            <title>Minimal Definitions, Minimal Computing - Notes</title>
             <link>http://rudenoise.uk/md-mc-notes.html</link>
             <description>Notes and thoughts triggered by Jentery Sayers's piece of the same title.</description>
             <guid>http://rudenoise.uk/md-mc-notes.html</guid>
-            <pubDate>Thu  6 Oct 2016 19:30:00 GMT</pubDate>
+            <pubDate>Thu, 6 Oct 2016 19:30:00 GMT</pubDate>
         </item>
         <item>
             <title>OpenBSD Notes</title>
             <link>http://rudenoise.uk/open-bsd-notes.html</link>
             <description>A rugged and minimal pairing of OS and laptop.</description>
             <guid>http://rudenoise.uk/open-bsd-notes.html</guid>
-            <pubDate>Thu  6 Oct 2016 19:00:00 GMT</pubDate>
+            <pubDate>Thu, 6 Oct 2016 19:00:00 GMT</pubDate>
         </item>
         <item>
             <title>Creating a Swift Package on Linux</title>
             <link>http://rudenoise.uk/swift-linux.html</link>
             <description>A fast guide to creating and releasing a Swift package/module, from Linux.</description>
             <guid>http://rudenoise.uk/swift-linux.html</guid>
-            <pubDate>Tue  13 Sept 2016 11:00:00 GMT</pubDate>
+            <pubDate>Tue, 13 Sep 2016 11:00:00 GMT</pubDate>
         </item>
         <item>
-            <title>OCaml Update June 2016</title>
+            <title>OCaml Update Jun 2016</title>
             <link>http://rudenoise.uk/ocaml-june-16.html</link>
             <description>Updates on: MirageOS Hackathon, Marrakech; MirageOS Dashboard; and what to learn, next?</description>
-            <guid>http://rudenoise.uk/ocaml-diary-04b.html</guid>
-            <pubDate>Thu  2 June 2016 17:00:00 GMT</pubDate>
+            <guid>http://rudenoise.uk/ocaml-june-16.html</guid>
+            <pubDate>Thu, 2 Jun 2016 17:00:00 GMT</pubDate>
         </item>
         <item>
             <title>OCaml Diary, Part 4b</title>
             <link>http://rudenoise.uk/ocaml-diary-04b.html</link>
             <description>A simple OCaml CLI application and how it compares to some alternatives.</description>
             <guid>http://rudenoise.uk/ocaml-diary-04b.html</guid>
-            <pubDate>Thu  3 Mar 2016 20:47:00 GMT</pubDate>
+            <pubDate>Thu, 3 Mar 2016 20:47:00 GMT</pubDate>
         </item>
         <item>
             <title>OCaml/MirageOS Diary, Part 4a</title>
