@@ -61,7 +61,7 @@ I like to know and understand my tools. I'm not at a stage where
 replacing _vim_ and _git_ are an option.
 
 Much as I admire _pandoc_ I am not using most of its functionality.
-For sub-set of _markdown_ that I'm using I could write my own
+For the sub-set of _markdown_ that I'm using I could write my own
 _md-to-html_ program.
 
 And though _AWS_ is cheap (this blog is never visited enough to make it
