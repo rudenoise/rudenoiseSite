@@ -9,7 +9,7 @@ pairing of OS and laptop.
 The basic OS is small, the x86 install is less
 than 300MB. This provides everything _OpenBSD_'s developers consider
 essential for a general-purpose Operating System. The UNIX philosophy
-is adhered to and coupled with rigorous documentation. If
+is adhered to and is coupled with rigorous documentation. If
 there is a job that needs doing it will have one program to do it and
 the user can read a thorough manual describing its intended use and
 functionality, with examples. While not for the novice (it's console
@@ -21,8 +21,8 @@ I'm enjoying the learning-curve, I recommend it.
 
 ## Adding Things
 
-I aim at a simple set-up, for example I try and publish this site
-with as few tools as possible:
+I aim at a simple set-up, for example this page published using
+the flowing tools:
 
 * write and edit in _vim_;
 * use _git_ for version control;
@@ -31,9 +31,8 @@ with as few tools as possible:
 * a _shell_ script to wrap the HTML in a minimally styled document;
 * I deploy this to an _AWS S3_ bucket which serves over _http_.
 
-I thought that this setup-was "minimal" but adding all this to a
-system as stripped down as _OpenBSD_ reveals just how much
-computation is involved.
+_OpenBSD_ reveals just how much computation is involved in
+assembling the tools, above.
 
 For instance, _pandoc_ is a non-trivial piece of software. To install
 on _Ubuntu_ I'd simply:
