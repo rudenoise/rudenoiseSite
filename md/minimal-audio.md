@@ -15,6 +15,7 @@
 <sub>[_[13](#ref13)_]</sub>
 <sub>[_[14](#ref14)_]</sub>
 <sub>[_[15](#ref15)_]</sub>
+<sub>[_[16](#ref16)_]</sub>
 
 1. <a id="ref1"></a> [Minimal Definitions, Minimal Computing - Notes](http://rudenoise.uk/md-mc-notes.html)
 2. <a id="ref2"></a> [Minimal Computing: Thought Pieces](http://go-dh.github.io/mincomp/thoughts/)
@@ -28,6 +29,7 @@
 10. <a id="ref10"></a> [Paul Batchelor's Blog](http://paulbatchelor.github.io/blog/)
 11. <a id="ref11"></a> [Sporth](https://paulbatchelor.github.io/proj/sporth)
 12. <a id="ref12"></a> [Chiptune](https://en.wikipedia.org/wiki/Chiptune)
-13. <a id="ref13"></a> []()
-14. <a id="ref14"></a> []()
-15. <a id="ref15"></a> []()
+13. <a id="ref13"></a> [musl libc](https://www.musl-libc.org)
+14. <a id="ref14"></a> [sine](https://en.wikipedia.org/wiki/Sine)
+15. <a id="ref15"></a> [Kahn Academy Trigonometry](https://www.khanacademy.org/math/trigonometry/trigonometry-right-triangles/intro-to-the-trig-ratios/v/basic-trigonometry-ii)
+16. <a id="ref16"></a> []()
