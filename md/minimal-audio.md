@@ -44,36 +44,48 @@ little dry and based on an old standard (ANSI/c89, as in 1989); and
 _Learn C and Build Your Own Lisp_<sub>[_[6](#ref6)_]</sub>, witch is
 based on C99 (the same as OpenBSD) and is really well written.
 
-Audio...
-<sub>[_[7](#ref7)_]</sub>
-<sub>[_[8](#ref8)_]</sub>
+For my programs I wanted to build
+"wave-forms"<sub>[_[7](#ref7)_]</sub>, and in synthesis the basic
+forms are _square, saw, triangle and sine_. Generating these and many
+other types of audio are well covered
+problems<sub>[_[8](#ref8)_]</sub>, I've seen many great
+tools<sub>[_[9](#ref9)_]</sub> that are open-source and great to
+use<sub>[_[10](#ref10)_]</sub>. (Especially anything by Paul
+Batchelor<sub>[_[11](#ref11)_]</sub>).
 
-Cool audio projects...
-<sub>[_[9](#ref9)_]</sub>
-<sub>[_[10](#ref10)_]</sub>
-<sub>[_[11](#ref11)_]</sub>
 
-As simple and low as I can make it: chip-tunes...
-<sub>[_[12](#ref12)_]</sub>
+But as brilliant as the existing tool are I wanted to learn for
+myself. I wanted to keep things very simple and easy to debug. I also
+like that classic 80's game-sound
+(chip-tunes<sub>[_[12](#ref12)_]</sub>) so making the waves in
+8-bit-mono, using unsigned integers seemed like the way to go.
 
-Lib musl-c...
-<sub>[_[13](#ref13)_]</sub>
+So I setup my tools (_VIm, GCC, make and musl lib-c_<sub>[_[13](#ref13)_]</sub>) and it started to flow:
 
-Wave-forms (square, saw, triangle, sine)...
-
-Results...
+Square:
 ![Square Wave](./img/square.gif)
+Saw:
 ![Saw Wave](./img/saw.gif)
+Triangle:
 ![Triangle Wave](./img/triangle.gif)
 
-Sine and trigonometry...
-<sub>[_[14](#ref14)_]</sub>
-<sub>[_[15](#ref15)_]</sub>
+Then I got hung up on Sine<sub>[_[14](#ref14)_]</sub> and
+trigonometry... Having paid little attention in school I was very
+impressed by Khan Academy<sub>[_[15](#ref15)_]</sub>, an afternoon of
+"school" and it started to come together.
 
-Debugging with ears, then eyes...
-<sub>[_[16](#ref16)_]</sub>
+It still didn't sound quite right but ears (or my ears) are not that
+good at relating audio irregularities to code. I wanted to visualise
+what I was hearing. I needed an oscilloscope, the next best thing is
+_GNU Plot_<sub>[_[16](#ref16)_]</sub>.
 
-Done.
+Now it was obvious:
+![Broken Sine Wave](./img/badSine.gif)
+
+I had the quadrants of my wave being "rendered" in the wrong order
+and was looping over the edges of each cycle.
+
+Fixed!!!
 ![Sine Wave](./img/sine.gif)
 
 1. <a id="ref1"></a> [Minimal Definitions, Minimal Computing - Notes](http://rudenoise.uk/md-mc-notes.html)
