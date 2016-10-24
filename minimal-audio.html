@@ -87,29 +87,52 @@ Minimal Audio
                 </h1>
                 <p class="small">Published:
                     <time>
-2016-10-22
+2016-10-24
                     </time>
                 </p>
             </header>
-<p>Since writing a little about <em>Minimal Computing</em><sub>[<em><a href="#ref1">1</a></em>]</sub> (and being included on the community site<sub>[<em><a href="#ref2">2</a></em>]</sub>), the week has been spent putting some of these principles into practice.</p>
-<p>My first real interest in computers stems from making <em>Drum and Bass</em> as a teenager. While I've retained an interest I'd never tried programming any audio related software. While exploring <em>OpenBSD</em> I discovered how simply the OS implements its audio functionality and (unlike others) gives it kernel-space priority.</p>
-<p>It seemed like a good place to start doing some audio programming and learn things from the ground up. The simplest way to get a noise was to pipe <em>/dev/random</em> to <em>/dev/audio</em>.</p>
+<p>Continuing the <em>Minimal Computing</em> <sub>[<em><a href="#ref1">1</a></em>]</sub> <sub>[<em><a href="#ref2">2</a></em>]</sub> theme this post is about minimal audio programming.</p>
+<p>My first real interest in computers stems from making <em>Drum and Bass</em> as a teenager. I've retained an interest but never tried programming any audio. While exploring <em>OpenBSD</em> I discovered how simply the OS implements audio functionality and (unlike others) gives it kernel-space priority which could give it an edge over other OSs.</p>
+<p>It seemed like a good place to start learning things from the ground up. Many programmers may have done this kind of thing at university, I hadn't and wish that I had.</p>
+<p>The simplest way to make a noise in <em>OpenBSD</em>:</p>
 <pre class="ksh"><code># play white noise
 cat &gt; /dev/audio &lt; /dev/random &amp;
 # stop
 kill %1</code></pre>
-<p><em>/dev/random</em> is a stream of random bytes, <em>/dev/audio</em> is a &quot;file&quot; that represents the sound-interface with the OS. That was cool but generating a musical sound would be better. The simplest way to do this would be to send a stream of bytes to <em>/dev/audio</em>. A &quot;square wave&quot; would be the simplest, a period of bytes at one number/level, followed by another stream at a different level.</p>
-<p>I'd been learning <em>Linux X86 Assembly</em><sub>[<em><a href="#ref3">3</a></em>]</sub> so the most <em>minimal</em> program I could build a square-wave with could be written in assembly. The only problem being that the program was specific to Linux. To be enable working between Linux and OpenBSD (and almost any other OS/architecture) I decided to satisfy another long-standing curiosity. I'd build some wave generators in the <em>C</em> programming-language<sub>[<em><a href="#ref4">4</a></em>]</sub>.</p>
-<p>I bought two books: <em>The C Programming Language</em><sub>[<em><a href="#ref5">5</a></em>]</sub> which is a &quot;classic&quot; but also a little dry and based on an old standard (ANSI/c89, as in 1989); and <em>Learn C and Build Your Own Lisp</em><sub>[<em><a href="#ref6">6</a></em>]</sub>, witch is based on C99 (the same as OpenBSD) and is really well written.</p>
-<p>For my programs I wanted to build &quot;wave-forms&quot;<sub>[<em><a href="#ref7">7</a></em>]</sub>, and in synthesis the basic forms are <em>square, saw, triangle and sine</em>. Generating these and many other types of audio are well covered problems<sub>[<em><a href="#ref8">8</a></em>]</sub>, I've seen many great tools<sub>[<em><a href="#ref9">9</a></em>]</sub> that are open-source and great to use<sub>[<em><a href="#ref10">10</a></em>]</sub>. (Especially anything by Paul Batchelor<sub>[<em><a href="#ref11">11</a></em>]</sub>).</p>
-<p>But as brilliant as the existing tool are I wanted to learn for myself. I wanted to keep things very simple and easy to debug. I also like that classic 80's game-sound (chip-tunes<sub>[<em><a href="#ref12">12</a></em>]</sub>) so making the waves in 8-bit-mono, using unsigned integers seemed like the way to go.</p>
-<p>So I setup my tools (<em>VIm, GCC, make and musl lib-c</em><sub>[<em><a href="#ref13">13</a></em>]</sub>) and it started to flow:</p>
+<p><em>/dev/random</em> is a file/stream of random bytes, <em>/dev/audio</em> is a file that represents the sound-interface. Cool but generating a musical sound would be better. The simplest way to do this would be to send a stream of bytes to <em>/dev/audio</em>. A &quot;square wave&quot; is basic, a period of bytes at one number/level, followed by another stream at a different level.</p>
+<p>I know a little <em>Linux X86 Assembly</em> <sub>[<em><a href="#ref3">3</a></em>]</sub> so the most <em>minimal</em> audio program I could think up was: build a square-wave in assembly. The only problem being that the program was specific to Linux. To work between <em>Linux</em> and <em>OpenBSD</em> (and almost any other OS/architecture) I decided to satisfy another long-standing curiosity. I'd build some wave generators in the <em>C</em> programming-language <sub>[<em><a href="#ref4">4</a></em>]</sub>.</p>
+<p>I bought two books: <em>The C Programming Language</em> <sub>[<em><a href="#ref5">5</a></em>]</sub> which is a &quot;classic&quot; but also a little dry and based on an old standard (ANSI/c89, as in 1989); and <em>Learn C and Build Your Own Lisp</em> <sub>[<em><a href="#ref6">6</a></em>]</sub>, witch is based on C99 (the same as OpenBSD) and is really well written.</p>
+<p>For my programs I wanted to build &quot;wave-forms&quot; <sub>[<em><a href="#ref7">7</a></em>]</sub>, the basic forms are <em>square, saw, triangle and sine</em>. Generating these and many other types of audio are well covered problems<sub>[<em><a href="#ref8">8</a></em>]</sub>, I've seen many great tools <sub>[<em><a href="#ref9">9</a></em>]</sub> that are open-source and worth playing with <sub>[<em><a href="#ref10">10</a></em>]</sub>. (Especially anything by Paul Batchelor<sub>[<em><a href="#ref11">11</a></em>]</sub>).</p>
+<p>But as brilliant as those tool are, I wanted to learn for myself and to keep things very simple and easy to debug. I also like that classic 80's game-sound (chip-tunes <sub>[<em><a href="#ref12">12</a></em>]</sub>) so making the waves in 8-bit-mono, using unsigned integers seemed like the way to go.</p>
+<p>I setup my tools (<em>Vim, GCC, make and musl lib-c</em> <sub>[<em><a href="#ref13">13</a></em>]</sub>) and it started to flow:</p>
 <p>Square: <img src="./img/square.gif" alt="Square Wave" /> Saw: <img src="./img/saw.gif" alt="Saw Wave" /> Triangle: <img src="./img/triangle.gif" alt="Triangle Wave" /></p>
 <p>Then I got hung up on Sine<sub>[<em><a href="#ref14">14</a></em>]</sub> and trigonometry... Having paid little attention in school I was very impressed by Khan Academy<sub>[<em><a href="#ref15">15</a></em>]</sub>, an afternoon of &quot;school&quot; and it started to come together.</p>
 <p>It still didn't sound quite right but ears (or my ears) are not that good at relating audio irregularities to code. I wanted to visualise what I was hearing. I needed an oscilloscope, the next best thing is <em>GNU Plot</em><sub>[<em><a href="#ref16">16</a></em>]</sub>.</p>
-<p>Now it was obvious: <img src="./img/badSine.gif" alt="Broken Sine Wave" /></p>
+<p>Now it was obvious (and obscene?): <img src="./img/badSine.gif" alt="Broken Sine Wave" /></p>
 <p>I had the quadrants of my wave being &quot;rendered&quot; in the wrong order and was looping over the edges of each cycle.</p>
 <p>Fixed!!! <img src="./img/sine.gif" alt="Sine Wave" /></p>
+<p>GNUPlot is the shit!</p>
+<pre><code>  300 +-+----+------+------+------+------+-----+------+------+------+----+-+
+      +      +      +      +      +      +     +      +      +      +      +
+      |                                              &#39;-&#39; using 1:2    A    |
+  250 +-+     AAAAAA                                   AAAAAA            +-+
+      |     AAA    AA                                AAA    AA             |
+      |    AA       AAA                             AA       AA            |
+  200 +-+ AA          AA                           AA          A         +-+
+      |  AA            AA                         AA            A          |
+      | AA              A                        AA              A         |
+  150 +AA                A                      AA               AA      +-+
+      |A                 AA                    AA                 AA       |
+      A                   AA                   A                   AA      |
+      |                    AA                 A                     AA     |
+  100 +-+                   AA               AA                      A   +-+
+      |                      AA             AA                        A    |
+      |                       AA           AA                          A   |
+   50 +-+                      AA         AA                            A+-+
+      |                         AA       AA                              AA|
+      +      +      +      +     AAA   AAA     +      +      +      +     AA
+    0 +-+----+------+------+------+AAAAA-+-----+------+------+------+----+-+
+      0      50    100    150    200    250   300    350    400    450    500</code></pre>
 <ol style="list-style-type: decimal">
 <li><a id="ref1"></a> <a href="http://rudenoise.uk/md-mc-notes.html">Minimal Definitions, Minimal Computing - Notes</a></li>
 <li><a id="ref2"></a> <a href="http://go-dh.github.io/mincomp/thoughts/">Minimal Computing: Thought Pieces</a></li>
