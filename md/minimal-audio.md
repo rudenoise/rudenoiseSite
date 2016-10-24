@@ -2,7 +2,7 @@
 
 Continuing the _Minimal Computing_ <sub>[_[1](#ref1)_]</sub>
 <sub>[_[2](#ref2)_]</sub> theme this post is about minimal audio
-programming.
+programming in _C_ on _Linux_ and _OpenBSD_.
 
 My first real interest in computers stems from making _Drum and Bass_
 as a teenager. I've retained an interest but never tried
