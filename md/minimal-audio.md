@@ -9,7 +9,7 @@ as a teenager. I've retained an interest but never tried
 programming any audio. While exploring _OpenBSD_ I
 discovered how simply the OS implements audio functionality and
 (unlike others) gives it kernel-space priority which could give it an
-edge over other OSs.
+edge, in this space, over other OSs.
 
 It seemed like a good place to start
 learning things from the ground up. Many programmers may have done this
