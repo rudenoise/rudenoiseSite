@@ -87,13 +87,13 @@ Minimal Audio
                 </h1>
                 <p class="small">Published:
                     <time>
-2016-10-25
+2016-10-28
                     </time>
                 </p>
             </header>
-<p>Continuing the <em>Minimal Computing</em> <sub>[<em><a href="#ref1">1</a></em>]</sub> <sub>[<em><a href="#ref2">2</a></em>]</sub> theme this post is about minimal audio programming in <em>C</em> on <em>Linux</em> and <em>OpenBSD</em>.</p>
-<p>My first real interest in computers stems from making <em>Drum and Bass</em> as a teenager. I've retained an interest but never tried programming any audio. While exploring <em>OpenBSD</em> I discovered how simply the OS implements audio functionality and (unlike others) gives it kernel-space priority which could give it an edge, in this space, over other OSs.</p>
-<p>It seemed like a good place to start learning things from the ground up. Many programmers may have done this kind of thing at university, I hadn't and wish that I had.</p>
+<p>Continuing the <em>Minimal Computing</em> <sub>[<em><a href="#ref1">1</a></em>]</sub> <sub>[<em><a href="#ref2">2</a></em>]</sub> theme, this post is about audio programming in <em>C</em> (on <em>Linux</em> and <em>OpenBSD</em>).</p>
+<p>My first real interest in computers stems from making <em>Drum and Bass</em> as a teenager. I've retained that interest but never tried programming any audio. While exploring <em>OpenBSD</em> I discovered how simply the OS implements sound functionality and (unlike others) gives it kernel-space priority, making it an enticing platform for this kind of work.</p>
+<p>Starting to make sound, from the ground up, is a topic many programmers may have covered during university, I hadn't and wish that I had.</p>
 <p>The simplest way to make a noise in <em>OpenBSD</em>:</p>
 <pre class="ksh"><code># play white noise
 cat &gt; /dev/audio &lt; /dev/random &amp;

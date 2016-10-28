@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>Minimal Audio</title>
+            <link>http://rudenoise.uk/minimal-audio.html</link>
+            <description>(Minimal) audio programming in C (on Linux and OpenBSD).</description>
+            <guid>http://rudenoise.uk/minimal-audio.html</guid>
+            <pubDate>Fri, 28 Oct 2016 10:35:00 GMT</pubDate>
+        </item>
+        <item>
             <title>Minimal Definitions, Minimal Computing - Notes</title>
             <link>http://rudenoise.uk/md-mc-notes.html</link>
             <description>Notes and thoughts triggered by Jentery Sayers's piece of the same title.</description>

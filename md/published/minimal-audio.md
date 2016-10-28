@@ -1,19 +1,19 @@
 # Minimal Audio
 
 Continuing the _Minimal Computing_ <sub>[_[1](#ref1)_]</sub>
-<sub>[_[2](#ref2)_]</sub> theme this post is about minimal audio
-programming in _C_ on _Linux_ and _OpenBSD_.
+<sub>[_[2](#ref2)_]</sub> theme, this post is about audio
+programming in _C_ (on _Linux_ and _OpenBSD_).
 
 My first real interest in computers stems from making _Drum and Bass_
-as a teenager. I've retained an interest but never tried
+as a teenager. I've retained that interest but never tried
 programming any audio. While exploring _OpenBSD_ I
-discovered how simply the OS implements audio functionality and
-(unlike others) gives it kernel-space priority which could give it an
-edge, in this space, over other OSs.
+discovered how simply the OS implements sound functionality and
+(unlike others) gives it kernel-space priority, making it an enticing
+platform for this kind of work.
 
-It seemed like a good place to start
-learning things from the ground up. Many programmers may have done this
-kind of thing at university, I hadn't and wish that I had.
+Starting to make sound, from the ground up, is a topic many
+programmers may have covered during university, I hadn't and wish
+that I had.
 
 The simplest way to make a noise in _OpenBSD_:
 ```ksh
