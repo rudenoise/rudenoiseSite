@@ -14,6 +14,9 @@ components contained within. The barrier to entry is low, the
 learning curve is mellow but this comes at the expense of
 understanding/knowledge and the ability to tinker and re-purpose.
 
+1. Where do I want to work on the ladder of abstracton?
+2. How much complexity is managable?
+3. Should I hide or expose that complexity?
 
 <sub>[_[1](#ref1)_]</sub>
 <sub>[_[2](#ref2)_]</sub>
