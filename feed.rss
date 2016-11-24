@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>Low Tech Minimal Computing</title>
+            <link>http://rudenoise.uk/low-tech-minimal-computing.html</link>
+            <description>Low Tech Magazine recently posted two essays that address topics relevant to Minimal Computing...</description>
+            <guid>http://rudenoise.uk/low-tech-minimal-computing.html</guid>
+            <pubDate>Thu, 24 Nov 206 11:57:04 GMT</pubDate>
+        </item>
+        <item>
             <title>Minimal Audio</title>
             <link>http://rudenoise.uk/minimal-audio.html</link>
             <description>(Minimal) audio programming in C (on Linux and OpenBSD).</description>
