@@ -12,14 +12,16 @@ review of the year.
 
 ## Wot I Done:
 
-* MirageOS
-* Grift
+* Some OCaml/MirageOS/Marrakech Hackathon
+* Grift (the beginnings of a Graph DB)
 * Minimal Computing
 * Minimal Audio
-* OpenBSD
-* Comics
-* This Blog
-* Meditating
+* Explored some of OpenBSD
+* Drew a couple of pictures
+* Wrote this Blog
+* Started meditating
+* Loads of contracting
+* Parenting and husbandry
 
 ## Writing and Notes
 
@@ -74,7 +76,7 @@ managed to start a small project in Swift 3 building and in-memory
 Graph Engine that can persist as JSON. It felt like the start of
 something, exactly what I don't know.
 
-## Reading
+## Recommended Reading
 
 * Cheap Novelties: The Pleasures of Urban Decay By Ben Katchor
 * Writing That Sitcom By James Cary
@@ -83,7 +85,7 @@ something, exactly what I don't know.
 * Real World OCaml
 * Mundial Magazine
 
-## Conclusion
+## Conclusions
 
 I've been quite depressed this year, mostly relating to a
 frustration with a lack of "progress". Progress with what? Finding
@@ -91,8 +93,8 @@ a project that I can commit to and then working on it.
 
 Writing this I realise that I have managed to do quite a lot of
 exploration and experimentation. I had thought that I don't really
-have enough time to get anything significant done, outside regular
-work and family life. Adding it all up that doesn't appear to be
+have enough time to get anything significant done (outside regular
+work and family life). Adding it all up that doesn't appear to be
 the case.
 
 I wasn't depressed the whole time, just when thinking about my
@@ -100,9 +102,22 @@ personal projects. My wife and daughters continue to be be the
 funniest and most enjoyable company I can imagine. I'm lucky and I
 know it.
 
-Doing a bit of mindful meditation has also helped a little.
+Doing a bit of mindful meditation has also helped a little. I might
+become religious next year?
 
 The work I have done has hopped subjects and media. If all of that
-effort could be applied to one project and I could discover the
+effort could be applied to one project, and I could discover the
 right motivation, then next year might be a little different.
 
+Did this blog achieve its aims? I was going to say _no_ but, on
+reflection, I have managed to use it as a way to find others.
+Joining in with the MirageOS group was really interesting and the
+Minimal Computing Group has promise. I'm not working in complete
+isolation.
+
+Has my move to contracting allowed me to work in a way that better
+suites me? Yes, it's taken a while (coming up on 3 years) but I
+have been able to make a lot of time for R&D.
+
+Final thought: this year looks much better written down, maybe it
+was pretty decent after all?
