@@ -19,6 +19,7 @@ review of the year.
 * OpenBSD
 * Comics
 * This Blog
+* Meditating
 
 ## Writing and Notes
 
@@ -94,6 +95,14 @@ have enough time to get anything significant done, outside regular
 work and family life. Adding it all up that doesn't appear to be
 the case.
 
+I wasn't depressed the whole time, just when thinking about my
+personal projects. My wife and daughters continue to be be the
+funniest and most enjoyable company I can imagine. I'm lucky and I
+know it.
+
+Doing a bit of mindful meditation has also helped a little.
+
 The work I have done has hopped subjects and media. If all of that
-effort had been applied to one project then a good amount distance
-could be covered.
+effort could be applied to one project and I could discover the
+right motivation, then next year might be a little different.
+
