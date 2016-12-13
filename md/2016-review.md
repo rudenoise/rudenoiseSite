@@ -5,6 +5,11 @@ it posting an average of just over once a month. A small
 achievement. Previous attempts have fallen by the wayside sooner or
 been much more sporadic.
 
+All sorts of crap happened this year and I expect it'll be well
+reviewed elsewhere. I'm particularly looking forward to Charlie
+Brooker's Screen Wipe of the Year. This is a more self-centred
+review of the year.
+
 ## Wot I Done:
 
 * MirageOS
@@ -67,3 +72,28 @@ I also started exploring Graph Theory and its applications, I
 managed to start a small project in Swift 3 building and in-memory
 Graph Engine that can persist as JSON. It felt like the start of
 something, exactly what I don't know.
+
+## Reading
+
+* Cheap Novelties: The Pleasures of Urban Decay By Ben Katchor
+* Writing That Sitcom By James Cary
+* On the Move: A Life By Oliver Sacks
+* Programming from the Ground Up
+* Real World OCaml
+* Mundial Magazine
+
+## Conclusion
+
+I've been quite depressed this year, mostly relating to a
+frustration with a lack of "progress". Progress with what? Finding
+a project that I can commit to and then working on it.
+
+Writing this I realise that I have managed to do quite a lot of
+exploration and experimentation. I had thought that I don't really
+have enough time to get anything significant done, outside regular
+work and family life. Adding it all up that doesn't appear to be
+the case.
+
+The work I have done has hopped subjects and media. If all of that
+effort had been applied to one project then a good amount distance
+could be covered.
