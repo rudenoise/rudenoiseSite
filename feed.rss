@@ -6,11 +6,18 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>2016 Reviewed</title>
+            <link>http://rudenoise.uk/2016-review.html</link>
+            <description>A round up of my activities in 2016</description>
+            <guid>http://rudenoise.uk/2016-review.html</guid>
+            <pubDate>Thu, 15 Dec 2016 14:45:00 GMT</pubDate>
+        </item>
+        <item>
             <title>Low Tech Minimal Computing</title>
             <link>http://rudenoise.uk/low-tech-minimal-computing.html</link>
             <description>Low Tech Magazine recently posted two essays that address topics relevant to Minimal Computing...</description>
             <guid>http://rudenoise.uk/low-tech-minimal-computing.html</guid>
-            <pubDate>Thu, 24 Nov 206 11:57:04 GMT</pubDate>
+            <pubDate>Thu, 24 Nov 2016 11:57:04 GMT</pubDate>
         </item>
         <item>
             <title>Minimal Audio</title>

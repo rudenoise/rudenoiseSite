@@ -1,21 +1,15 @@
 # 2016 Reviewed
 
-I started this blog in January 2016 and I have managed to maintain
-it posting an average of just over once a month. A small
-achievement. Previous attempts have fallen by the wayside sooner or
-been much more sporadic.
-
 All sorts of crap happened this year and I expect it'll be well
 reviewed elsewhere. I'm particularly looking forward to Charlie
-Brooker's Screen Wipe of the Year. This is a more self-centred
-review of the year.
+Brooker's 2016 Wipe. This is a more self-centred/personal review.
 
 ## Wot I Done:
 
 * Some OCaml/MirageOS/Marrakech Hackathon
-* Grift (the beginnings of a Graph DB)
-* Minimal Computing
-* Minimal Audio
+* Grift (the beginnings of a Graph DB in Swift)
+* Minimal Computing (contributing to the conversation)
+* Minimal Audio (small programs for noises)
 * Explored some of OpenBSD
 * Drew a couple of pictures
 * Wrote this Blog
@@ -24,6 +18,11 @@ review of the year.
 * Parenting and husbandry
 
 ## Writing and Notes
+
+I started this blog back in January and I have managed to maintain
+it, posting an average of just over once a month. A small
+achievement. Previous attempts have fallen by the wayside sooner or
+been much more sporadic.
 
 My first post described a writing system that I intended to follow
 for the rest of the year. I followed it for one week.
@@ -50,19 +49,20 @@ Neighbour's Dr Karl Kennedy himself, Alan Fletcher.
 ## Equipment
 
 I ditched OSX and the Macbook Pro and returned to Linux and
-ThinkPad. Discovering the I3 Window Manager made the largest impact
+ThinkPad. Discovering the i3 Window Manager made the largest impact
 on my work-flow. If you prefer a text-centric UI then I can highly
 recommend i3.
 
 I resurrected my ThinkPad X61s and installed OpenBSD. I'm only
 scratching the surface but so far it seems like an OS I might
-actually be able to understand at a lower level due to its minimalism.
+actually be able to understand.
 
 ## Computing
 
 My public programming has also been pretty consistent, I've mucked
 about with 20 repositories on GitHub this year. Played with some
-new tools: x86 assembly, C, OCaml and OpenBSD being the highlights.
+new tools: x86 assembly, C, OCaml, Swift and OpenBSD being the
+highlights.
 
 I've written more OCaml than any other language and can recommend
 its environment, capabilities and community. My week in Marrakech
@@ -89,35 +89,36 @@ something, exactly what I don't know.
 
 I've been quite depressed this year, mostly relating to a
 frustration with a lack of "progress". Progress with what? Finding
-a project that I can commit to and then working on it.
+a project that I can commit to and then work on consistently.
 
 Writing this I realise that I have managed to do quite a lot of
 exploration and experimentation. I had thought that I don't really
 have enough time to get anything significant done (outside regular
-work and family life). Adding it all up that doesn't appear to be
+work and family life). Adding it all up: that doesn't appear to be
 the case.
 
-I wasn't depressed the whole time, just when thinking about my
+I wasn't depressed the whole time, only when thinking about my
 personal projects. My wife and daughters continue to be be the
 funniest and most enjoyable company I can imagine. I'm lucky and I
 know it.
 
 Doing a bit of mindful meditation has also helped a little. I might
-become religious next year?
+become religious next year.
 
 The work I have done has hopped subjects and media. If all of that
 effort could be applied to one project, and I could discover the
 right motivation, then next year might be a little different.
 
-Did this blog achieve its aims? I was going to say _no_ but, on
-reflection, I have managed to use it as a way to find others.
+Did this blog achieve its aim of connecting me to others? I was
+going to say _no_ but, on reflection, I have managed to use it as a
+stepping stone.
 Joining in with the MirageOS group was really interesting and the
-Minimal Computing Group has promise. I'm not working in complete
-isolation.
+Minimal Computing Group is promising. I'm not working in complete
+social isolation.
 
 Has my move to contracting allowed me to work in a way that better
 suites me? Yes, it's taken a while (coming up on 3 years) but I
-have been able to make a lot of time for R&D.
+have been able to make a lot of time for writing and R&D.
 
-Final thought: this year looks much better written down, maybe it
-was pretty decent after all?
+Final thought: this year looks much better written down, there is a
+fair bit to show for the effort.
