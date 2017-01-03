@@ -8,7 +8,29 @@ This year I plan to:
 * code creatively;
 * make music.
 
-These I'd like to do in parallel and in combination.
+These I'd like to do in parallel and in combination, using the
+following tools:
+
+* ThinkPad x250 + Ubuntu + i3wm;
+* Pilot Capless and Copic Pens;
+* Korg Electribe Sampler 2;
+* iPhone SE;
+* 8" 5050 and Skateboard Cafe boards;
+* Airmax BWs.
+
+Possible projects:
+
+* zine (paper/ePub);
+* audio (bass-music/audio-zine/podcast);
+* daily/weekly chain-exercises: write, draw, audio, skate,
+  code;
+* meditate.
+
+To Do:
+
+* attend a conference/event;
+* publish _finished/complete_ things;
+* imake firends, chat, be cool.
 
 <sub>[_[1](#ref1)_]</sub>
 <sub>[_[2](#ref2)_]</sub>
