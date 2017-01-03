@@ -1,8 +1,14 @@
 # 2017 Plans
 
-* Keep writing;
-* Keep drawing;
-* Make audio.
+This year I plan to:
+
+* keep skating;
+* keep writing;
+* keep drawing;
+* code creatively;
+* make music.
+
+These I'd like to do in parallel and in combination.
 
 <sub>[_[1](#ref1)_]</sub>
 <sub>[_[2](#ref2)_]</sub>
