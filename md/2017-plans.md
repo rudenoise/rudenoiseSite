@@ -18,6 +18,12 @@ following tools:
 * 8" 5050 and Skateboard Cafe boards;
 * Airmax BWs.
 
+Principles and values:
+
+* create over consume;
+* trivia over grand meaning;
+* observe and reflect.
+
 Possible projects:
 
 * zine (paper/ePub);
