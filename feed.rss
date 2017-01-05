@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>2017 Plans</title>
+            <link>http://rudenoise.uk/2017-plans.html</link>
+            <description>This year I plan to...</description>
+            <guid>http://rudenoise.uk/2017-plans.html</guid>
+            <pubDate>Thu, 5 Jan 2017 14:03:00 GMT</pubDate>
+        </item>
+        <item>
             <title>2016 Reviewed</title>
             <link>http://rudenoise.uk/2016-review.html</link>
             <description>A round up of my activities in 2016</description>
