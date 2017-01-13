@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>Barratt House</title>
+            <link>http://rudenoise.uk/barratt-house.html</link>
+            <description>The ingredients are ready for this year's project...</description>
+            <guid>http://rudenoise.uk/barratt-house.html</guid>
+            <pubDate>Fri, 13 Jan 2017 20:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title>2017 Plans</title>
             <link>http://rudenoise.uk/2017-plans.html</link>
             <description>This year I plan to...</description>
