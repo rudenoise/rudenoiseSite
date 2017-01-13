@@ -1,2 +1,2 @@
 #! /bin/bash
-aws --profile rudenos s3 sync s3://rudenoise.uk/ ./
+aws --profile rudenoise s3 sync s3://rudenoise.uk/ ./
