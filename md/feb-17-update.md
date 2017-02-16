@@ -22,6 +22,14 @@ has been spent assessing gear, however the creative efforts are
 building up. The ratio should shift heavily towards creation
 shortly.
 
+## Work Done
+
+I've heard various skaters talking about how instagram is basically
+a personal Zine. In that spirit I've been posting the results of my
+weekly Electribe sessions. Here they are:
+
+TODO: embed instagram posts.
+
 ## Work in Progress:
 
 1. this blog;
