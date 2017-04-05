@@ -9,6 +9,20 @@ Key:
     mix100  Tapco Mix 100
     x250    ThinkPad x250, Windows 10, Tracktion 7/Waveform
 
+-----
+Set Up A:
+
+esx2    --midi-out->    pulse2
+esx2    --stereo->      mix100
+pulse2  --stereo->      mix100
+mix100  --stereo->      dr-40
+mix100  --aux->         pulse2
+mix100  --aux->         esx2
+dr-40   --stereo->      mix100
+mix100  --stereo->      esx2
+
+-----
+Set Up B:
 
 
 ```
