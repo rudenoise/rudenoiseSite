@@ -18,6 +18,12 @@ sudo apt-get install libsamplerate-dev
 # not right version:
 sudo apt-get install librtaudio-dev librtmidi-dev
 # build and install from source: http://www.music.mcgill.ca/%7Egary/rtmidi/
+tar -xvzf rtmidi-2.1.1.tar.gz
+cd rtmidi-2.1.1/
+./configure
+sudo make
+sudo make install
+sudo apt-get install libxpm-dev
 
 # build
 ./configure --target=linux --enable-vst
