@@ -1,10 +1,12 @@
 # Giada on Ubuntu 16.04
 
-`.deb` on site is aimed at 17.x.
+`.deb` on site is aimed at 17.x. Worked once I'd installed the dependencies [here](https://giadamusic.com/documentation/show/compiling-from-source)
 
 The version in the ununtu package repo is old `0.11.2` and has no `vst` support compiled.
 
 ## Build from source:
+
+Didn't get it working.
 
 ```bash
 # get the source
