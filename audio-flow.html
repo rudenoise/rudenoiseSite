@@ -106,15 +106,22 @@ esx2    --midi-out-&gt;    pulse2
 esx2    --stereo-&gt;      mix100
 pulse2  --stereo-&gt;      mix100
 mix100  --stereo-&gt;      dr-40
-mix100  --aux-&gt;         pulse2
-mix100  --aux-&gt;         esx2
+mix100  --aux-&gt;         pulse2  [ext in]
+mix100  --aux-&gt;         esx2    [ext in]
 dr-40   --stereo-&gt;      mix100
 mix100  --stereo-&gt;      esx2
 
 -----
 Set Up B:
 
-</code></pre>
+esx2    --midi-out-&gt;    pulse2
+esx2    --right/mono-&gt;  mix100  [ch1]
+esx2    --left/mono-&gt;   pulse2  [ext in]
+pulse2  --right/mono-&gt;  mix100  [ch2]
+mix100  --stereo-&gt;      dr-40
+mix100  --aux-&gt;         esx2    [ext in]
+dr-40   --stereo-&gt;      mix100
+mix100  --stereo-&gt;      esx2    [ext in]</code></pre>
 <p><sub>[<em><a href="#ref1">1</a></em>]</sub> <sub>[<em><a href="#ref2">2</a></em>]</sub> <sub>[<em><a href="#ref3">3</a></em>]</sub> <sub>[<em><a href="#ref4">4</a></em>]</sub> <sub>[<em><a href="#ref5">5</a></em>]</sub> <sub>[<em><a href="#ref6">6</a></em>]</sub> <sub>[<em><a href="#ref7">7</a></em>]</sub> <sub>[<em><a href="#ref8">8</a></em>]</sub> <sub>[<em><a href="#ref9">9</a></em>]</sub> <sub>[<em><a href="#ref10">10</a></em>]</sub> <sub>[<em><a href="#ref11">11</a></em>]</sub> <sub>[<em><a href="#ref12">12</a></em>]</sub> <sub>[<em><a href="#ref13">13</a></em>]</sub> <sub>[<em><a href="#ref14">14</a></em>]</sub> <sub>[<em><a href="#ref15">15</a></em>]</sub></p>
 <ol style="list-style-type: decimal">
 <li><a id="ref1"></a> <a href=""></a></li>

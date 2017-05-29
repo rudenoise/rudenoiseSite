@@ -16,15 +16,22 @@ esx2    --midi-out->    pulse2
 esx2    --stereo->      mix100
 pulse2  --stereo->      mix100
 mix100  --stereo->      dr-40
-mix100  --aux->         pulse2
-mix100  --aux->         esx2
+mix100  --aux->         pulse2  [ext in]
+mix100  --aux->         esx2    [ext in]
 dr-40   --stereo->      mix100
 mix100  --stereo->      esx2
 
 -----
 Set Up B:
 
-
+esx2    --midi-out->    pulse2
+esx2    --right/mono->  mix100  [ch1]
+esx2    --left/mono->   pulse2  [ext in]
+pulse2  --right/mono->  mix100  [ch2]
+mix100  --stereo->      dr-40
+mix100  --aux->         esx2    [ext in]
+dr-40   --stereo->      mix100
+mix100  --stereo->      esx2    [ext in]
 ```
 
 <sub>[_[1](#ref1)_]</sub>
