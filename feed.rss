@@ -6,6 +6,13 @@
         <link>http://rudenoise.uk</link>
         <description>A feed notifying subscribers about changes to the content of the Rudenoise UK website.</description>
         <item>
+            <title>Note Making and Docs</title>
+            <link>http://rudenoise.uk/note-making-and-docs.html</link>
+            <description>Some thoughts on notemaking and documentation...</description>
+            <guid>http://rudenoise.uk/note-making-and-docs.html</guid>
+            <pubDate>Sat, 3 Mar 2018 13:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title>Barratt House</title>
             <link>http://rudenoise.uk/barratt-house.html</link>
             <description>The ingredients are ready for this year's project...</description>
