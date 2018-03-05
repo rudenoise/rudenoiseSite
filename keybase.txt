@@ -1,0 +1,54 @@
+Some thoughts on notemaking and documentation..://keybase.io/rudenoise
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://rudenoise.uk
+  * I am rudenoise (https://keybase.io/rudenoise) on keybase.
+  * I have a public key ASCRgIH2oGqo4lzAuw4TNQXkWIFo6BlC7nbUguBdfBtLlgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120588b68379be73cb0df871761fa61bf522290483d8f4a755f5d3d21dd62d0adb00a",
+      "host": "keybase.io",
+      "kid": "0120918081f6a06aa8e25cc0bb0e133505e4588168e81942ee76d482e05d7c1b4b960a",
+      "uid": "e888439affb4077ee24400922b32d419",
+      "username": "rudenoise"
+    },
+    "merkle_root": {
+      "ctime": 1520244299,
+      "hash": "477341bd57c021a058f4418c30f6d71c18bae9f9ce426ebdc452845005f2cc5fa9256a3f8e4e5a27d87e23aa189f3efa44c6995287aa8aa63138e053283cc578",
+      "hash_meta": "92ee3cf1eba02fba1064c06825d9a5e02e3b3a2665c287989577abc80328c504",
+      "seqno": 2185254
+    },
+    "service": {
+      "hostname": "rudenoise.uk",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.44"
+  },
+  "ctime": 1520244321,
+  "expire_in": 504576000,
+  "prev": "9ed097f1240a8478df41190e21598d1f40c1edffe40bcb9d9b072e5fbbe7dd59",
+  "seqno": 37,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgkYCB9qBqqOJcwLsOEzUF5FiBaOgZQu521ILgXXwbS5YKp3BheWxvYWTFA0V7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNTg4YjY4Mzc5YmU3M2NiMGRmODcxNzYxZmE2MWJmNTIyMjkwNDgzZDhmNGE3NTVmNWQzZDIxZGQ2MmQwYWRiMDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwOTE4MDgxZjZhMDZhYThlMjVjYzBiYjBlMTMzNTA1ZTQ1ODgxNjhlODE5NDJlZTc2ZDQ4MmUwNWQ3YzFiNGI5NjBhIiwidWlkIjoiZTg4ODQzOWFmZmI0MDc3ZWUyNDQwMDkyMmIzMmQ0MTkiLCJ1c2VybmFtZSI6InJ1ZGVub2lzZSJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUyMDI0NDI5OSwiaGFzaCI6IjQ3NzM0MWJkNTdjMDIxYTA1OGY0NDE4YzMwZjZkNzFjMThiYWU5ZjljZTQyNmViZGM0NTI4NDUwMDVmMmNjNWZhOTI1NmEzZjhlNGU1YTI3ZDg3ZTIzYWExODlmM2VmYTQ0YzY5OTUyODdhYThhYTYzMTM4ZTA1MzI4M2NjNTc4IiwiaGFzaF9tZXRhIjoiOTJlZTNjZjFlYmEwMmZiYTEwNjRjMDY4MjVkOWE1ZTAyZTNiM2EyNjY1YzI4Nzk4OTU3N2FiYzgwMzI4YzUwNCIsInNlcW5vIjoyMTg1MjU0fSwic2VydmljZSI6eyJob3N0bmFtZSI6InJ1ZGVub2lzZS51ayIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuNDQifSwiY3RpbWUiOjE1MjAyNDQzMjEsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiOWVkMDk3ZjEyNDBhODQ3OGRmNDExOTBlMjE1OThkMWY0MGMxZWRmZmU0MGJjYjlkOWIwNzJlNWZiYmU3ZGQ1OSIsInNlcW5vIjozNywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDCEBYZ3geJRiD79tpAWkkAbU9/WuLC/CobJt9GKqrBAdXUJeSzXUu/VZ7QpFo/Q/5BVCzpl8W6yNzUAzrsU8wGqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgd18sW2U6TAf+Vsv3kbpkXpg5C9E731mG9Z7lTymKMiqjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rudenoise
+
+==================================================================
