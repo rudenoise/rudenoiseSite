@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+Note Making and Docs
+        </title>
+        <style type="text/css">
+            @font-face {
+                    font-family: 'ocramedium';
+                    src: url('ocr-a.eot');
+                    src: url('ocr-a.eot?#iefix') format('embedded-opentype'),
+                         url('ocr-a.woff') format('woff'),
+                         url('ocr-a.ttf') format('truetype'),
+                         url('ocr-a.svg#ocramedium') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+            }
+            body {
+                margin: 1em auto;
+                padding-left: .5em;
+                padding-right: 1.5em;
+                max-width: 640px;
+                font-size: 135%;
+                line-height: 1.5em;
+                background: #222;
+                color: #CCC;
+                font-family: ocramedium, ocraextended, monospace;
+                background-image: url("/bg.png");
+                background-repeat: repeat;
+            }
+            article {
+                text-align: justify;
+            }
+            blockquote {
+                font-size: 0.9em;
+                font-style: oblique;
+            }
+            .caption {
+                font-size: 0.7em;
+                font-style: italic;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 640px;
+            }
+            @media only screen and (max-width: 400px) {
+                body {font-size: 100%;}
+            }
+            a {
+                color: orange;
+                text-decoration: none;
+                border-bottom: 1px solid;
+            }
+            sub>em>a { border-bottom: none; }
+            h1 { line-height: 1em;}
+            form {border: none}
+            input { font-family: ocramedium, ocraextended, monospace; border: none; }
+            .small { font-size: 65%;}
+            pre {
+                overflow-x: scroll; 
+                background: #444;
+                color: #FFF;
+                text-align: left;
+            }
+            .ocaml .fl {
+                color: yellow;
+            }
+            .ocaml .kw {
+                color: #ffb380;
+            }
+            .ocaml .co {
+                color: #ccc;
+            }
+        </style>
+        <link rel="alternate" type="application/rss+xml" title="Rudenoise's Feed" href="http://rudenoise.uk/feed.rss">
+        <link rel="alternate" type="application/rss+xml" title="Rudenoise's OCaml Feed" href="http://rudenoise.uk/ocaml.rss">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    </head>
+    <body>
+        <article>
+            <header>
+                <h1>
+Note Making and Docs
+                </h1>
+                <p class="small">Published:
+                    <time>
+2018-03-03
+                    </time>
+                </p>
+            </header>
+<h2 id="project-1-what-i-didreadthought-this-week">Project 1: What I Did/Read/Thought This Week</h2>
+<p>I like reading, writing, making, talking.</p>
+<p>Some kind of blog that ties together the random threads from each week.</p>
+<p>Text, video, code, audio.</p>
+<p>Like brain pickings for computing and DIY media.</p>
+<h2 id="documentation-in-software-is-hard">Documentation In Software is Hard</h2>
+<ul>
+<li>need to make it more automatic;</li>
+<li>literate programming doesn’t quite work;</li>
+<li>could you keep a live stream of code comments mixed with commit messages?</li>
+<li>thoughworks talk about Lightweight Architecture Decision Records;</li>
+<li>wikis, readme, help text
+<ul>
+<li>spectrum of local and global relevance</li>
+<li>out of date quickly</li>
+<li>need the history (version control useful)</li>
+</ul></li>
+</ul>
+<h2 id="documentation-in-organisations-is-hard">Documentation ~in Organisations~ is Hard</h2>
+<ul>
+<li>project management</li>
+<li>meetings and agendas</li>
+<li>discussions</li>
+<li>decision making</li>
+<li>work tracking</li>
+</ul>
+<p>Could graph data well applied do for loosely coupled data what spreadsheets did for tabular computation?</p>
+<ul>
+<li>https://www.thoughtworks.com/mingle/</li>
+<li>trello</li>
+<li>cadence/j3t</li>
+<li>wikis</li>
+<li>blogs</li>
+</ul>
+<h2 id="joe-armstrong-good-on-this">Joe Armstrong Good on This</h2>
+<ul>
+<li>https://twitter.com/joeerl/status/968835078053879809 I think my head is about to explode – If tiddlers can be put into a global address space and persisted when I’m off line then we’ve almost got Xanadu - at least the main features of Xanadu</li>
+<li>https://twitter.com/joeerl/status/968830209817489408 Having great fun with the <span class="citation" data-cites="TiddlyWiki">@TiddlyWiki</span> – This is changing how I think. Instead of thinking at a document level - it forces you to think at a paragraph level (the tiddlers) - and think how the tiddlers can be transcluded into larger units.</li>
+<li>https://twitter.com/joeerl/status/968748699907252224 Imagine if all file systems on all machines kept a hash of the file. Imagine if you could go to any web server anywhere anytime anyplace, request a file by giving the hash and by magic get back the file.</li>
+</ul>
+<h2 id="note-making-and-publishing">Note making and publishing</h2>
+<ul>
+<li>text fragments (like tiddlers);</li>
+<li>sha1(?) hashes/checksum for identity;</li>
+<li>meta-data (timestamps, location, tags) as further fragments;</li>
+<li><p>graph structures to tie together (fragments as vertices, relationships as edges);</p></li>
+<li>Git back-end (p2p);</li>
+<li>torrents for binary artifacts;</li>
+<li>human readable files (json/yaml/txt?);</li>
+<li>fast index and query;</li>
+<li>stand alone and networked;</li>
+<li><p>annotate with <a href="https://www.graphviz.org/doc/info/lang.html">Dot Language</a>?</p></li>
+<li>vim plug-in for editing;</li>
+<li>write in linear mode;</li>
+<li>saves to paragraph fragments (time stamps and tagged in collection);</li>
+<li>pipe urls to pandoc for fragment “clipping”;
+<ul>
+<li>urls as vertex for collections of “clippings”/“snippets”;</li>
+</ul></li>
+<li>distributed</li>
+<li>p2p</li>
+<li>fault tollerant</li>
+<li>open</li>
+<li><p>flexible</p></li>
+</ul>
+<h3 id="api">API</h3>
+<pre><code>post snippet -&gt; hash
+get hash -&gt; snippet
+
+# define edge with description
+post from=hash to=hash description=snippet -&gt; hash
+</code></pre>
+<p>Storage: https://gephi.org/users/supported-graph-formats/</p>
+<p>DotFiles?</p>
+            <footer>
+                <p class="small">If you want to be informed when more of this stuff is written you can <a href="/subscribe.html">subscribe</a> or why not look at <a href="/">Rudenoise's home page</a>?</p>
+            </footer>            
+        </article>
+    </body>
+</html>
